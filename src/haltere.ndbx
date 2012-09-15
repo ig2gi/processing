@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="0.9" type="file">
+    <var name="canvasBackground" value="#020202ff"/>
+    <var name="canvasWidth" value="2000.0"/>
+    <var name="canvasHeight" value="1000.0"/>
+    <var name="canvasY" value="0.0"/>
+    <var name="canvasX" value="0.0"/>
+    <node name="align1" prototype="corevector.align" x="580" y="290">
+        <param name="halign">
+            <value>center</value>
+        </param>
+        <param name="valign">
+            <value>none</value>
+        </param>
+    </node>
+    <node name="align2" prototype="corevector.align" x="850" y="490">
+        <param name="halign">
+            <value>center</value>
+        </param>
+        <param name="valign">
+            <value>middle</value>
+        </param>
+    </node>
+    <node name="color1" prototype="corevector.color" x="1030" y="180">
+        <param name="fill">
+            <value>#d4d4d4ff</value>
+        </param>
+        <param name="stroke">
+            <value>#373737ff</value>
+        </param>
+        <param name="strokeWidth">
+            <value>0.5</value>
+        </param>
+    </node>
+    <node name="geonet1" prototype="corevector.geonet" x="270" y="340">
+        <param min="40.0" name="w" type="float">
+            <expression>stamp("n", 100)</expression>
+        </param>
+        <node name="rect1" prototype="corevector.rect" x="50" y="580">
+            <param name="x">
+                <expression>parent.w/2</expression>
+            </param>
+            <param name="width">
+                <expression>parent.w</expression>
+            </param>
+            <param name="height">
+                <value>4.0</value>
+            </param>
+            <param name="rx">
+                <value>1.0</value>
+            </param>
+            <param name="fill">
+                <value>#838383ff</value>
+            </param>
+            <param name="stroke">
+                <value>#ffffffff</value>
+            </param>
+        </node>
+        <node name="ellipse2" prototype="corevector.ellipse" x="20" y="400">
+            <param name="x">
+                <expression>parent.w</expression>
+            </param>
+            <param name="width">
+                <value>10.0</value>
+            </param>
+            <param name="height">
+                <value>10.0</value>
+            </param>
+            <param name="fill">
+                <value>#838383ff</value>
+            </param>
+            <param name="stroke">
+                <value>#ffffffff</value>
+            </param>
+        </node>
+        <node name="resample1" prototype="corevector.resample" x="150" y="230">
+            <param name="method">
+                <value>amount</value>
+            </param>
+            <param name="points">
+                <value>7</value>
+            </param>
+            <param name="perContour">
+                <value>1</value>
+            </param>
+        </node>
+        <node name="ellipse1" prototype="corevector.ellipse" x="30" y="210">
+            <param name="width">
+                <value>10.0</value>
+            </param>
+            <param name="height">
+                <value>10.0</value>
+            </param>
+            <param name="fill">
+                <value>#838383ff</value>
+            </param>
+            <param name="stroke">
+                <value>#ffffffff</value>
+            </param>
+        </node>
+        <node name="wiggle3" prototype="corevector.wiggle" x="340" y="570">
+            <param name="wx">
+                <value>0.0</value>
+            </param>
+            <param name="wy">
+                <value>2.0</value>
+            </param>
+            <param name="seed">
+                <value>6</value>
+            </param>
+        </node>
+        <node name="resample2" prototype="corevector.resample" x="170" y="390">
+            <param name="method">
+                <value>amount</value>
+            </param>
+            <param name="points">
+                <value>7</value>
+            </param>
+            <param name="perContour">
+                <value>1</value>
+            </param>
+        </node>
+        <node name="resample3" prototype="corevector.resample" x="200" y="570">
+            <param name="length">
+                <value>4.0</value>
+            </param>
+            <param name="points">
+                <value>38</value>
+            </param>
+            <param name="perContour">
+                <value>1</value>
+            </param>
+        </node>
+        <node name="compound2" prototype="corevector.compound" rendered="true" x="640" y="250">
+            <param name="strokeWidth">
+                <value>1.0</value>
+            </param>
+        </node>
+        <node name="compound1" prototype="corevector.compound" x="520" y="130"/>
+        <node name="wiggle2" prototype="corevector.wiggle" x="280" y="380">
+            <param name="wx">
+                <value>2.0</value>
+            </param>
+            <param name="wy">
+                <value>2.0</value>
+            </param>
+            <param name="seed">
+                <value>18</value>
+            </param>
+        </node>
+        <node name="wiggle1" prototype="corevector.wiggle" x="280" y="180">
+            <param name="wx">
+                <value>2.0</value>
+            </param>
+            <param name="wy">
+                <value>2.0</value>
+            </param>
+            <param name="seed">
+                <value>18</value>
+            </param>
+        </node>
+        <node name="color1" prototype="corevector.color" x="770" y="260"/>
+        <conn input="resample1" output="ellipse1" port="shape"/>
+        <conn input="wiggle1" output="resample1" port="shape"/>
+        <conn input="resample2" output="ellipse2" port="shape"/>
+        <conn input="wiggle2" output="resample2" port="shape"/>
+        <conn input="resample3" output="rect1" port="shape"/>
+        <conn input="wiggle3" output="resample3" port="shape"/>
+        <conn input="compound1" output="wiggle1" port="shape"/>
+        <conn input="compound1" output="wiggle2" port="shapeB"/>
+        <conn input="compound2" output="wiggle3" port="shapeB"/>
+        <conn input="compound2" output="compound1" port="shape"/>
+        <conn input="color1" output="compound2" port="shape"/>
+    </node>
+    <node name="grid1" prototype="corevector.grid" x="400" y="490">
+        <param name="width">
+            <expression>WIDTH</expression>
+        </param>
+        <param name="height">
+            <expression>HEIGHT</expression>
+        </param>
+        <param name="rows">
+            <expression>WIDTH/60</expression>
+        </param>
+        <param name="columns">
+            <expression>WIDTH/50</expression>
+        </param>
+    </node>
+    <node name="grid2" prototype="corevector.grid" x="280" y="170">
+        <param name="width">
+            <expression>WIDTH</expression>
+        </param>
+        <param name="height">
+            <expression>HEIGHT</expression>
+        </param>
+        <param name="rows">
+            <value>1</value>
+        </param>
+        <param name="columns">
+            <expression>WIDTH/50</expression>
+        </param>
+    </node>
+    <node name="line1" prototype="corevector.line" x="50" y="50">
+        <param name="y">
+            <expression>-HEIGHT/2</expression>
+        </param>
+        <param name="angle">
+            <value>90.0</value>
+        </param>
+        <param name="distance">
+            <expression>HEIGHT</expression>
+        </param>
+    </node>
+    <node name="merge1" prototype="corevector.merge" x="880" y="160"/>
+    <node name="merge2" prototype="corevector.merge" rendered="true" x="1020" y="430"/>
+    <node name="place1" prototype="corevector.place" x="750" y="320">
+        <param name="stamp">
+            <value>1</value>
+        </param>
+        <param name="expr">
+            <value>n=math.min(CPOS*50,50)</value>
+        </param>
+        <param name="angle" type="string" widget="stamp_expression">
+            <value>a=CNUM</value>
+        </param>
+    </node>
+    <node name="place2" prototype="corevector.place" x="520" y="80">
+        <param name="stamp">
+            <value>1</value>
+        </param>
+        <param name="expr">
+            <value>n2=CNUM</value>
+        </param>
+    </node>
+    <node name="resample1" prototype="corevector.resample" x="190" y="50">
+        <param name="method">
+            <value>amount</value>
+        </param>
+        <param name="points">
+            <value>56</value>
+        </param>
+        <param name="perContour">
+            <value>1</value>
+        </param>
+    </node>
+    <node name="sort1" prototype="corevector.sort" x="570" y="470">
+        <param name="scope">
+            <value>pt_g</value>
+        </param>
+        <param name="order">
+            <value>random</value>
+        </param>
+        <param name="seed">
+            <expression>stamp("n",5)</expression>
+        </param>
+    </node>
+    <node name="textpath1" prototype="corevector.textpath" x="700" y="520">
+        <param name="text">
+            <value>Design</value>
+        </param>
+        <param name="font">
+            <value>Damascus</value>
+        </param>
+        <param name="size">
+            <value>800.0</value>
+        </param>
+        <param name="fill">
+            <value>#e2e2e2ff</value>
+        </param>
+        <param name="stroke">
+            <expression>color(0.00, 0.00, 0.00, 0.5)</expression>
+        </param>
+    </node>
+    <node name="transform1" prototype="corevector.transform" x="430" y="310">
+        <param name="ty">
+            <expression>random(0, 50, stamp("n", 1))</expression>
+        </param>
+        <param name="r">
+            <expression>stamp("a", 0)</expression>
+        </param>
+    </node>
+    <node name="wiggle1" prototype="corevector.wiggle" x="360" y="40">
+        <param name="wx">
+            <value>2.0</value>
+        </param>
+        <param name="wy">
+            <value>0.0</value>
+        </param>
+        <param name="seed">
+            <expression>stamp("n2", 1)</expression>
+        </param>
+    </node>
+    <conn input="merge2" output="align2" port="shapes"/>
+    <conn input="merge2" output="color1" port="shapes"/>
+    <conn input="sort1" output="grid1" port="shape"/>
+    <conn input="place1" output="sort1" port="template"/>
+    <conn input="merge1" output="place1" port="shapes"/>
+    <conn input="place2" output="wiggle1" port="shape"/>
+    <conn input="place2" output="grid2" port="template"/>
+    <conn input="merge1" output="place2" port="shapes"/>
+    <conn input="resample1" output="line1" port="shape"/>
+    <conn input="wiggle1" output="resample1" port="shape"/>
+    <conn input="color1" output="merge1" port="shape"/>
+    <conn input="transform1" output="geonet1" port="shape"/>
+    <conn input="align1" output="transform1" port="shape"/>
+    <conn input="place1" output="align1" port="shape"/>
+    <conn input="align2" output="textpath1" port="shape"/>
+</ndbx>
