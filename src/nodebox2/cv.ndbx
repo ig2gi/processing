@@ -1,0 +1,2444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="0.9" type="file">
+    <var name="canvasHeight" value="3500.0"/>
+    <var name="canvasWidth" value="2200.0"/>
+    <node name="acronyms" prototype="corevector.datastamp" x="1830" y="-670">
+        <param name="file">
+            <value>cv/cv-skills.csv</value>
+        </param>
+    </node>
+    <node name="align1" prototype="corevector.align" x="1310" y="-1150">
+        <param name="x">
+            <value>363.0</value>
+        </param>
+        <param name="y">
+            <value>698.0</value>
+        </param>
+    </node>
+    <node name="align2" prototype="corevector.align" x="1220" y="-600">
+        <param name="y">
+            <value>4.0</value>
+        </param>
+        <param name="halign">
+            <expression>if (transform1.r &lt; 90.0) {"left"} else {"left"}</expression>
+        </param>
+        <param name="valign">
+            <value>none</value>
+        </param>
+    </node>
+    <node name="align4" prototype="corevector.align" x="20" y="-1020">
+        <param name="x">
+            <value>-965.0</value>
+        </param>
+        <param name="y">
+            <value>-1654.0</value>
+        </param>
+        <param name="valign">
+            <value>top</value>
+        </param>
+    </node>
+    <node name="barchart" prototype="corevector.geonet" x="210" y="-1320">
+        <port name="sect"/>
+        <param name="x" type="float">
+            <value>-185.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-1475.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#226091a9</value>
+        </param>
+        <param name="title" type="string">
+            <value>activities</value>
+        </param>
+        <param name="legend" type="string">
+            <value>%</value>
+        </param>
+        <param name="font" type="string" widget="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="file" type="string" widget="file">
+            <value>../data/cv/cv-global-skills.csv</value>
+        </param>
+        <param name="multiplier" type="float">
+            <value>8.0</value>
+        </param>
+        <param name="tablename" type="string">
+            <value>sectors</value>
+        </param>
+        <param name="background" type="color">
+            <expression>frame.fill</expression>
+        </param>
+        <node name="sector" prototype="corevector.null" x="-460" y="-290">
+            <param name="name" type="string" widget="text">
+                <expression>stamp(parent.tablename + "_value_0","?")</expression>
+            </param>
+            <param help="Number of years" name="years" type="float">
+                <expression>stamp(parent.tablename +"_value_1",1)</expression>
+            </param>
+            <param name="index" type="int">
+                <expression>stamp(parent.tablename +"_row_index", 0)</expression>
+            </param>
+            <param name="count" type="int">
+                <expression>stamp(parent.tablename +"_row_count", 0)</expression>
+            </param>
+        </node>
+        <node name="transform1" prototype="corevector.transform" x="-50" y="-460">
+            <param name="ty">
+                <expression>sector.index * rect2.height /1.3</expression>
+            </param>
+        </node>
+        <node name="transform2" prototype="corevector.transform" x="40" y="-160">
+            <param name="ty">
+                <expression>sector.index * rect2.height/1.2</expression>
+            </param>
+        </node>
+        <node name="rect2" prototype="corevector.rect" x="-220" y="-470">
+            <port name="sect"/>
+            <param name="x">
+                <expression>parent.x -width / 2.0</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="width">
+                <expression>sector.years * parent.multiplier</expression>
+            </param>
+            <param name="height">
+                <value>43.0</value>
+            </param>
+            <param name="rx">
+                <value>25.0</value>
+            </param>
+            <param name="ry">
+                <value>25.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.background</expression>
+            </param>
+            <param name="strokeWidth">
+                <value>10.0</value>
+            </param>
+        </node>
+        <node name="textpath1" prototype="corevector.textpath" x="-200" y="-340">
+            <port name="sect"/>
+            <param name="text">
+                <expression>parent.title</expression>
+            </param>
+            <param name="font">
+                <value>EurostileBold</value>
+            </param>
+            <param name="size">
+                <value>30.0</value>
+            </param>
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y - rect2.height</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="align3" prototype="corevector.align" x="210" y="20">
+            <param name="x">
+                <expression>parent.x - rect2.width + rect2.strokeWidth</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y + sector.index * rect2.height /1.3</expression>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="align2" prototype="corevector.align" x="220" y="-360">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="halign">
+                <value>right</value>
+            </param>
+            <param name="valign">
+                <value>none</value>
+            </param>
+        </node>
+        <node name="align1" prototype="corevector.align" x="190" y="-160">
+            <param name="x">
+                <expression>parent.x +10</expression>
+            </param>
+            <param name="valign">
+                <value>none</value>
+            </param>
+        </node>
+        <node name="merge4" prototype="corevector.merge" x="430" y="-230"/>
+        <node name="textpath2" prototype="corevector.textpath" x="-200" y="-120">
+            <port name="sect"/>
+            <param name="text">
+                <expression>sector.name</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="size">
+                <value>26.0</value>
+            </param>
+            <param name="align">
+                <value>LEFT</value>
+            </param>
+            <param name="x">
+                <expression>parent.x + 10</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="textpath3" prototype="corevector.textpath" x="-190" y="30">
+            <param name="text">
+                <expression>" " + math.round(sector.years) + parent.legend</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="size">
+                <value>19.0</value>
+            </param>
+            <param name="align">
+                <value>LEFT</value>
+            </param>
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="fill">
+                <value>#fdfdfdff</value>
+            </param>
+        </node>
+        <node name="merge1" prototype="corevector.merge" rendered="true" x="660" y="-480"/>
+        <node name="sect" prototype="corevector.datastamp" x="590" y="-230">
+            <param name="file">
+                <expression>parent.file</expression>
+            </param>
+            <param name="tableName">
+                <expression>parent.tablename</expression>
+            </param>
+        </node>
+        <node name="line1" prototype="corevector.line" x="-200" y="-230">
+            <port name="sect"/>
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y - 0.9 * rect2.height</expression>
+            </param>
+            <param name="angle">
+                <value>90.0</value>
+            </param>
+            <param name="distance">
+                <expression>sector.count * 0.9 * rect2.height</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <conn input="merge4" output="align2" port="shapes"/>
+        <conn input="merge4" output="align1" port="shapes"/>
+        <conn input="merge4" output="line1" port="shapes"/>
+        <conn input="transform1" output="rect2" port="shape"/>
+        <conn input="transform2" output="textpath2" port="shape"/>
+        <conn input="align2" output="transform1" port="shape"/>
+        <conn input="align1" output="transform2" port="shape"/>
+        <conn input="merge4" output="align3" port="shapes"/>
+        <conn input="align3" output="textpath3" port="shape"/>
+        <conn input="sect" output="merge4" port="shape"/>
+        <conn input="textpath1" output="sector" port="sect"/>
+        <conn input="line1" output="sector" port="sect"/>
+        <conn input="textpath2" output="sector" port="sect"/>
+        <conn input="rect2" output="sector" port="sect"/>
+        <conn input="merge1" output="textpath1" port="shapes"/>
+        <conn input="merge1" output="sect" port="shapes"/>
+    </node>
+    <node name="barchart1" prototype="corevector.geonet" x="420" y="-1350">
+        <port name="sect"/>
+        <param name="x" type="float">
+            <value>346.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-1475.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#226091a9</value>
+        </param>
+        <param name="title" type="string">
+            <value>sectors</value>
+        </param>
+        <param name="legend" type="string">
+            <value>y</value>
+        </param>
+        <param name="font" type="string" widget="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="file" type="string" widget="file">
+            <value>../data/cv/cv-sector.csv</value>
+        </param>
+        <param name="multiplier" type="float">
+            <value>43.0</value>
+        </param>
+        <param name="tablename" type="string">
+            <value>activities</value>
+        </param>
+        <param name="background" type="color">
+            <expression>frame.fill</expression>
+        </param>
+        <node name="sector" prototype="corevector.null" x="-460" y="-290">
+            <param name="name" type="string" widget="text">
+                <expression>stamp(parent.tablename + "_value_0","?")</expression>
+            </param>
+            <param help="Number of years" name="years" type="float">
+                <expression>stamp(parent.tablename +"_value_1",1)</expression>
+            </param>
+            <param name="index" type="int">
+                <expression>stamp(parent.tablename +"_row_index", 0)</expression>
+            </param>
+            <param name="count" type="int">
+                <expression>stamp(parent.tablename +"_row_count", 0)</expression>
+            </param>
+        </node>
+        <node name="transform1" prototype="corevector.transform" x="-10" y="-470">
+            <param name="ty">
+                <expression>sector.index * rect2.height /1.3</expression>
+            </param>
+        </node>
+        <node name="transform2" prototype="corevector.transform" x="10" y="-130">
+            <param name="ty">
+                <expression>sector.index * rect2.height/1.2</expression>
+            </param>
+        </node>
+        <node name="rect2" prototype="corevector.rect" x="-200" y="-470">
+            <port name="sect"/>
+            <param name="x">
+                <expression>parent.x -width / 2.0</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="width">
+                <expression>sector.years * parent.multiplier</expression>
+            </param>
+            <param name="height">
+                <value>43.0</value>
+            </param>
+            <param name="rx">
+                <value>25.0</value>
+            </param>
+            <param name="ry">
+                <value>25.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.background</expression>
+            </param>
+            <param name="strokeWidth">
+                <value>10.0</value>
+            </param>
+        </node>
+        <node name="textpath1" prototype="corevector.textpath" x="-50" y="-320">
+            <port name="sect"/>
+            <param name="text">
+                <expression>parent.title</expression>
+            </param>
+            <param name="font">
+                <value>EurostileBold</value>
+            </param>
+            <param name="size">
+                <value>30.0</value>
+            </param>
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y - rect2.height</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="align3" prototype="corevector.align" x="210" y="20">
+            <param name="x">
+                <expression>parent.x - rect2.width + rect2.strokeWidth</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y + sector.index * rect2.height /1.3</expression>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="align2" prototype="corevector.align" x="210" y="-450">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="halign">
+                <value>right</value>
+            </param>
+            <param name="valign">
+                <value>none</value>
+            </param>
+        </node>
+        <node name="align1" prototype="corevector.align" x="210" y="-140">
+            <param name="x">
+                <expression>parent.x +10</expression>
+            </param>
+            <param name="valign">
+                <value>none</value>
+            </param>
+        </node>
+        <node name="merge4" prototype="corevector.merge" x="430" y="-230"/>
+        <node name="textpath2" prototype="corevector.textpath" x="-200" y="-120">
+            <port name="sect"/>
+            <param name="text">
+                <expression>sector.name</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="size">
+                <value>26.0</value>
+            </param>
+            <param name="align">
+                <value>LEFT</value>
+            </param>
+            <param name="x">
+                <expression>parent.x + 10</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="fill">
+                <expression>rect2.fill</expression>
+            </param>
+        </node>
+        <node name="textpath3" prototype="corevector.textpath" x="-190" y="30">
+            <param name="text">
+                <expression>" " + math.round(sector.years) + parent.legend</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="size">
+                <value>19.0</value>
+            </param>
+            <param name="align">
+                <value>LEFT</value>
+            </param>
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="fill">
+                <value>#fdfdfdff</value>
+            </param>
+        </node>
+        <node name="merge1" prototype="corevector.merge" rendered="true" x="780" y="-520"/>
+        <node name="sect" prototype="corevector.datastamp" x="640" y="-230">
+            <param name="file">
+                <expression>parent.file</expression>
+            </param>
+            <param name="tableName">
+                <expression>parent.tablename</expression>
+            </param>
+        </node>
+        <node name="line1" prototype="corevector.line" x="-200" y="-230">
+            <port name="sect"/>
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y - 0.9 * rect2.height</expression>
+            </param>
+            <param name="angle">
+                <value>90.0</value>
+            </param>
+            <param name="distance">
+                <expression>sector.count * 0.9 * rect2.height</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <conn input="transform1" output="rect2" port="shape"/>
+        <conn input="transform2" output="textpath2" port="shape"/>
+        <conn input="rect2" output="sector" port="sect"/>
+        <conn input="textpath1" output="sector" port="sect"/>
+        <conn input="align3" output="textpath3" port="shape"/>
+        <conn input="align2" output="transform1" port="shape"/>
+        <conn input="align1" output="transform2" port="shape"/>
+        <conn input="merge4" output="align2" port="shapes"/>
+        <conn input="merge4" output="align1" port="shapes"/>
+        <conn input="merge4" output="line1" port="shapes"/>
+        <conn input="merge4" output="align3" port="shapes"/>
+        <conn input="textpath2" output="sector" port="sect"/>
+        <conn input="line1" output="sector" port="sect"/>
+        <conn input="sect" output="merge4" port="shape"/>
+        <conn input="merge1" output="textpath1" port="shapes"/>
+        <conn input="merge1" output="sect" port="shapes"/>
+    </node>
+    <node name="connect" prototype="corevector.geonet" x="190" y="-1160">
+        <param name="x" type="float">
+            <value>747.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-1447.0</value>
+        </param>
+        <param name="width" type="float">
+            <value>126.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#226091a9</value>
+        </param>
+        <node name="rect1" prototype="corevector.rect" x="-470" y="70">
+            <param name="height">
+                <value>19.0</value>
+            </param>
+            <param name="rx">
+                <value>10.0</value>
+            </param>
+            <param name="ry">
+                <value>10.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="transform2" prototype="corevector.transform" x="-180" y="-210">
+            <param name="_code">
+                <value type="python"><![CDATA[from nodebox.graphics import Transform
+
+def cook(self):
+    if self.shape is None: return None
+    t = Transform()
+    # Each letter of the order describes an operation.
+    for op in self.order:
+        if op == 't':
+            t.translate(self.tx, self.ty)
+        elif op == 'r':
+            if self.r == 180.0:
+                t.rotate(0.0)
+            elif (self.r > 90.0) & (self.r < 180.0):
+                t.rotate(self.r - 180.0)
+            elif (self.r < 270.0) & (self.r > 180.0):
+                t.rotate(self.r - 180.0)
+            else:
+                t.rotate(self.r)
+        elif op == 's':
+            t.scale(self.sx / 100, self.sy / 100)
+    # Transform.map clones and transforms the geometry.
+    return t.map(self.shape)]]></value>
+            </param>
+            <param name="order">
+                <value>rts</value>
+            </param>
+            <param name="ty">
+                <value>-8.0</value>
+            </param>
+            <param name="r">
+                <expression> (360 * stamp("n", 0) / polygon1.sides)</expression>
+            </param>
+        </node>
+        <node name="rect2" prototype="corevector.rect" x="-410" y="190">
+            <param name="width">
+                <value>250.0</value>
+            </param>
+            <param name="height">
+                <value>19.0</value>
+            </param>
+            <param name="rx">
+                <value>10.0</value>
+            </param>
+            <param name="ry">
+                <value>10.0</value>
+            </param>
+            <param name="fill">
+                <value>#787878ff</value>
+            </param>
+        </node>
+        <node name="place1" prototype="corevector.place" x="30" y="50">
+            <param name="stamp">
+                <value>1</value>
+            </param>
+            <param name="expr">
+                <value>n=CNUM</value>
+            </param>
+        </node>
+        <node name="align3" prototype="corevector.align" x="-330" y="-140">
+            <param name="halign">
+                <value>right</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="merge4" prototype="corevector.merge" x="270" y="130"/>
+        <node name="align7" prototype="corevector.align" x="-410" y="-30">
+            <param name="x">
+                <value>16.0</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="align8" prototype="corevector.align" x="-350" y="50">
+            <param name="x">
+                <value>11.0</value>
+            </param>
+            <param name="halign">
+                <value>right</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="merge5" prototype="corevector.merge" x="-140" y="10"/>
+        <node name="textpath3" prototype="corevector.textpath" x="-470" y="-130">
+            <param name="text">
+                <expression>["twitter","gmail","linkedin","artLimited","website","phone","pinterest"][stamp("n",0)] </expression>
+            </param>
+            <param name="font">
+                <value>EurostileRegular</value>
+            </param>
+            <param name="size">
+                <value>17.0</value>
+            </param>
+            <param name="fill">
+                <value>#ffffffff</value>
+            </param>
+        </node>
+        <node name="align5" prototype="corevector.align" rendered="true" x="240" y="-130">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="halign">
+                <value>center</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="align6" prototype="corevector.align" x="-10" y="350">
+            <param name="x">
+                <value>-43.0</value>
+            </param>
+            <param name="y">
+                <value>106.0</value>
+            </param>
+            <param name="valign">
+                <value>none</value>
+            </param>
+        </node>
+        <node name="textpath5" prototype="corevector.textpath" x="-530" y="-20">
+            <param name="text">
+                <expression> ["#ig2gi","gilbert.perrin@gmail.com","linkedin.com/in/gilbertperrin","gilbertperrin.portfolio.artlimited.net","gilbertperrin.fr","+41 78 687 22 50","pinterest"][stamp("n",0)]</expression>
+            </param>
+            <param name="font">
+                <value>EurostileRegular</value>
+            </param>
+            <param name="size">
+                <value>15.0</value>
+            </param>
+            <param name="align">
+                <value>LEFT</value>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="textpath6" prototype="corevector.textpath" x="-240" y="430">
+            <param name="text">
+                <value>connect</value>
+            </param>
+            <param name="font">
+                <value>EurostileBold</value>
+            </param>
+            <param name="size">
+                <value>26.0</value>
+            </param>
+            <param name="align">
+                <value>LEFT</value>
+            </param>
+            <param name="x">
+                <value>-6.0</value>
+            </param>
+            <param name="y">
+                <value>-25.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="align9" prototype="corevector.align" x="-290" y="130">
+            <param name="x">
+                <value>-11.0</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="line1" prototype="corevector.line" x="-310" y="250">
+            <param name="angle">
+                <value>90.0</value>
+            </param>
+            <param name="distance">
+                <value>129.0</value>
+            </param>
+            <param name="stroke">
+                <value>#347398ff</value>
+            </param>
+            <param name="strokeWidth">
+                <value>5.0</value>
+            </param>
+            <param name="points">
+                <value>6</value>
+            </param>
+        </node>
+        <conn input="merge5" output="align8" port="shapes"/>
+        <conn input="merge5" output="align3" port="shapes"/>
+        <conn input="merge5" output="align7" port="shapes"/>
+        <conn input="merge4" output="place1" port="shapes"/>
+        <conn input="place1" output="merge5" port="shape"/>
+        <conn input="align3" output="textpath3" port="shape"/>
+        <conn input="align7" output="textpath5" port="shape"/>
+        <conn input="align5" output="merge4" port="shape"/>
+        <conn input="place1" output="line1" port="template"/>
+        <conn input="align6" output="textpath6" port="shape"/>
+        <conn input="merge4" output="align6" port="shapes"/>
+        <conn input="align8" output="rect1" port="shape"/>
+        <conn input="align9" output="rect2" port="shape"/>
+    </node>
+    <node name="dotline" prototype="corevector.geonet" x="-950" y="-990">
+        <param name="x" type="float">
+            <value>481.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-696.0</value>
+        </param>
+        <param name="distance" type="float">
+            <value>345.0</value>
+        </param>
+        <param name="angle" type="float" widget="angle">
+            <value>0.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#8f8f8fff</value>
+        </param>
+        <node name="ellipse1" prototype="corevector.ellipse" x="-400" y="200">
+            <param name="width">
+                <value>17.0</value>
+            </param>
+            <param name="height">
+                <expression>width</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="place1" prototype="corevector.place" rendered="true" x="-180" y="230"/>
+        <node name="line1" prototype="corevector.line" x="-370" y="310">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="angle">
+                <expression>parent.angle</expression>
+            </param>
+            <param name="distance">
+                <expression>parent.distance</expression>
+            </param>
+            <param name="points">
+                <expression>math.rint(distance/ellipse1.width)/1.5</expression>
+            </param>
+        </node>
+        <conn input="place1" output="ellipse1" port="shape"/>
+        <conn input="place1" output="line1" port="template"/>
+    </node>
+    <node name="dotline1" prototype="corevector.geonet" x="-980" y="-860">
+        <param name="x" type="float">
+            <value>481.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>778.0</value>
+        </param>
+        <param name="distance" type="float">
+            <value>345.0</value>
+        </param>
+        <param name="angle" type="float" widget="angle">
+            <value>0.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#8f8f8fff</value>
+        </param>
+        <node name="ellipse1" prototype="corevector.ellipse" x="-400" y="200">
+            <param name="width">
+                <value>17.0</value>
+            </param>
+            <param name="height">
+                <expression>width</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="place1" prototype="corevector.place" rendered="true" x="-180" y="230"/>
+        <node name="line1" prototype="corevector.line" x="-370" y="310">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="angle">
+                <expression>parent.angle</expression>
+            </param>
+            <param name="distance">
+                <expression>parent.distance</expression>
+            </param>
+            <param name="points">
+                <expression>math.rint(distance/ellipse1.width)/1.5</expression>
+            </param>
+        </node>
+        <conn input="place1" output="ellipse1" port="shape"/>
+        <conn input="place1" output="line1" port="template"/>
+    </node>
+    <node name="dotline3" prototype="corevector.geonet" x="-240" y="-920">
+        <param name="x" type="float">
+            <value>-888.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-26.0</value>
+        </param>
+        <param name="distance" type="float">
+            <value>777.0</value>
+        </param>
+        <param name="angle" type="float" widget="angle">
+            <value>0.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#a4a4a4ff</value>
+        </param>
+        <node name="ellipse1" prototype="corevector.ellipse" x="-400" y="200">
+            <param name="width">
+                <value>17.0</value>
+            </param>
+            <param name="height">
+                <expression>width</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="place1" prototype="corevector.place" rendered="true" x="-180" y="230"/>
+        <node name="line1" prototype="corevector.line" x="-370" y="310">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="angle">
+                <expression>parent.angle</expression>
+            </param>
+            <param name="distance">
+                <expression>parent.distance</expression>
+            </param>
+            <param name="points">
+                <expression>math.rint(distance/ellipse1.width)/1.5</expression>
+            </param>
+        </node>
+        <conn input="place1" output="ellipse1" port="shape"/>
+        <conn input="place1" output="line1" port="template"/>
+    </node>
+    <node name="dotline4" prototype="corevector.geonet" x="-330" y="-970">
+        <param name="x" type="float">
+            <value>655.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-29.0</value>
+        </param>
+        <param name="distance" type="float">
+            <value>959.0</value>
+        </param>
+        <param name="angle" type="float" widget="angle">
+            <value>0.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#a4a4a4ff</value>
+        </param>
+        <node name="ellipse1" prototype="corevector.ellipse" x="-400" y="200">
+            <param name="width">
+                <value>17.0</value>
+            </param>
+            <param name="height">
+                <expression>width</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="place1" prototype="corevector.place" rendered="true" x="-180" y="230"/>
+        <node name="line1" prototype="corevector.line" x="-370" y="310">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="angle">
+                <expression>parent.angle</expression>
+            </param>
+            <param name="distance">
+                <expression>parent.distance</expression>
+            </param>
+            <param name="points">
+                <expression>math.rint(distance/ellipse1.width)/1.5</expression>
+            </param>
+        </node>
+        <conn input="place1" output="ellipse1" port="shape"/>
+        <conn input="place1" output="line1" port="template"/>
+    </node>
+    <node name="ellipse1" prototype="corevector.ellipse" x="1390" y="-500">
+        <param name="width">
+            <value>366.0</value>
+        </param>
+        <param name="height">
+            <expression>width</expression>
+        </param>
+    </node>
+    <node name="ellipse2" prototype="corevector.ellipse" x="1550" y="-930">
+        <param name="width">
+            <expression>ellipse1.width</expression>
+        </param>
+        <param name="height">
+            <expression>width</expression>
+        </param>
+        <param name="fill">
+            <value>#ffffffff</value>
+        </param>
+        <param name="stroke">
+            <value>#999999ff</value>
+        </param>
+        <param name="strokeWidth">
+            <value>10.0</value>
+        </param>
+    </node>
+    <node name="footer" prototype="corevector.textpath" x="-120" y="-510">
+        <param name="text">
+            <value>Generated with Python &amp; Nodebox2   ©</value>
+        </param>
+        <param name="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="y">
+            <expression>HEIGHT/2.0 - 60</expression>
+        </param>
+    </node>
+    <node name="frame" prototype="corevector.rect" x="-370" y="-700">
+        <param name="x">
+            <value>-36.0</value>
+        </param>
+        <param name="y">
+            <value>-1481.0</value>
+        </param>
+        <param name="width">
+            <expression>WIDTH - 300</expression>
+        </param>
+        <param name="height">
+            <value>372.0</value>
+        </param>
+        <param name="rx">
+            <value>20.0</value>
+        </param>
+        <param name="ry">
+            <value>20.0</value>
+        </param>
+        <param name="fill">
+            <value>#e2e0e1ff</value>
+        </param>
+        <param name="stroke">
+            <value>#6b6b6bff</value>
+        </param>
+    </node>
+    <node name="infobar" prototype="corevector.geonet" x="-490" y="-1010">
+        <param name="fill" type="color">
+            <value>#545454ff</value>
+        </param>
+        <param name="stroke" type="color">
+            <value>#ffffffff</value>
+        </param>
+        <param name="x" type="float">
+            <value>1670.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>0.0</value>
+        </param>
+        <param name="font" type="string" widget="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="infos" type="string">
+            <value>43,Fr,C</value>
+        </param>
+        <param name="size" type="float">
+            <value>66.0</value>
+        </param>
+        <param name="count" type="int">
+            <value>3</value>
+        </param>
+        <node name="merge4" prototype="corevector.merge" x="-170" y="-410"/>
+        <node name="textpath3" prototype="corevector.textpath" x="-550" y="-530">
+            <param name="text">
+                <expression>parent.infos.split(',')[stamp("n", 0)]</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.stroke</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.stroke</expression>
+            </param>
+        </node>
+        <node name="rect3" prototype="corevector.rect" x="-380" y="-300">
+            <param name="width">
+                <expression>parent.size</expression>
+            </param>
+            <param name="height">
+                <expression>width</expression>
+            </param>
+            <param name="rx">
+                <value>20.0</value>
+            </param>
+            <param name="ry">
+                <value>20.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.fill</expression>
+            </param>
+        </node>
+        <node name="rect2" prototype="corevector.rect" x="-550" y="-330">
+            <param name="width">
+                <expression>rect3.width * 0.6</expression>
+            </param>
+            <param name="height">
+                <expression>rect3.height * 0.6</expression>
+            </param>
+            <param name="rx">
+                <value>20.0</value>
+            </param>
+            <param name="ry">
+                <value>20.0</value>
+            </param>
+            <param name="fill">
+                <value>#989898ff</value>
+            </param>
+        </node>
+        <node name="copy1" prototype="corevector.copy" x="-20" y="-430">
+            <param name="copies">
+                <expression>parent.count</expression>
+            </param>
+            <param name="tx">
+                <expression>rect3.width +4</expression>
+            </param>
+            <param name="stamp">
+                <value>1</value>
+            </param>
+            <param name="expr">
+                <value>n=CNUM</value>
+            </param>
+        </node>
+        <node name="fit2" prototype="corevector.fit" x="-360" y="-450"/>
+        <node name="align1" prototype="corevector.align" rendered="true" x="210" y="-480">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+        </node>
+        <conn input="merge4" output="rect3" port="shapes"/>
+        <conn input="merge4" output="fit2" port="shapes"/>
+        <conn input="fit2" output="textpath3" port="shape"/>
+        <conn input="fit2" output="rect2" port="template"/>
+        <conn input="copy1" output="merge4" port="shape"/>
+        <conn input="align1" output="copy1" port="shape"/>
+    </node>
+    <node name="merge1" prototype="corevector.merge" x="1860" y="-840"/>
+    <node name="merge2" prototype="corevector.merge" rendered="true" x="990" y="-540"/>
+    <node name="merge3" prototype="corevector.merge" x="1570" y="-730"/>
+    <node name="merge4" prototype="corevector.merge" x="-130" y="-1070"/>
+    <node name="merge5" prototype="corevector.merge" x="530" y="-1200"/>
+    <node name="rect2" prototype="corevector.rect" x="1180" y="-430">
+        <param name="width">
+            <expression>stamp("data_value_0", 0) * ellipse2.width / 15</expression>
+        </param>
+        <param name="height">
+            <value>5.0</value>
+        </param>
+        <param name="rx">
+            <value>2.0</value>
+        </param>
+        <param name="ry">
+            <value>2.0</value>
+        </param>
+        <param name="fill">
+            <value>#999999ff</value>
+        </param>
+    </node>
+    <node name="resample1" prototype="corevector.resample" x="1560" y="-580">
+        <param name="method">
+            <value>amount</value>
+        </param>
+        <param name="points">
+            <expression>stamp("data_row_count", 10)</expression>
+        </param>
+        <param name="perContour">
+            <value>1</value>
+        </param>
+    </node>
+    <node name="textonpath1" prototype="corevector.textonpath" x="-110" y="-680">
+        <param name="text">
+            <value>key indicators</value>
+        </param>
+        <param name="font">
+            <value>Avenir-Roman</value>
+        </param>
+        <param name="size">
+            <value>35.0</value>
+        </param>
+        <param name="start">
+            <value>194.0</value>
+        </param>
+        <param name="loop">
+            <value>0</value>
+        </param>
+        <param name="dy">
+            <value>10.0</value>
+        </param>
+        <param name="fill">
+            <value>#474747ff</value>
+        </param>
+    </node>
+    <node name="textpath1" prototype="corevector.textpath" x="1210" y="-810">
+        <param name="text">
+            <expression>stamp("data_value_1", "?")</expression>
+        </param>
+        <param name="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="size">
+            <value>18.0</value>
+        </param>
+        <param name="align">
+            <value>RIGHT</value>
+        </param>
+        <param name="x">
+            <value>-13.0</value>
+        </param>
+        <param name="fill">
+            <value>#2b2b2bff</value>
+        </param>
+    </node>
+    <node name="textpath2" prototype="corevector.textpath" x="1650" y="-830">
+        <param name="text">
+            <value>skills</value>
+        </param>
+        <param name="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="size">
+            <value>30.0</value>
+        </param>
+        <param name="y">
+            <expression>-0.75 * ellipse2.width</expression>
+        </param>
+        <param name="fill">
+            <value>#2b2b2bff</value>
+        </param>
+    </node>
+    <node name="threegram" prototype="corevector.geonet" x="80" y="-1250">
+        <param name="text" type="string">
+            <value>analytic,creative,synthetic</value>
+        </param>
+        <param name="width" type="float">
+            <value>187.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#d63e27ff</value>
+        </param>
+        <param name="title" type="string">
+            <value>types of thinking</value>
+        </param>
+        <param name="x" type="float">
+            <value>-709.0</value>
+        </param>
+        <param name="y" type="float">
+            <value>-1438.0</value>
+        </param>
+        <param name="font" type="string" widget="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="strokeWidth" type="float">
+            <value>10.0</value>
+        </param>
+        <param name="background" type="color">
+            <expression>frame.fill</expression>
+        </param>
+        <node name="merge4" prototype="corevector.merge" x="1110" y="-800"/>
+        <node name="textpath3" prototype="corevector.textpath" x="680" y="-670">
+            <param name="text">
+                <expression>parent.text.split(',')[stamp("n",0)]</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="size">
+                <value>20.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="transform1" prototype="corevector.transform" x="790" y="-780">
+            <param name="r">
+                <value>90.0</value>
+            </param>
+        </node>
+        <node name="transform2" prototype="corevector.transform" x="550" y="-590">
+            <param name="r">
+                <value>30.0</value>
+            </param>
+        </node>
+        <node name="polygon1" prototype="corevector.polygon" x="340" y="-590">
+            <param name="radius">
+                <expression>arc1.width / 4.0</expression>
+            </param>
+        </node>
+        <node name="copy1" prototype="corevector.copy" x="540" y="-760">
+            <param name="copies">
+                <value>3</value>
+            </param>
+            <param name="r">
+                <value>120.0</value>
+            </param>
+        </node>
+        <node name="place1" prototype="corevector.place" x="1020" y="-560">
+            <param name="stamp">
+                <value>1</value>
+            </param>
+            <param name="expr">
+                <value>n=CNUM</value>
+            </param>
+        </node>
+        <node name="arc1" prototype="corevector.arc" x="290" y="-760">
+            <param name="width">
+                <expression>parent.width</expression>
+            </param>
+            <param name="height">
+                <expression>width</expression>
+            </param>
+            <param name="degrees">
+                <value>120.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.background</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.color</expression>
+            </param>
+            <param name="strokeWidth">
+                <expression>parent.strokeWidth</expression>
+            </param>
+        </node>
+        <node name="textpath1" prototype="corevector.textpath" x="460" y="-1020">
+            <param name="text">
+                <expression>parent.title</expression>
+            </param>
+            <param name="font">
+                <value>EurostileBold</value>
+            </param>
+            <param name="size">
+                <value>30.0</value>
+            </param>
+            <param name="y">
+                <expression>-parent.width / 2.0 - arc1.strokeWidth</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.color</expression>
+            </param>
+            <param name="stroke">
+                <expression>parent.color</expression>
+            </param>
+        </node>
+        <node name="align1" prototype="corevector.align" rendered="true" x="1300" y="-930">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="halign">
+                <value>center</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <conn input="merge4" output="transform1" port="shapes"/>
+        <conn input="merge4" output="place1" port="shapes"/>
+        <conn input="transform1" output="copy1" port="shape"/>
+        <conn input="transform2" output="polygon1" port="shape"/>
+        <conn input="copy1" output="arc1" port="shape"/>
+        <conn input="place1" output="textpath3" port="shape"/>
+        <conn input="place1" output="transform2" port="template"/>
+        <conn input="align1" output="merge4" port="shape"/>
+        <conn input="merge4" output="textpath1" port="shapes"/>
+    </node>
+    <node name="timeline" prototype="corevector.geonet" x="10" y="-820">
+        <port name="const"/>
+        <param name="height" type="float">
+            <value>2423.0</value>
+        </param>
+        <param name="x" type="float">
+            <value>-52.0</value>
+        </param>
+        <param name="color" type="color">
+            <value>#474747ff</value>
+        </param>
+        <param name="width" type="float">
+            <expression>WIDTH - 300</expression>
+        </param>
+        <param name="font" type="string" widget="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="y" type="float">
+            <value>172.0</value>
+        </param>
+        <param name="yearpx" type="float">
+            <expression>height / 25</expression>
+        </param>
+        <param name="filePeriods" type="string" widget="file">
+            <value>../data/cv/cv-experience.csv</value>
+        </param>
+        <param name="fileSpots" type="string" widget="file">
+            <value>../data/cv/cv-diploma.csv</value>
+        </param>
+        <param name="background" type="color">
+            <value>#eeecedff</value>
+        </param>
+        <node name="transform1" prototype="corevector.transform" x="180" y="-280">
+            <param name="ty">
+                <expression>-0.05 * parent.height</expression>
+            </param>
+        </node>
+        <node name="rect3" prototype="corevector.rect" x="-10" y="280">
+            <param name="width">
+                <expression>textpath1.size *10</expression>
+            </param>
+            <param name="height">
+                <expression>textpath1.size</expression>
+            </param>
+            <param name="fill">
+                <expression>parent.background</expression>
+            </param>
+        </node>
+        <node name="textonpath1" prototype="corevector.textonpath" x="390" y="-240">
+            <param name="text">
+                <value>timeline</value>
+            </param>
+            <param name="font">
+                <value>Avenir-Roman</value>
+            </param>
+            <param name="size">
+                <value>35.0</value>
+            </param>
+            <param name="start">
+                <value>198.0</value>
+            </param>
+            <param name="loop">
+                <value>0</value>
+            </param>
+            <param name="dy">
+                <value>10.0</value>
+            </param>
+            <param name="fill">
+                <expression>frame.stroke</expression>
+            </param>
+        </node>
+        <node name="place2" prototype="corevector.place" x="610" y="120"/>
+        <node name="place1" prototype="corevector.place" x="630" y="-50">
+            <param name="stamp">
+                <value>1</value>
+            </param>
+            <param name="expr">
+                <value>n=CNUM</value>
+            </param>
+        </node>
+        <node name="textpath1" prototype="corevector.textpath" x="40" y="-150">
+            <param name="text">
+                <expression>[1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013][resample1.points-1-stamp("n",0)]</expression>
+            </param>
+            <param name="font">
+                <expression>parent.font</expression>
+            </param>
+            <param name="size">
+                <value>39.0</value>
+            </param>
+            <param name="fill">
+                <value>#545454ff</value>
+            </param>
+            <param name="stroke">
+                <value>#fdfdfdff</value>
+            </param>
+        </node>
+        <node name="timespots" prototype="corevector.geonet" x="580" y="-310">
+            <port name="values"/>
+            <param name="color" type="color">
+                <value>#636363ff</value>
+            </param>
+            <param name="x" type="float">
+                <value>641.0</value>
+            </param>
+            <param name="y" type="float">
+                <expression>-1.0 *  line1.distance / 2.0</expression>
+            </param>
+            <param name="size" type="int">
+                <value>19</value>
+            </param>
+            <param min="2.0" name="points" type="int">
+                <value>4</value>
+            </param>
+            <param name="font" type="string" widget="font">
+                <value>EurostileRegular</value>
+            </param>
+            <param name="align" type="string" widget="menu">
+                <value>right</value>
+                <menu key="left">Left</menu>
+                <menu key="right">Right</menu>
+            </param>
+            <param name="yearpx" type="float">
+                <expression>parent.yearpx</expression>
+            </param>
+            <param name="file" type="string" widget="file">
+                <expression>parent.fileSpots</expression>
+            </param>
+            <param name="height" type="float">
+                <expression>parent.height</expression>
+            </param>
+            <node name="ellipse4" prototype="corevector.ellipse" x="1070" y="480">
+                <param name="x">
+                    <expression>parent.x</expression>
+                </param>
+                <param name="width">
+                    <value>50.0</value>
+                </param>
+                <param name="height">
+                    <expression>width</expression>
+                </param>
+                <param name="fill">
+                    <expression>parent.color</expression>
+                </param>
+                <param name="stroke">
+                    <expression>parent.color</expression>
+                </param>
+            </node>
+            <node name="dotline5" prototype="corevector.geonet" x="680" y="480">
+                <port name="catg"/>
+                <param name="x" type="float">
+                    <value>0.0</value>
+                </param>
+                <param name="y" type="float">
+                    <expression>-parent.height/2.0 - 200</expression>
+                </param>
+                <param name="distance" type="float">
+                    <expression>parent.height + 200</expression>
+                </param>
+                <param name="angle" type="float" widget="angle">
+                    <value>90.0</value>
+                </param>
+                <param name="color" type="color">
+                    <expression>hsb(parent.color.h,parent.color.s,parent.color.b, 0.1)</expression>
+                </param>
+                <node name="ellipse1" prototype="corevector.ellipse" x="-390" y="190">
+                    <param name="width">
+                        <value>1.0</value>
+                    </param>
+                    <param name="height">
+                        <expression>width</expression>
+                    </param>
+                    <param name="fill">
+                        <expression>parent.color</expression>
+                    </param>
+                </node>
+                <node name="place1" prototype="corevector.place" rendered="true" x="-180" y="230"/>
+                <node name="line1" prototype="corevector.line" x="-370" y="310">
+                    <param name="x">
+                        <expression>parent.x</expression>
+                    </param>
+                    <param name="y">
+                        <expression>parent.y</expression>
+                    </param>
+                    <param name="angle">
+                        <expression>parent.angle</expression>
+                    </param>
+                    <param name="distance">
+                        <expression>parent.distance</expression>
+                    </param>
+                    <param name="points">
+                        <expression>math.rint(distance/ellipse1.width)/2</expression>
+                    </param>
+                </node>
+                <conn input="place1" output="ellipse1" port="shape"/>
+                <conn input="place1" output="line1" port="template"/>
+            </node>
+            <node name="ellipse1" prototype="corevector.ellipse" x="440" y="80">
+                <param name="width">
+                    <expression>0.6 * star1.inner</expression>
+                </param>
+                <param name="height">
+                    <expression>width</expression>
+                </param>
+            </node>
+            <node name="textpath1" prototype="corevector.textpath" x="420" y="240">
+                <port name="dipl"/>
+                <param name="text">
+                    <expression>diploma.title</expression>
+                </param>
+                <param name="font">
+                    <value>EurostileBold</value>
+                </param>
+                <param name="size">
+                    <value>23.0</value>
+                </param>
+                <param name="align">
+                    <value>RIGHT</value>
+                </param>
+                <param name="x">
+                    <expression>parent.x - 1.0 * star1.outer/1.8</expression>
+                </param>
+                <param name="y">
+                    <expression>align1.y + star1.outer/4</expression>
+                </param>
+                <param name="fill">
+                    <expression>parent.color</expression>
+                </param>
+            </node>
+            <node name="align4" prototype="corevector.align" x="850" y="460">
+                <param name="x">
+                    <expression>parent.x</expression>
+                </param>
+                <param name="halign">
+                    <value>center</value>
+                </param>
+                <param name="valign">
+                    <value>none</value>
+                </param>
+            </node>
+            <node name="align1" prototype="corevector.align" x="770" y="10">
+                <param name="x">
+                    <expression>parent.x</expression>
+                </param>
+                <param name="y">
+                    <expression>parent.y + diploma.indexy * parent.yearpx</expression>
+                </param>
+                <param name="halign">
+                    <value>center</value>
+                </param>
+                <param name="valign">
+                    <value>middle</value>
+                </param>
+            </node>
+            <node name="star1" prototype="corevector.star" x="440" y="0">
+                <port name="dipl"/>
+                <param name="points">
+                    <expression>parent.points</expression>
+                </param>
+                <param name="outer">
+                    <expression>inner*1.5</expression>
+                </param>
+                <param name="inner">
+                    <expression>parent.size</expression>
+                </param>
+            </node>
+            <node name="textpath2" prototype="corevector.textpath" x="430" y="360">
+                <port name="dipl"/>
+                <param name="text">
+                    <expression>diploma.material</expression>
+                </param>
+                <param name="font">
+                    <expression>parent.font</expression>
+                </param>
+                <param name="size">
+                    <value>16.0</value>
+                </param>
+                <param name="align">
+                    <value>LEFT</value>
+                </param>
+                <param name="x">
+                    <expression>parent.x + 1.0 * star1.outer / 1.6</expression>
+                </param>
+                <param name="y">
+                    <expression>align1.y + star1.outer/5</expression>
+                </param>
+                <param name="fill">
+                    <expression>parent.color</expression>
+                </param>
+            </node>
+            <node name="diploma" prototype="corevector.null" x="160" y="240">
+                <param name="title" type="string" widget="text">
+                    <expression>stamp("dipl_value_3","title")</expression>
+                </param>
+                <param label="Indexy (years)" min="0.0" name="indexy" type="float">
+                    <expression>stamp("dipl_value_2",0)</expression>
+                </param>
+                <param name="material" type="string" widget="text">
+                    <expression>stamp("dipl_value_4",0)</expression>
+                </param>
+                <param name="index" type="int">
+                    <expression>stamp("dipl_row_index", 0)</expression>
+                </param>
+            </node>
+            <node name="align8" prototype="corevector.align" x="1290" y="390">
+                <param name="x">
+                    <expression>parent.x</expression>
+                </param>
+                <param name="y">
+                    <expression>dotline5.y</expression>
+                </param>
+                <param name="halign">
+                    <value>none</value>
+                </param>
+                <param name="valign">
+                    <value>middle</value>
+                </param>
+            </node>
+            <node name="merge7" prototype="corevector.merge" x="1190" y="550"/>
+            <node name="textpath6" prototype="corevector.textpath" x="990" y="590">
+                <param name="text">
+                    <value>Diplomas</value>
+                </param>
+                <param name="font">
+                    <expression>parent.font</expression>
+                </param>
+                <param name="size">
+                    <value>30.0</value>
+                </param>
+                <param name="x">
+                    <expression>parent.x</expression>
+                </param>
+                <param name="y">
+                    <expression>-ellipse4.width * 0.65</expression>
+                </param>
+                <param name="fill">
+                    <expression>parent.color</expression>
+                </param>
+            </node>
+            <node name="merge1" prototype="corevector.merge" x="980" y="90"/>
+            <node name="merge2" prototype="corevector.merge" rendered="true" x="1420" y="70"/>
+            <node name="dipl" prototype="corevector.datastamp" x="1190" y="40">
+                <param name="file">
+                    <expression>parent.file</expression>
+                </param>
+                <param name="tableName">
+                    <value>dipl</value>
+                </param>
+            </node>
+            <node name="merge3" prototype="corevector.merge" x="1170" y="210"/>
+            <node name="compound1" prototype="corevector.compound" x="600" y="20">
+                <param name="function">
+                    <value>subtracted</value>
+                </param>
+                <param name="fill">
+                    <expression>parent.color</expression>
+                </param>
+            </node>
+            <conn input="merge1" output="align1" port="shapes"/>
+            <conn input="merge1" output="textpath2" port="shapes"/>
+            <conn input="merge1" output="textpath1" port="shapes"/>
+            <conn input="compound1" output="star1" port="shape"/>
+            <conn input="compound1" output="ellipse1" port="shapeB"/>
+            <conn input="textpath1" output="diploma" port="dipl"/>
+            <conn input="star1" output="diploma" port="dipl"/>
+            <conn input="align4" output="dotline5" port="shape"/>
+            <conn input="align8" output="merge7" port="shape"/>
+            <conn input="merge7" output="ellipse4" port="shapes"/>
+            <conn input="merge7" output="textpath6" port="shapes"/>
+            <conn input="merge3" output="align4" port="shapes"/>
+            <conn input="merge3" output="align8" port="shapes"/>
+            <conn input="merge2" output="merge3" port="shapes"/>
+            <conn input="merge2" output="dipl" port="shapes"/>
+            <conn input="textpath2" output="diploma" port="dipl"/>
+            <conn input="align1" output="compound1" port="shape"/>
+            <conn input="dipl" output="merge1" port="shape"/>
+        </node>
+        <node name="align2" prototype="corevector.align" x="180" y="-30">
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="align1" prototype="corevector.align" rendered="true" x="1130" y="-210">
+            <param name="x">
+                <expression>parent.x</expression>
+            </param>
+            <param name="y">
+                <expression>parent.y</expression>
+            </param>
+            <param name="halign">
+                <value>center</value>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="timeperiods" prototype="corevector.geonet" x="750" y="-360">
+            <port name="parameters"/>
+            <param name="width" type="float">
+                <value>16.0</value>
+            </param>
+            <param name="x" type="float">
+                <value>-700.0</value>
+            </param>
+            <param name="y" type="float">
+                <expression>-1.0 *  line1.distance / 2.0</expression>
+            </param>
+            <param name="font" type="string" widget="font">
+                <value>EurostileRegular</value>
+            </param>
+            <param name="color1" type="color">
+                <value>#4091b8ff</value>
+            </param>
+            <param name="color2" type="color">
+                <value>#d09e47ff</value>
+            </param>
+            <param name="color3" type="color">
+                <value>#d05044ff</value>
+            </param>
+            <param name="color4" type="color">
+                <value>#abc255ff</value>
+            </param>
+            <param name="aligned" type="int" widget="toggle">
+                <value>0</value>
+            </param>
+            <param name="file" type="string" widget="file">
+                <expression>parent.filePeriods</expression>
+            </param>
+            <param name="yearpx" type="float">
+                <expression>parent.yearpx</expression>
+            </param>
+            <param name="height" type="float">
+                <expression>parent.height</expression>
+            </param>
+            <param name="offset" type="float">
+                <value>300.0</value>
+            </param>
+            <node name="ellipse4" prototype="corevector.ellipse" x="-60" y="-410">
+                <param name="width">
+                    <expression>0.7* ellipse3.width</expression>
+                </param>
+                <param name="height">
+                    <expression>width</expression>
+                </param>
+            </node>
+            <node name="dotline5" prototype="corevector.geonet" x="280" y="660">
+                <port name="catg"/>
+                <param name="x" type="float">
+                    <value>0.0</value>
+                </param>
+                <param name="y" type="float">
+                    <expression>-parent.height/2.0  - category.offsety</expression>
+                </param>
+                <param name="distance" type="float">
+                    <expression>parent.height + category.offsety</expression>
+                </param>
+                <param name="angle" type="float" widget="angle">
+                    <value>90.0</value>
+                </param>
+                <param name="color" type="color">
+                    <expression>category.color</expression>
+                </param>
+                <node name="ellipse1" prototype="corevector.ellipse" x="-390" y="190">
+                    <param name="width">
+                        <value>1.0</value>
+                    </param>
+                    <param name="height">
+                        <expression>width</expression>
+                    </param>
+                    <param name="fill">
+                        <expression>hsb(parent.color.h,parent.color.s,parent.color.b, 0.5) </expression>
+                    </param>
+                </node>
+                <node name="place1" prototype="corevector.place" rendered="true" x="-180" y="230"/>
+                <node name="line1" prototype="corevector.line" x="-370" y="310">
+                    <param name="x">
+                        <expression>parent.x</expression>
+                    </param>
+                    <param name="y">
+                        <expression>parent.y</expression>
+                    </param>
+                    <param name="angle">
+                        <expression>parent.angle</expression>
+                    </param>
+                    <param name="distance">
+                        <expression>parent.distance</expression>
+                    </param>
+                    <param name="points">
+                        <expression>math.rint(distance/ellipse1.width)/2</expression>
+                    </param>
+                </node>
+                <conn input="place1" output="ellipse1" port="shape"/>
+                <conn input="place1" output="line1" port="template"/>
+            </node>
+            <node name="ellipse3" prototype="corevector.ellipse" x="-60" y="-660">
+                <port name="expe"/>
+                <param name="width">
+                    <value>40.0</value>
+                </param>
+                <param name="height">
+                    <expression>width</expression>
+                </param>
+                <param name="fill">
+                    <expression>experience.color</expression>
+                </param>
+            </node>
+            <node name="ellipse1" prototype="corevector.ellipse" x="270" y="760">
+                <port name="catg"/>
+                <param name="y">
+                    <expression>-parent.height/2.0  - category.offsety</expression>
+                </param>
+                <param name="width">
+                    <expression>20 + category.duration * 5.0</expression>
+                </param>
+                <param name="height">
+                    <expression>width</expression>
+                </param>
+                <param name="fill">
+                    <expression>category.color</expression>
+                </param>
+            </node>
+            <node name="arc1" prototype="corevector.arc" x="-180" y="-10">
+                <port name="expe"/>
+                <param name="width">
+                    <expression>parent.width</expression>
+                </param>
+                <param name="height">
+                    <expression>width</expression>
+                </param>
+                <param name="degrees">
+                    <value>180.0</value>
+                </param>
+            </node>
+            <node name="textpath1" prototype="corevector.textpath" x="90" y="130">
+                <port name="expe"/>
+                <param name="text">
+                    <expression>experience.title</expression>
+                </param>
+                <param name="font">
+                    <value>EurostileBold</value>
+                </param>
+                <param name="align">
+                    <value>LEFT</value>
+                </param>
+            </node>
+            <node name="align4" prototype="corevector.align" x="630" y="640">
+                <param name="x">
+                    <expression>parent.x + 50 + parent.offset * category.id  + rect3.width / 2</expression>
+                </param>
+                <param name="y">
+                    <expression>0</expression>
+                </param>
+                <param name="halign">
+                    <value>center</value>
+                </param>
+                <param name="valign">
+                    <value>none</value>
+                </param>
+            </node>
+            <node name="align3" prototype="corevector.align" x="320" y="250">
+                <param name="x">
+                    <expression>rect3.width + textpath1.size</expression>
+                </param>
+                <param name="y">
+                    <expression>align2.y+ textpath1.size</expression>
+                </param>
+                <param name="valign">
+                    <value>top</value>
+                </param>
+            </node>
+            <node name="align2" prototype="corevector.align" x="310" y="100">
+                <param name="x">
+                    <expression>rect3.width</expression>
+                </param>
+                <param name="y">
+                    <expression>-rect3.height / 2.0</expression>
+                </param>
+                <param name="valign">
+                    <value>top</value>
+                </param>
+            </node>
+            <node name="align1" prototype="corevector.align" x="1000" y="-310">
+                <param name="x">
+                    <expression>parent.x  + 50 + parent.offset * experience.category </expression>
+                </param>
+                <param name="y">
+                    <expression>parent.y + experience.indexy * parent.yearpx</expression>
+                </param>
+                <param name="valign">
+                    <value>top</value>
+                </param>
+            </node>
+            <node name="align5" prototype="corevector.align" x="550" y="-310">
+                <param name="x">
+                    <expression>rect3.width</expression>
+                </param>
+                <param name="y">
+                    <expression>align2.y + 2.0 * textpath1.size</expression>
+                </param>
+                <param name="valign">
+                    <value>top</value>
+                </param>
+            </node>
+            <node name="expe" prototype="corevector.datastamp" x="1230" y="-340">
+                <param name="file">
+                    <expression>parent.file</expression>
+                </param>
+                <param name="tableName">
+                    <value>expe</value>
+                </param>
+            </node>
+            <node name="compound2" prototype="corevector.compound" x="340" y="-130">
+                <param name="fill">
+                    <expression>experience.color</expression>
+                </param>
+            </node>
+            <node name="experience" prototype="corevector.null" x="-320" y="400">
+                <param name="duration" type="float">
+                    <expression>stamp("expe_value_3",1)</expression>
+                </param>
+                <param name="title" type="string" widget="text">
+                    <expression>stamp("expe_value_5","title")</expression>
+                </param>
+                <param label="Index (years)" min="0.0" name="indexy" type="float">
+                    <expression>stamp("expe_value_4",0)</expression>
+                </param>
+                <param name="organization" type="string">
+                    <expression>stamp("expe_value_8","organization")</expression>
+                </param>
+                <param name="subtitle" type="string">
+                    <expression>stamp("expe_value_6","subtitle")</expression>
+                </param>
+                <param name="type" type="string">
+                    <expression>stamp("expe_value_7","type")</expression>
+                </param>
+                <param name="category" type="int">
+                    <expression>stamp("expe_value_9",1) - 1</expression>
+                </param>
+                <param name="index" type="int">
+                    <expression>stamp("expe_row_index",0)</expression>
+                </param>
+                <param name="fromDate" type="string">
+                    <expression>stamp("expe_value_1","?")</expression>
+                </param>
+                <param name="toDate" type="string">
+                    <expression>stamp("expe_value_2","?")</expression>
+                </param>
+                <param name="description" type="string" widget="text">
+                    <expression>stamp("expe_value_10","?")</expression>
+                </param>
+                <param name="tags" type="string">
+                    <expression>stamp("expe_value_12","?")</expression>
+                </param>
+                <param name="missions" type="string">
+                    <expression>stamp("expe_value_11","")</expression>
+                </param>
+                <param name="color" type="color">
+                    <expression>[parent.color1, parent.color2, parent.color3, parent.color4][category]</expression>
+                </param>
+                <param name="ntags" type="int">
+                    <expression>experience.tags.split(" ").length</expression>
+                </param>
+            </node>
+            <node name="fit2" prototype="corevector.fit" x="640" y="350"/>
+            <node name="fit1" prototype="corevector.fit" x="120" y="-460"/>
+            <node name="transform1" prototype="corevector.transform" x="310" y="380">
+                <param name="r">
+                    <value>-90.0</value>
+                </param>
+            </node>
+            <node name="rect3" prototype="corevector.rect" x="110" y="-10">
+                <port name="expe"/>
+                <param name="width">
+                    <expression>parent.width</expression>
+                </param>
+                <param name="height">
+                    <expression>experience.duration * parent.yearpx - width</expression>
+                </param>
+            </node>
+            <node name="transform2" prototype="corevector.transform" x="-40" y="-150">
+                <param name="ty">
+                    <expression>-1.0 * rect3.height / 2.0 </expression>
+                </param>
+            </node>
+            <node name="copy1" prototype="corevector.copy" x="470" y="-460">
+                <param name="copies">
+                    <expression>experience.ntags</expression>
+                </param>
+                <param name="tx">
+                    <expression>ellipse3.width + 1</expression>
+                </param>
+                <param name="stamp">
+                    <value>1</value>
+                </param>
+                <param name="expr">
+                    <value>n=CNUM</value>
+                </param>
+            </node>
+            <node name="copy2" prototype="corevector.copy" x="120" y="-160">
+                <param name="copies">
+                    <value>2</value>
+                </param>
+                <param name="order">
+                    <value>trs</value>
+                </param>
+                <param name="r">
+                    <value>180.0</value>
+                </param>
+            </node>
+            <node name="merge4" prototype="corevector.merge" x="870" y="690"/>
+            <node name="textpath2" prototype="corevector.textpath" x="110" y="250">
+                <port name="expe"/>
+                <param name="text">
+                    <expression>experience.subtitle +   experience.type + " - " + experience.organization</expression>
+                </param>
+                <param name="font">
+                    <expression>parent.font</expression>
+                </param>
+                <param name="size">
+                    <value>19.0</value>
+                </param>
+                <param name="align">
+                    <value>LEFT</value>
+                </param>
+            </node>
+            <node name="textpath3" prototype="corevector.textpath" x="440" y="890">
+                <port name="catg"/>
+                <param name="text">
+                    <expression>math.round(category.duration) + " years - " + category.name</expression>
+                </param>
+                <param name="font">
+                    <value>EurostileRegular</value>
+                </param>
+                <param name="size">
+                    <value>33.0</value>
+                </param>
+                <param name="align">
+                    <value>LEFT</value>
+                </param>
+                <param name="x">
+                    <expression>parent.x + 50 + parent.offset * category.id  + ellipse1.width</expression>
+                </param>
+                <param name="y">
+                    <expression>-parent.height/2.0  - category.offsety - 25</expression>
+                </param>
+            </node>
+            <node name="merge5" prototype="corevector.merge" x="780" y="-280"/>
+            <node name="textpath4" prototype="corevector.textpath" x="-80" y="-510">
+                <port name="expe"/>
+                <param name="_code">
+                    <value type="python"><![CDATA[from nodebox.graphics import Path, Text
+
+def cook(self):
+    tags = self.tags.rsplit(' ')
+    n = len(tags)
+    txt = '%s %i %i' % (tags[0], n, self.i)
+    if n >  0:
+        k = self.i
+        txt = '%s' % (tags[self.i:self.i+1])   
+        txt = txt.strip('[]u\' ')
+        if len(txt) > 6:
+            txt = txt[:4] + "\n" + txt[4:]
+    t = Text(txt, self.x, self.y, self.width, self.height)
+    t.fontName = self.font
+    t.fontSize = self.size
+    
+    
+    # valueOf requires a correct value: LEFT, CENTER, RIGHT or JUSTIFY. Anything else will
+    # make it crash. If users start doing crazy things and change the alignment, at least
+    # make sure you catch the error.
+    try:
+        t.align = Text.Align.valueOf(self.align)
+    except:
+        pass
+    p = t.path
+    p.fillColor = self.fill
+    if self.strokeWidth > 0:
+        p.strokeColor = self.stroke
+        p.strokeWidth = self.strokeWidth
+    else:
+        p.strokeColor = None
+    return p.asGeometry()]]></value>
+                </param>
+                <param name="font">
+                    <expression>parent.font</expression>
+                </param>
+                <param name="size">
+                    <value>19.0</value>
+                </param>
+                <param name="fill">
+                    <value>#ffffffff</value>
+                </param>
+                <param name="i" type="int">
+                    <expression>stamp("n", 0)</expression>
+                </param>
+                <param name="tags" type="string">
+                    <expression>experience.tags</expression>
+                </param>
+            </node>
+            <node name="merge6" prototype="corevector.merge" x="280" y="-560"/>
+            <node name="category" prototype="corevector.null" x="10" y="820">
+                <param name="id" type="int">
+                    <expression>stamp("catg_value_0",1) - 1</expression>
+                </param>
+                <param name="name" type="string">
+                    <expression>stamp("catg_value_1","?")</expression>
+                </param>
+                <param name="duration" type="float">
+                    <expression>stamp("catg_value_2",1)</expression>
+                </param>
+                <param name="offsety" type="float">
+                    <expression>[250,200,150,100][id]</expression>
+                </param>
+                <param name="color" type="color">
+                    <expression>[parent.color1, parent.color2, parent.color3, parent.color4][id]</expression>
+                </param>
+            </node>
+            <node name="merge7" prototype="corevector.merge" x="490" y="120"/>
+            <node name="textpath5" prototype="corevector.textpath" x="110" y="380">
+                <port name="expe"/>
+                <param name="text">
+                    <expression>experience.fromDate.split('/')[0] + "." + experience.fromDate.split('/')[2] + " &gt; " + experience.toDate.split('/')[0] + "." + experience.toDate.split('/')[2]</expression>
+                </param>
+                <param name="font">
+                    <value>EurostileRegular</value>
+                </param>
+                <param name="size">
+                    <value>20.0</value>
+                </param>
+                <param name="align">
+                    <value>LEFT</value>
+                </param>
+                <param name="x">
+                    <value>6.0</value>
+                </param>
+                <param name="fill">
+                    <value>#363636ff</value>
+                </param>
+            </node>
+            <node name="merge1" prototype="corevector.merge" x="660" y="-20"/>
+            <node name="merge2" prototype="corevector.merge" rendered="true" x="1510" y="-250"/>
+            <node name="merge3" prototype="corevector.merge" x="460" y="690"/>
+            <node name="filter1" prototype="corevector.filter" x="610" y="-230">
+                <param name="_code">
+                    <value type="python"><![CDATA[# This node serves as a template for writing your own vector filters.
+# Read the code in cook() and replace it with your own.
+
+def cook(self):
+    if self.n == 1:
+        return None
+    # Replace the code below
+    # Check if a shape is connected.
+    if self.shape is None: return None
+    # If you're changing the shape, make sure to clone it.
+    #new_shape = self.shape.clone()
+    # Do something with the cloned copy.
+    #new_shape.rotate(45)
+    # Return the transformed shape.
+    #return new_shape
+    return self.shape]]></value>
+                </param>
+                <param name="n" type="int">
+                    <expression>experience.ntags</expression>
+                </param>
+            </node>
+            <node name="categories" prototype="corevector.datastamp" x="1070" y="730">
+                <param name="file">
+                    <value>../data/cv/cv-categories.csv</value>
+                </param>
+                <param name="tableName">
+                    <value>catg</value>
+                </param>
+            </node>
+            <conn input="merge2" output="categories" port="shapes"/>
+            <conn input="merge2" output="expe" port="shapes"/>
+            <conn input="transform2" output="arc1" port="shape"/>
+            <conn input="rect3" output="experience" port="expe"/>
+            <conn input="copy2" output="transform2" port="shape"/>
+            <conn input="arc1" output="experience" port="expe"/>
+            <conn input="textpath1" output="experience" port="expe"/>
+            <conn input="textpath2" output="experience" port="expe"/>
+            <conn input="merge1" output="compound2" port="shapes"/>
+            <conn input="compound2" output="copy2" port="shape"/>
+            <conn input="align4" output="merge3" port="shape"/>
+            <conn input="merge3" output="dotline5" port="shapes"/>
+            <conn input="merge3" output="ellipse1" port="shapes"/>
+            <conn input="merge4" output="align4" port="shapes"/>
+            <conn input="textpath3" output="category" port="catg"/>
+            <conn input="categories" output="merge4" port="shape"/>
+            <conn input="merge4" output="textpath3" port="shapes"/>
+            <conn input="dotline5" output="category" port="catg"/>
+            <conn input="ellipse1" output="category" port="catg"/>
+            <conn input="merge6" output="ellipse3" port="shapes"/>
+            <conn input="merge6" output="fit1" port="shapes"/>
+            <conn input="copy1" output="merge6" port="shape"/>
+            <conn input="fit1" output="textpath4" port="shape"/>
+            <conn input="fit1" output="ellipse4" port="template"/>
+            <conn input="textpath4" output="experience" port="expe"/>
+            <conn input="ellipse3" output="experience" port="expe"/>
+            <conn input="align1" output="merge5" port="shape"/>
+            <conn input="expe" output="align1" port="shape"/>
+            <conn input="align2" output="textpath1" port="shape"/>
+            <conn input="align3" output="textpath2" port="shape"/>
+            <conn input="merge7" output="align2" port="shapes"/>
+            <conn input="merge7" output="align3" port="shapes"/>
+            <conn input="merge1" output="merge7" port="shapes"/>
+            <conn input="merge5" output="merge1" port="shapes"/>
+            <conn input="align5" output="copy1" port="shape"/>
+            <conn input="textpath5" output="experience" port="expe"/>
+            <conn input="filter1" output="align5" port="shape"/>
+            <conn input="merge5" output="filter1" port="shapes"/>
+            <conn input="transform1" output="textpath5" port="shape"/>
+            <conn input="compound2" output="rect3" port="shapeB"/>
+            <conn input="fit2" output="transform1" port="shape"/>
+            <conn input="fit2" output="rect3" port="template"/>
+            <conn input="merge5" output="fit2" port="shapes"/>
+        </node>
+        <node name="align5" prototype="corevector.align" x="260" y="-140">
+            <param name="x">
+                <expression>-parent.width / 2.0 + 50</expression>
+            </param>
+            <param name="valign">
+                <value>middle</value>
+            </param>
+        </node>
+        <node name="frame" prototype="corevector.rect" x="0" y="-290">
+            <param name="width">
+                <expression>parent.width</expression>
+            </param>
+            <param name="height">
+                <expression>1.2 * parent.height</expression>
+            </param>
+            <param name="rx">
+                <value>20.0</value>
+            </param>
+            <param name="ry">
+                <value>20.0</value>
+            </param>
+            <param name="fill">
+                <expression>parent.background</expression>
+            </param>
+            <param name="stroke">
+                <value>#6b6b6bff</value>
+            </param>
+        </node>
+        <node name="resample1" prototype="corevector.resample" x="340" y="-30">
+            <param name="method">
+                <value>amount</value>
+            </param>
+            <param name="points">
+                <value>26</value>
+            </param>
+        </node>
+        <node name="merge1" prototype="corevector.merge" x="1040" y="80"/>
+        <node name="merge2" prototype="corevector.merge" x="400" y="170"/>
+        <node name="line1" prototype="corevector.line" x="-10" y="-20">
+            <param name="angle">
+                <value>90.0</value>
+            </param>
+            <param name="distance">
+                <expression>parent.height</expression>
+            </param>
+            <param name="stroke">
+                <value>#d80000ff</value>
+            </param>
+            <param name="strokeWidth">
+                <value>2.0</value>
+            </param>
+        </node>
+        <node name="rect4" prototype="corevector.rect" x="120" y="120">
+            <param name="width">
+                <expression>parent.width - frame.strokeWidth</expression>
+            </param>
+            <param name="height">
+                <value>1.0</value>
+            </param>
+            <param name="fill">
+                <value>#0000002b</value>
+            </param>
+        </node>
+        <node name="fit1" prototype="corevector.fit" x="250" y="280">
+            <param name="x">
+                <expression>-parent.width / 2.0 +100</expression>
+            </param>
+            <param name="width">
+                <value>116.0</value>
+            </param>
+            <param name="height">
+                <expression>textpath1.size</expression>
+            </param>
+            <param name="keepProportions">
+                <value>0</value>
+            </param>
+        </node>
+        <conn input="merge1" output="textonpath1" port="shapes"/>
+        <conn input="merge1" output="place2" port="shapes"/>
+        <conn input="merge1" output="timespots" port="shapes"/>
+        <conn input="merge1" output="timeperiods" port="shapes"/>
+        <conn input="merge1" output="place1" port="shapes"/>
+        <conn input="place2" output="resample1" port="template"/>
+        <conn input="place1" output="resample1" port="template"/>
+        <conn input="align2" output="line1" port="shape"/>
+        <conn input="align5" output="textpath1" port="shape"/>
+        <conn input="resample1" output="align2" port="shape"/>
+        <conn input="place1" output="align5" port="shape"/>
+        <conn input="align1" output="merge1" port="shape"/>
+        <conn input="transform1" output="frame" port="shape"/>
+        <conn input="textonpath1" output="transform1" port="shape"/>
+        <conn input="merge2" output="rect4" port="shapes"/>
+        <conn input="merge2" output="fit1" port="shapes"/>
+        <conn input="place2" output="merge2" port="shape"/>
+        <conn input="fit1" output="rect3" port="shape"/>
+    </node>
+    <node name="title" prototype="corevector.textpath" x="-450" y="-1120">
+        <param name="text">
+            <value>Gilbert Perrin</value>
+        </param>
+        <param name="font">
+            <value>EurostileRegular</value>
+        </param>
+        <param name="size">
+            <value>101.0</value>
+        </param>
+        <param name="align">
+            <value>LEFT</value>
+        </param>
+        <param name="x">
+            <value>9.0</value>
+        </param>
+        <param name="fill">
+            <value>#414141ff</value>
+        </param>
+    </node>
+    <node name="transform1" prototype="corevector.transform" x="1370" y="-810">
+        <param name="_code">
+            <value type="python"><![CDATA[from nodebox.graphics import Transform
+
+def cook(self):
+    if self.shape is None: return None
+    t = Transform()
+    # Each letter of the order describes an operation.
+    for op in self.order:
+        if op == 't':
+            t.translate(self.tx, self.ty)
+        elif op == 'r':
+           #if self.r == 180.0:
+           #    t.rotate(40)
+           # elif (self.r > 90.0) & (self.r < 180.0):
+           #     t.rotate(self.r - 180.0) 
+           # elif (self.r < 270.0) & (self.r > 180.0):
+           #     t.rotate(self.r - 180.0)
+           #else:
+               t.rotate(self.r)
+        elif op == 's':
+            t.scale(self.sx / 100, self.sy / 100)
+    # Transform.map clones and transforms the geometry.
+    return t.map(self.shape)]]></value>
+        </param>
+        <param name="r">
+            <expression>360.0 * (stamp("data_row_index", 0) / stamp("data_row_count", 0))</expression>
+        </param>
+    </node>
+    <node name="transform2" prototype="corevector.transform" x="690" y="-1010">
+        <param name="tx">
+            <value>-48.0</value>
+        </param>
+    </node>
+    <node name="transform3" prototype="corevector.transform" x="1370" y="-650">
+        <param name="_code">
+            <value type="python"><![CDATA[from nodebox.graphics import Transform
+
+def cook(self):
+    if self.shape is None: return None
+    t = Transform()
+    # Each letter of the order describes an operation.
+    for op in self.order:
+        if op == 't':
+            t.translate(self.tx, self.ty)
+        elif op == 'r':
+           # if self.r == 180.0:
+            #    t.rotate(0.0)
+           # elif (self.r > 90.0) & (self.r < 180.0):
+           #     t.rotate(self.r - 180.0) 
+           # elif (self.r < 270.0) & (self.r > 180.0):
+           #     t.rotate(self.r - 180.0)
+           # else:
+           t.rotate(self.r)
+        elif op == 's':
+            t.scale(self.sx / 100, self.sy / 100)
+    # Transform.map clones and transforms the geometry.
+    return t.map(self.shape)]]></value>
+        </param>
+        <param name="r">
+            <expression>360.0 * (stamp("data_row_index", 0) / stamp("data_row_count", 0))</expression>
+        </param>
+    </node>
+    <conn input="merge2" output="timeline" port="shapes"/>
+    <conn input="merge2" output="footer" port="shapes"/>
+    <conn input="merge2" output="textonpath1" port="shapes"/>
+    <conn input="merge2" output="align4" port="shapes"/>
+    <conn input="merge1" output="ellipse2" port="shapes"/>
+    <conn input="resample1" output="ellipse1" port="shape"/>
+    <conn input="acronyms" output="resample1" port="template"/>
+    <conn input="align1" output="merge1" port="shape"/>
+    <conn input="merge1" output="acronyms" port="shapes"/>
+    <conn input="merge1" output="textpath2" port="shapes"/>
+    <conn input="transform1" output="textpath1" port="shape"/>
+    <conn input="merge3" output="transform1" port="shapes"/>
+    <conn input="acronyms" output="merge3" port="shape"/>
+    <conn input="merge3" output="transform3" port="shapes"/>
+    <conn input="transform3" output="align2" port="shape"/>
+    <conn input="align2" output="rect2" port="shape"/>
+    <conn input="merge4" output="infobar" port="shapes"/>
+    <conn input="merge4" output="title" port="shapes"/>
+    <conn input="align4" output="merge4" port="shape"/>
+    <conn input="textonpath1" output="frame" port="shape"/>
+    <conn input="merge4" output="dotline4" port="shapes"/>
+    <conn input="merge5" output="barchart1" port="shapes"/>
+    <conn input="merge5" output="barchart" port="shapes"/>
+    <conn input="merge5" output="threegram" port="shapes"/>
+    <conn input="transform2" output="merge5" port="shape"/>
+    <conn input="merge2" output="transform2" port="shapes"/>
+    <conn input="merge5" output="connect" port="shapes"/>
+</ndbx>

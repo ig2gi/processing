@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="1.0" type="file">
+    <link href="java:nodebox.function.MathFunctions" rel="functions"/>
+    <link href="java:nodebox.function.StringFunctions" rel="functions"/>
+    <link href="java:nodebox.function.ColorFunctions" rel="functions"/>
+    <link href="java:nodebox.function.ListFunctions" rel="functions"/>
+    <link href="java:nodebox.function.DataFunctions" rel="functions"/>
+    <link href="python:libraries/corevector/corevector.py" rel="functions"/>
+    <link href="python:libraries/l_system/l_system.py" rel="functions"/>
+    <link href="python:libraries/packing/packing.py" rel="functions"/>
+    <node name="root" renderedChild="colorize1">
+        <node name="colorize1" position="620.00,80.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#9b9b9bff"/>
+            <port name="strokeWidth" type="float" value="2.0"/>
+        </node>
+        <node name="import_svg1" position="480.00,180.00" prototype="corevector.import_svg">
+            <port name="file" type="string" value="../data/men.svg"/>
+            <port name="position" type="point" value="-2.00,0.00"/>
+        </node>
+        <conn input="colorize1.shape" output="import_svg1"/>
+    </node>
+</ndbx>
