@@ -1,4 +1,4 @@
-art_graph
+processing
 =========
 
-Artistic Processing Images
+Visualizing Data and Artistic Processing Images
