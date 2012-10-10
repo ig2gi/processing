@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="1.0" type="file">
+    <link href="java:nodebox.function.MathFunctions" rel="functions"/>
+    <link href="java:nodebox.function.StringFunctions" rel="functions"/>
+    <link href="java:nodebox.function.ColorFunctions" rel="functions"/>
+    <link href="java:nodebox.function.ListFunctions" rel="functions"/>
+    <link href="java:nodebox.function.DataFunctions" rel="functions"/>
+    <link href="python:libraries/corevector/corevector.py" rel="functions"/>
+    <link href="python:libraries/l_system/l_system.py" rel="functions"/>
+    <link href="python:libraries/packing/packing.py" rel="functions"/>
+    <node name="root" renderedChild="translate1">
+        <node name="align1" position="780.00,360.00" prototype="corevector.align">
+            <port name="halign" type="string" value="left"/>
+        </node>
+        <node name="angle" position="660.00,120.00" prototype="math.multiply">
+            <port name="value2" type="float" value="360.0"/>
+        </node>
+        <node name="angle1" position="720.00,40.00" prototype="math.multiply">
+            <port name="value2" type="float" value="360.0"/>
+        </node>
+        <node name="code" position="320.00,260.00" prototype="data.lookup">
+            <port name="key" type="string" value="code"/>
+        </node>
+        <node name="codenumber" position="420.00,260.00" prototype="math.to_integer"/>
+        <node name="compound1" position="660.00,440.00" prototype="corevector.compound"/>
+        <node name="coordinates1" position="860.00,120.00" prototype="math.coordinates">
+            <port name="distance" type="float" value="1500.0"/>
+        </node>
+        <node position="320.00,160.00" prototype="list.count"/>
+        <node name="divide1" position="480.00,80.00" prototype="math.divide">
+            <port name="value2" type="float" value="382.0"/>
+        </node>
+        <node name="e" position="300.00,360.00" prototype="data.lookup">
+            <port name="key" type="string" value="e"/>
+        </node>
+        <node name="enumbers" position="60.00,100.00" prototype="data.import_csv">
+            <port name="file" type="string" value="enumbers.csv"/>
+        </node>
+        <node name="id" position="320.00,60.00" prototype="data.lookup">
+            <port name="key" type="string" value="id"/>
+        </node>
+        <node name="names" position="320.00,540.00" prototype="data.lookup">
+            <port name="key" type="string" value="names"/>
+        </node>
+        <node name="negate1" position="580.00,40.00" prototype="math.negate"/>
+        <node name="rotate1" position="840.00,260.00" prototype="corevector.rotate"/>
+        <node name="textpath1" position="560.00,340.00" prototype="corevector.textpath">
+            <port name="font_name" type="string" value="Eurostile"/>
+            <port name="align" type="string" value="LEFT"/>
+        </node>
+        <node name="textpath2" position="560.00,540.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="E"/>
+            <port name="font_name" type="string" value="Eurostile"/>
+            <port name="align" type="string" value="RIGHT"/>
+        </node>
+        <node name="translate1" position="960.00,260.00" prototype="corevector.translate"/>
+        <node name="type" position="320.00,440.00" prototype="data.lookup">
+            <port name="key" type="string" value="type"/>
+        </node>
+        <conn input="id.list" output="enumbers"/>
+        <conn input="code.list" output="enumbers"/>
+        <conn input="names.list" output="enumbers"/>
+        <conn input="type.list" output="enumbers"/>
+        <conn input="divide1.value1" output="id"/>
+        <conn input="count.list" output="enumbers"/>
+        <conn input="translate1.translate" output="coordinates1"/>
+        <conn input="translate1.shape" output="rotate1"/>
+        <conn input="negate1.value" output="divide1"/>
+        <conn input="angle.value1" output="negate1"/>
+        <conn input="rotate1.shape" output="align1"/>
+        <conn input="angle1.value1" output="negate1"/>
+        <conn input="coordinates1.angle" output="angle1"/>
+        <conn input="rotate1.angle" output="angle"/>
+        <conn input="e.list" output="enumbers"/>
+        <conn input="textpath2.text" output="e"/>
+        <conn input="compound1.shape1" output="textpath1"/>
+        <conn input="compound1.shape2" output="textpath2"/>
+        <conn input="align1.shape" output="compound1"/>
+        <conn input="codenumber.value" output="code"/>
+        <conn input="textpath1.text" output="codenumber"/>
+    </node>
+</ndbx>

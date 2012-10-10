@@ -1,0 +1,383 @@
+id,e,code,scode,type,names
+1,E,100,,C,Curcumin
+2,E,101,,C,Riboflavin (Vitamin B2)
+3,E,101,a,C,Riboflavin-5'-Phosphate 
+4,E,102,,C!,Tartrazine
+5,E,103,,C,Chrysoine Resorcinol
+6,E,104,,C!,Quinoline Yellow
+7,E,105,,C,Fast Yellow AB
+8,E,106,,C,Riboflavin-5-Sodium Phosphate
+9,E,107,,C!,Yellow 2G
+10,E,110,,C!,Sunset Yellow FCF*Orange Yellow S
+11,E,111,,C,Orange GGN
+12,E,120,,C!,Cochineal*Carminic acid*Carmines
+13,E,121,,C,Orcein*Orchil
+14,E,122,,C!,Carmoisine*Azorubine
+15,E,123,,C!,Amaranth
+16,E,124,,C!,Ponceau 4R*Cochineal Red A
+17,E,125,,C,Scarlet GN
+18,E,126,,C,Ponceau 6R
+19,E,127,,C!,E ythrosine
+20,E,128,,C!,Red 2G
+21,E,129,,C!,Allura Red AC
+22,E,130,,C,Indanthrene blue RS
+23,E,131,,C!,Patent Blue V
+24,E,132,,C!,Indigo carmine*Indigotine
+25,E,133,,C!,Brilliant Blue FCF
+26,E,140,,C,Chlorophylls and Chlorophyllins
+27,E,141,,C,Copper complexes of E 140
+28,E,142,,C!,Greens S
+29,E,150,a,C,Plain Caramel 
+30,E,150,b,C,Caustic sulphite caramel 
+31,E,150,c,C,Ammonia caramel 
+32,E,150,d,C,Sulphite ammonia caramel 
+33,E,151,,C!,Black PN*Brilliant Black BN
+34,E,152,,C!,Black 7984
+35,E,153,,C,Carbon black*Vegetable carbon
+36,E,154,,C!,Brown FK*Kipper Brown
+37,E,155,,C!,Brown HT*Chocolate brown HT
+38,E,160,a,C,$\alpha$-carotene*$\beta$-carotene*$\gamma$-carotene
+39,E,160,b,C!,Annatto*bixin*norbixin
+40,E,160,c,C,Capsanthin*capsorubin*Paprika extract
+41,E,160,d,C,Lycopene 
+42,E,160,e,C,Beta-apo-8'-carotenal
+43,E,160,f,C,Ethyl ester of beta-apo-8'-carotenic acid
+44,E,161,a,C,Flavoxanthin
+45,E,161,b,C,Lutein
+46,E,161,c,C,Cryptoaxanthin 
+47,E,161,d,C,Rubixanthin
+48,E,161,e,C,Violaxanthin
+49,E,161,f,C,Rhodoxanthin
+50,E,161,g,C,Canthaxanthin
+51,E,162,,C,Beetroot Red*Betanin
+52,E,163,,C,Anthocyanins
+53,E,170,,C,Calcium carbonate
+54,E,171,,C,Titanium dioxide
+55,E,172,,C,Iron oxides and hydroxides
+56,E,173,,C,Aluminium
+57,E,174,,C,Silver
+58,E,175,,C,Gold
+59,E,180,,C,Pigment Rubine*Lithol Rubine BK
+60,E,181,,C,Tannin
+61,E,200,,P,Sorbic acid
+62,E,201,,P,Sodium sorbate
+63,E,202,,P,Potassium sorbate
+64,E,203,,P,Calcium sorbate
+65,E,210,,P!,Benzoic acid
+66,E,211,,P!,Sodium benzoate
+67,E,212,,P!,Potassium benzoate
+68,E,213,,P!,Calcium benzoate
+69,E,214,,P!,Ethyl para-hydroxybenzoate
+70,E,215,,P!,Sodium ethyl para-hydroxybenzoate
+71,E,216,,P!,Propyl para-hydroxybenzoate
+72,E,217,,P!,Sodium propyl para-hydroxybenzoate
+73,E,218,,P!,Methyl para-hydroxybenzoate
+74,E,219,,P!,Sodium methyl para-hydroxybenzoate
+75,E,220,,P!,Sulphur dioxide
+76,E,221,,P!,Sodium sulphite
+77,E,222,,P!,Sodium hydrogen sulphite
+78,E,223,,P!,Sodium metabisulphite
+79,E,224,,P!,Potassium metabisulphite
+80,E,225,,P!,Sodium sulphite
+81,E,226,,P!,Calcium sulphite
+82,E,227,,P!,Calcium hydrogen sulphite
+83,E,228,,P!,Potassium hydrogen sulphite
+84,E,230,,P,Biphenyl*diphenyl
+85,E,231,,P,Orthophenyl phenol
+86,E,232,,P,Sodium orthophenyl phenol
+87,E,233,,P,Thiabendazole
+88,E,234,,P,Nisin
+89,E,235,,P,Natamycin*Pimaracin
+90,E,236,,P,Formic acid
+91,E,237,,P,Sodium formiate
+92,E,238,,P,Calcium formiate
+93,E,239,,P,Hexamethylene tetramine*Hexamine
+94,E,240,,P,Formaldehyde
+95,E,242,,P,Dimethyl dicarbonate
+96,E,249,,P,Potassium nitrite
+97,E,250,,P,Sodium nitrite
+98,E,251,,P,Sodium nitrate*saltpetre
+99,E,252,,P,Potassium nitrate (Saltpetre)
+100,E,260,,AP,Acetic acid
+101,E,261,,AP,Potassium acetate
+102,E,262,,AP,Sodium acetates
+103,E,263,,AP,Calcium acetate
+104,E,264,,P,Ammonium acetate
+105,E,270,,OP,Lactic acid
+106,E,280,,P,Propionic acid
+107,E,281,,P,Sodium propionate
+108,E,282,,P!,Calcium propionate
+109,E,283,,P,Potassium propionate
+110,E,284,,P,Boric acid
+111,E,285,,P,Sodium tetraborate (borax)
+112,E,290,,A,Carbon dioxide
+113,E,296,,A,Malic acid
+114,E,297,,A,Fumaric acid
+115,E,300,,O,Ascorbic acid (Vitamin C)
+116,E,301,,O,Sodium ascorbate
+117,E,302,,O,Calcium ascorbate
+118,E,303,,O,Potassium ascorbate
+119,E,304,,O,Fatty acid esters of ascorbic acid
+120,E,306,,O,Tocopherol-rich extract (natural) 
+121,E,307,,O,$\alpha$-tocopherol (synth) 
+122,E,308,,O,$\gamma$-tocopherol (synth) 
+123,E,309,,O,$\delta$-tocopherol (synth) 
+124,E,310,,O!,Propyl gallate
+125,E,311,,O!,Octyl gallate
+126,E,312,,O!,Dodecyl gallate
+127,E,315,,O,Erythorbic acid
+128,E,316,,O,Sodium erythorbate
+129,E,317,,O,Erythorbic acid
+130,E,318,,O,Sodium erythorbin
+131,E,319,,O,Butylhydroxinon
+132,E,320,,O,Butylated hydroxyanisole (BHA)
+133,E,321,,O!,Butylated hydroxytoluene (BHT)
+134,E,322,,,Lecithin
+135,E,325,,O,Sodium lactate
+136,E,326,,AO,Potassium lactate
+137,E,327,,O,Calcium lactate
+138,E,328,,.,Potassium lactate
+139,E,329,,O,Magnesium lactate
+140,E,330,,O,Citric acid
+141,E,331,,O,Sodium citrates
+142,E,332,,O,Potassium citrates
+143,E,333,,AO,Calcium citrates
+144,E,334,,O,Tartaric acid (L(+)-)
+145,E,335,,O,Sodium tartrates
+146,E,336,,O,Potassium tartrates
+147,E,337,,O,Sodium potassium tartrate
+148,E,338,,O,Phosphoric acid
+149,E,339,,O,Sodium phosphates
+150,E,340,,O,Potassium phosphates
+151,E,341,,,Calcium phosphates
+152,E,343,,,Magnesium phosphates
+153,E,350,,A,Sodium malates
+154,E,351,,A,Potassium malate
+155,E,352,,,Calcium malates
+156,E,353,,E,Metatartaric acid
+157,E,354,,E,Calcium tartrate
+158,E,355,,,Adipic acid 
+159,E,356,,,Sodium adipate 
+160,E,357,,,Potassium adipate 
+161,E,363,,,Succinic acid
+162,E,365,,,Sodium fumarate
+163,E,366,,,Potassium fumarate
+164,E,367,,,Calcium fumarate
+165,E,370,,,I*4-Heptonolactone
+166,E,375,,!,Nicotinic acid*Niacin*Nicotinamide
+167,E,380,,,Triammonium citrate 
+168,E,381,,,Ammoniumferrocitrate
+169,E,385,,,Calcium disodium ethylene diamine tetra-acetate
+170,E,400,,E T,Alginic acid
+171,E,401,,E T,Sodium alginate
+172,E,402,,E T,Potassium alginate
+173,E,403,,E T,Ammonium alginate
+174,E,404,,E T,Calcium alginate
+175,E,405,,E T,Propane-1*2-diol alginate
+176,E,406,,T,Agar 
+177,E,407,,ET!,Carrageenan
+178,E,407,a,ET,Processed eucheuma seaweed
+179,E,408,,.,Furcellaran
+180,E,410,,ET,Locust bean gum (Carob gum)
+181,E,412,,ET,Guar gum 
+182,E,413,,ET!,Tragacanth
+183,E,414,,ET!,Acacia gum (gum arabic)
+184,E,415,,ET,Xanthan gum
+185,E,416,,ET!,Karaya gum
+186,E,417,,ET,Tara gum
+187,E,418,,ET,Gellan gum
+188,E,420,,ES,Sorbitol or sorbitol syrup
+189,E,421,,KS,Mannitol
+190,E,422,,ES,Glycerol
+191,E,425,,E,Konjac gum or glucomannane
+192,E,430,,ET!,Polyoxyethylene stearate
+193,E,431,,E,Polyoxyethylene stearate
+194,E,432,,E,Polyoxyethylene sorbitan monolaurate
+195,E,433,,E,Polyoxyethylene sorbitan monooleate
+196,E,434,,E,Polyoxyethylene sorbitan monopalmitate
+197,E,435,,E,Polyoxyethylene sorbitan monostearate
+198,E,436,,E,Polyoxyethylene sorbitan tristearate
+199,E,440,,E,Pectin or amidated pectin
+200,E,441,,E,Gelatine
+201,E,442,,E,Ammonium phosphatides
+202,E,444,,E,Sucrose acetate isobutyrate
+203,E,445,,E,Glycerol esters of wood rosins
+204,E,450,,E,Diphosphates (Na*K*Ca)
+205,E,450,a,E.,Disodium dihydrogen diphosphate
+206,E,451,,E,Triphosphates (Na*K)
+207,E,452,,E,Polyphosphates (Na*K*Ca*KCa)
+208,E,459,,E,Beta-cyclodextrine
+209,E,460,,E,Cellulose (microcrystalline or powdered)
+210,E,461,,E,Methyl cellulose
+211,E,462,,E,Ethyl cellulose
+212,E,463,,E,Hydroxy propyl cellulose
+213,E,464,,E,Hydroxy propyl methyl cellulose
+214,E,465,,E,Ethyl methyl cellulose
+215,E,466,,E,Carboxy methyl cellulose*Sodium carboxy methyl cellulose
+216,E,468,,E,Crosslinked Na carboxymethyl cellulose
+217,E,469,,E,Enzymically hydrolysed carboxymethyl cellulose
+218,E,470,a,EK,Sodium*potassium and calcium salts of fatty acids
+219,E,470,b,EK,Magnesium salts of fatty acids
+220,E,471,,E,Mono- and diglycerides of fatty acids
+221,E,472,a,E,Acetic esters of glycerides of fatty acids
+222,E,472,b,E,Lactic esters of glycerides of fatty acids
+223,E,472,c,E,Citric esters of glycerides of fatty acids
+224,E,472,d,E,Tartaric esters of glycerides of fatty acids
+225,E,472,e,E,Mono- and diacetyl tartaric acid esters of glycerides of fatty acids
+226,E,472,f,E,Mixed acetic and tartaric acid esters of glycerides of fatty acids
+227,E,473,,E,Sucrose esters of fatty acids
+228,E,474,,E,Sucroglycerides
+229,E,475,,E,Polyglycerol esters of fatty acids
+230,E,476,,E,Polyglycerol polyricinoleate
+231,E,477,,E,Propane-1*2-diol esters of fatty acids*propylene glycol esters of fatty acids
+232,E,478,,E,Lactylated fatty acid esters of glycerol and propane-1
+233,E,479,b,E,Thermally oxidized soya bean oil interacted with mono- and diglycerides of fatty acids
+234,E,481,,E,Sodium stearoyl-2-lactylate
+235,E,482,,E,Calcium stearoyl-2-lactylate
+236,E,483,,E,Stearyl tartrate
+237,E,491,,E,Sorbitan monostearate
+238,E,492,,E,Sorbitan tristearate
+239,E,493,,E,Sorbitan monolaurate
+240,E,494,,E,Sorbitan monooleate
+241,E,495,,E,Sorbitan monopalmitate
+242,E,500,,,Sodium carbonates
+243,E,501,,A,Potassium carbonates
+244,E,503,,A,Ammonium carbonates
+245,E,504,,AK,Magnesium carbonates
+246,E,507,,A,Hydrochloric acid
+247,E,508,,A,Potassium chloride
+248,E,509,,A,Calcium chloride
+249,E,510,,A,Ammonium chloride*ammonia solution
+250,E,511,,A,Magnesium chloride
+251,E,512,,A,Stannous chloride
+252,E,513,,A,Sulphuric acid
+253,E,514,,A,Sodium sulphates
+254,E,515,,A,Potassium sulphates
+255,E,516,,AE,Calcium sulphate
+256,E,517,,A,Ammonium sulphate
+257,E,518,,A,Magnesium sulphate*Epsom salts
+258,E,519,,A,Copper sulphate
+259,E,520,,A,Aluminium sulphate
+260,E,521,,A,Aluminium sodium sulphate
+261,E,522,,A,Aluminium potassium sulphate
+262,E,523,,A,Aluminium ammonium sulphate
+263,E,524,,A,Sodium hydroxide
+264,E,525,,A,Potassium hydroxide
+265,E,526,,AE,Calcium hydroxide
+266,E,527,,A,Ammonium hydroxide
+267,E,528,,A,Magnesium hydroxide
+268,E,529,,A,Calcium oxide
+269,E,530,,A,Magnesium oxide
+270,E,535,,AK,Sodium ferrocyanide
+271,E,536,,A,Potassium ferrocyanide
+272,E,538,,A,Calcium ferrocyanide
+273,E,540,,AE,Dicalcium diphosphate
+274,E,541,,E,Sodium aluminium phosphate*acidic
+275,E,542,,K,Bone phosphate
+276,E,543,,,Calcium sodium polyphosphate
+277,E,544,,E,Calcium polyphosphate
+278,E,545,,E,Aluminium polyphosphate
+279,E,550,,,Sodium silicate
+280,E,551,,EK,Silicon dioxide (Silica)
+281,E,552,,K,Calcium silicate
+282,E,553,a,K,Magnesium silicates
+283,E,553,b,K!,Talc
+284,E,554,,K,Sodium aluminium silicate
+285,E,555,,K,Potassium aluminium silicate
+286,E,556,,K,Calcium aluminium silicate
+287,E,558,,K,Bentonite
+288,E,559,,K,Aluminium silicate (Kaolin)
+289,E,570,,K,Stearic acid (Fatty acid)
+290,E,572,,EK,Magnesium stearate*calcium stearate
+291,E,574,,A,Gluconic acid
+292,E,575,,AE,Glucono-delta-lactone
+293,E,576,,E,Sodium gluconate
+294,E,577,,E,Potassium gluconate
+295,E,578,,E,Calcium gluconate
+296,E,579,,C,Ferrous gluconate
+297,E,585,,C,Ferrous lactate
+298,E,620,,F,Glutamic acid 
+299,E,621,,F,Monosodium glutamate 
+300,E,622,,F,Monopotassium glutamate 
+301,E,623,,F,Calcium diglutamate 
+302,E,624,,F,Monoammonium glutamate 
+303,E,625,,F,Magnesium diglutamate 
+304,E,626,,F,Guanylic acid
+305,E,627,,F,Disodium guanylate*sodium guanylate
+306,E,628,,F,Dipotassium guanylate
+307,E,629,,F,Calcium guanylate
+308,E,630,,F,Inosinic acid
+309,E,631,,F,Disodium inosinate
+310,E,632,,F,Dipotassium inosinate
+311,E,633,,F,Calcium inosinate
+312,E,634,,F,Calcium 5'-ribonucleotides
+313,E,635,,F,Disodium 5'-ribonucleotides
+314,E,636,,F,Maltol
+315,E,637,,F,Ethyl maltol
+316,E,640,,F,Glycine and its sodium salt
+317,E,900,,K,Dimethyl polysiloxane
+318,E,901,,G!,Beeswax*white and yellow
+319,E,902,,G,Candelilla wax
+320,E,903,,G,Carnauba wax
+321,E,904,,G,Shellac
+322,E,905,,G,Microcrystalline wax
+323,E,907,,G,Crystalline wax
+324,E,910,,,L-cysteine
+325,E,912,,,Montanic acid esters 
+326,E,913,,,Lanolin*sheep wool grease
+327,E,914,,,Oxidized polyethylene wax 
+328,E,915,,,Ester of Kollophoniums
+329,E,920,,,L-cysteine hydrochloride 
+330,E,921,,,L-cysteine hydrochloride monohydrate 
+331,E,924,,,Potassium bromate
+332,E,925,,P,Chlorine
+333,E,926,,P,Chlorine dioxide
+334,E,927,b,,Carbamide
+335,E,928,,,Benzole peroxide
+336,E,938,,,Argon
+337,E,939,,,Helium 
+338,E,941,,,Nitrogen 
+339,E,942,,,Nitrous oxide
+340,E,948,,,Oxygen 
+341,E,950,,S,Acesulfame K
+342,E,951,,S,Aspartame
+343,E,952,,S,Cyclamic acid and its Na and Ca salts
+344,E,953,,S,Isomalt
+345,E,954,,S,Saccharin and its Na*K and Ca salts
+346,E,957,,SF,Thaumatin
+347,E,959,,S,Neohesperidine DC
+348,E,965,,ST,Maltitol (maybe syrup)
+349,E,966,,S,Lactitol
+350,E,967,,S,Xylitol
+351,E,999,,,Quillaia extract 
+352,E,1100,,.,Amylases
+353,E,1101,,.,Proteases
+354,E,1102,,.,Glucose oxidases
+355,E,1103,,,Invertase
+356,E,1105,,P,Lysozyme
+357,E,1200,,ET,Polydextrose
+358,E,1201,,ET,Polyvinylpyrrolidone
+359,E,1202,,,Polyvinylpolypyrrolidone
+360,E,1400,,,Dextrin
+361,E,1401,,,Modified starch
+362,E,1402,,,Alkaline modified starch
+363,E,1403,,,Bleached starch
+364,E,1404,,,Oxidized starch 
+365,E,1410,,,Monostarch phosphate 
+366,E,1412,,,Distarch phosphate 
+367,E,1413,,,Phosphated distarch phosphate 
+368,E,1414,,,Acetylated distarch phosphate 
+369,E,1420,,,Acetylated starch*mono starch acetate 
+370,E,1421,,,Acetylated starch*mono starch acetate 
+371,E,1422,,,Acetylated distarch adipate 
+372,E,1430,,,Distarch glycerine
+373,E,1440,,,Hydroxy propyl starch 
+374,E,1441,,,Hydroxy propyl distarch glycerine
+375,E,1442,,,Hydroxy propyl distarch phosphate 
+376,E,1450,,,Starch sodium octenyl succinate 
+377,E,1451,,,Acetylated oxidised starch
+378,E,1505,,,Triethyl citrate 
+379,E,1510,,,Ethanon
+380,E,1517,,,Glyceryl triacetate
+381,E,1518,,,Glyceryl triacetate
+382,E,1520,,,Propylene glycol
