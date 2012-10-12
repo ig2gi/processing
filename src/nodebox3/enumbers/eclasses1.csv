@@ -1,10 +1,9 @@
-id,n1,n2,parent,name,counte
-1,100,199,root,Colours,54
-2,200,299,root,Preservatives,47
-3,300,399,root,Antioxidants & acidity regulators,63
-4,400,499,root,Thickeners; stabilisers & emulsifiers,84
-5,500,599,root,pH regulators & anti-caking agents,65
-6,600,699,root,Flavour enhancers,20
-7,700,799,root,Antibiotics,0
-8,900,999,root,Miscellaneous,48
-9,1100,1599,root,Additional chemicals,43
+id,n1,n2,parent,name,counte,cumul
+1,100,199,root,Colours,54,54
+2,200,299,root,Preservatives,47,101
+3,300,399,root,Antioxidants & acidity regulators,63,164
+4,400,499,root,Thickeners; stabilisers & emulsifiers,84,248
+5,500,599,root,pH regulators & anti-caking agents,65,313
+6,600,699,root,Flavour enhancers,20,333
+8,900,999,root,Miscellaneous,48,381
+9,1000,1599,root,Additional chemicals,39,420

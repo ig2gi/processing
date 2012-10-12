@@ -381,7 +381,7 @@ id,e,code,number,subcode,since,sources,name,synonym
 380,E968,968,968,,None,[1][2],Erythritol,Tetrahydroxybutane*
 381,E999,999,999,,None,[2],Quillaia extract,
 382,E1001,1001,1001,,None,[1],Choline salts and esters,Choline salts and esters
-383,E1100,1100,1100,,None,[1],alpha-Amylase from Bacillus subtilis,Ptyalin*
+383,E1100,1100,1100,,None,[1],Amylase,Ptyalin*
 384,E1101,1101(i),1101,(i),None,[1],Protease,Protease
 385,E1101,1101(ii),1101,(ii),None,[1],Papain,Papain
 386,E1101,1101(iii),1101,(iii),None,[1],Bromelain,Bromelain

@@ -53,6 +53,7 @@ class ENumberClass(object):
     self.subclasses = []
     self.parent = None
     self.enumbers = []
+    self.cumul = 0
        
   def range():
     return [n1, n2]
@@ -75,6 +76,8 @@ class ENumberClass(object):
     return None
   
   def classify(self, enumber):
+      if enumber.number <= self.n2:
+        self.cumul += 1
       if self.contains(enumber.number):
         self.enumbers.append(enumber)
         if len(self.subclasses) > 0:
@@ -106,7 +109,6 @@ class ENumberClass(object):
       d[i] = [count, cumul]
     result = [[k,'E'+ str(k),v[0],v[1]] for k,v in d.iteritems()]
     result.sort(key=lambda x: x[0], reverse=False)
-    print result
     return result
         
   def all(self, level=0):
@@ -119,11 +121,11 @@ class ENumberClass(object):
     return all
     
   def csv(self):
-    return [self.n1, self.n2, self.parent.name, self.name, self.count_enumbers()]
+    return [self.n1, self.n2, self.parent.name, self.name, self.count_enumbers(), self.cumul]
     
   @classmethod
   def csvtitle(cls):
-      return ["n1","n2", "parent", "name", "counte"]
+      return ["n1","n2", "parent", "name", "counte", "cumul"]
     
   def label(self):
     return "%s: %s" % (self.parent.name, self.name)
@@ -220,6 +222,8 @@ def main():
       m = re.search(regex, range1[0].strip())
       n1 = int(m.group(1))
       n2 = int(m.group(2))
+      if n1 == 1100:
+        n1 = 1000
       c = ENumberClass(n1, n2, name)
       root_eclasses.add_subclass(c)
       i1,i2 = 1,2
@@ -229,6 +233,8 @@ def main():
       m = re.search(regex, row[i1])
       n1 = int(m.group(1))
       n2 = int(m.group(2))
+      if n1 == 1100:
+        n1 = 1000
       c2 = ENumberClass(n1,n2, name)
       c.add_subclass(c2)
     
@@ -313,7 +319,8 @@ def main():
       filename = '../../nodebox3/enumbers/enumbers-' + ec.name[0:4] 
       CSVWriter(filename + '.csv', ec.list_enumbers()).write()
       CSVWriter._write_(filename + '-estats.csv',ec.get_estats() , "N,EN,Co,Cu")
-      
+  
+  CSVWriter._write_('../../nodebox3/enumbers/enumbers-all-estats.csv',root_eclasses.get_estats() , "N,EN,Co,Cu")
 
 if __name__ == '__main__':
 	main()
