@@ -121,11 +121,12 @@ class ENumberClass(object):
     return all
     
   def csv(self):
-    return [self.n1, self.n2, self.parent.name, self.name, self.count_enumbers(), self.cumul]
+    s = "%s - %s" % (self.n1, self.n2)
+    return [s, self.n1, self.n2, self.parent.name, self.name, self.count_enumbers(), self.cumul]
     
   @classmethod
   def csvtitle(cls):
-      return ["n1","n2", "parent", "name", "counte", "cumul"]
+      return ["n1-n2", "n1","n2", "parent", "name", "counte", "cumul"]
     
   def label(self):
     return "%s: %s" % (self.parent.name, self.name)
