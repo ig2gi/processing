@@ -1,0 +1,21 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E620,620,620,,None,[1][2],Glutamic acid; L(+)-,L-(+)-glutamic acid*
+2,E621,621,621,,None,[1][2],Monosodium L-glutamate,Sodium Glutamate*
+3,E622,622,622,,None,[1][2],Monopotassium L-glutamate,Potassium Glutamate*
+4,E623,623,623,,None,[1][2],Calcium di-L-glutamate,Calcium glutamate*
+5,E624,624,624,,None,[1][2],Monoammonium L-glutamate,Monoammonium L-glutamate
+6,E625,625,625,,None,[1][2],Magnesium di-L-glutamate,Magnesium Glutamate*
+7,E626,626,626,,None,[1][2],Guanylic acid; 5'-,Guanylic acid; 5'-
+8,E627,627,627,,None,[1][2],Disodium 5'-guanylate,Sodium Guanylate*
+9,E628,628,628,,None,[1][2],Dipotassium 5'-guanylate,Potassium Guanylate*
+10,E629,629,629,,None,[1][2],Calcium 5'-guanylate,Calcium guanylate*
+11,E630,630,630,,None,[1][2],Inosinic acid; 5'-,Inosinic acid; 5'-
+12,E631,631,631,,None,[1][2],Disodium 5'-inosinate,Sodium Inosinate*
+13,E632,632,632,,None,[1][2],Potassium 5-inosinate,Potassium Inosinate*
+14,E633,633,633,,None,[1][2],Calcium 5'-inosinate,Calcium inosinate*
+15,E634,634,634,,None,[1][2],Calcium 5'-ribonucleotides,Calcium ribonucleotides*
+16,E635,635,635,,None,[1][2],Disodium 5'-ribonucleotides,Sodium Ribonucleotides*
+17,E636,636,636,,None,[1],Maltol,Maltol
+18,E637,637,637,,None,[1],Ethyl maltol,Ethyl maltol
+19,E640,640,640,,None,[2],Glycine and its sodium salt,
+20,E650,650,650,,None,[2],Zinc acetate,

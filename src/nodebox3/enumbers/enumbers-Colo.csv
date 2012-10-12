@@ -1,0 +1,55 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E100,100(i),100,(i),None,[1],Curcumin,Turmeric yellow*
+2,E100,100,100,,None,[2],Curcumin,
+3,E101,101,101,,None,[2],Riboflavins,
+4,E102,102,102,,None,[1][2],Tartrazine,Tartrazine
+5,E104,104,104,,None,[1][2],Quinoline yellow,Quinoline yellow
+6,E110,110,110,,None,[1][2],Sunset yellow FCF,Sunset yellow FCF
+7,E120,120,120,,None,[1][2],Carmines,Cochineal carmine*
+8,E122,122,122,,None,[1][2],Azorubine (Carmoisine),CI Food Red 3*
+9,E123,123,123,,None,[1][2],Amaranth,Naphtol Rot S.*
+10,E124,124,124,,None,[1][2],Ponceau 4R (Cochineal red A),Ponceau 4R (Cochineal red A)
+11,E127,127,127,,None,[1][2],Erythrosine,FD&C Red No. 3*
+12,E128,128,128,,None,[1],Red 2G,Red 2G
+13,E129,129,129,,None,[1][2],Allura red AC,FD&C Red No.40*
+14,E131,131,131,,None,[2],Patent Blue V,
+15,E132,132,132,,None,[1][2],Indigotine (Indigo carmine),Indigotine (Indigo carmine)
+16,E133,133,133,,None,[1][2],Brilliant blue FCF,FD&C Blue No.1*
+17,E140,140,140,,None,[1][2],Chlorophylls,Magnesium phaeophytin*
+18,E141,141,141,,None,[2],Copper complexes of chlorophylls; chlorophyllins,
+19,E142,142,142,,None,[2],Green S,
+20,E143,143,143,,None,[1],Fast green FCF,FD&C Green No. 3*
+21,E150,150c,150,c,None,[1][2],Caramel III - ammonia caramel,Caramel III - ammonia caramel
+22,E150,150b,150,b,None,[1][2],Caramel II - sulfite caramel,Caustic sulfite caramel*
+23,E150,150a,150,a,None,[1][2],Caramel I - plain caramel,Plain caramel*
+24,E150,150d,150,d,None,[1][2],Caramel IV - sulfite ammonia caramel,Sulfite ammonia caramel*
+25,E151,151,151,,None,[1][2],Brilliant black (Black PN),CI Food Black 1*
+26,E153,153,153,,None,[2],Vegetable carbon,
+27,E155,155,155,,None,[1][2],Brown HT,CI Food Brown 3*
+28,E160,160b(i),160,b(i),None,[1],Annatto extracts; bixin-based,Annatto extracts; bixin-based
+29,E160,160b(ii),160,b(ii),None,[1],Annatto extracts; norbixin-based,Annatto extracts; norbixin-based
+30,E160,160a(ii),160,a(ii),None,[1],beta-Carotenes; vegetable,Natural beta-carotene*
+31,E160,160d(iii),160,d(iii),None,[1],Lycopene; Blakeslea trispora,Lycopene; Blakeslea trispora
+32,E160,160d(i),160,d(i),None,[1],Lycopene; synthetic,Lycopene; synthetic
+33,E160,160d(ii),160,d(ii),None,[1],Lycopene; tomato,Lycopene; tomato
+34,E160,160a,160,a,None,[2],Carotenes,
+35,E160,160b,160,b,None,[2],Annatto; Bixin; Norbixin,
+36,E160,160c,160,c,None,[2],Paprika extract; capsanthin; capsorubin,
+37,E160,160d,160,d,None,[2],Lycopene,
+38,E160,160e,160,e,None,[2],Beta-apo-8'-carotenal ,C 30
+39,E161,161g,161,g,None,[1][2],Canthaxanthin,CI Food Orange 8*
+40,E161,161b(i),161,b(i),None,[1],Lutein from Tagetes erecta,Lutein from Tagetes erecta
+41,E161,161h(i),161,h(i),None,[1],Zeaxanthin; synthetic,Zeaxanthin; synthetic
+42,E161,161b,161,b,None,[2],Lutein,
+43,E162,162,162,,None,[1][2],Beet red,Beetroot Red*
+44,E163,163(ii),163,(ii),None,[1],Grape skin extract,Grape skin extract
+45,E163,163,163,,None,[2],Anthocyanins,
+46,E170,170(i),170,(i),None,[1],Calcium carbonate,Chalk*
+47,E170,170,170,,None,[2],Calcium carbonate,
+48,E171,171,171,,None,[1][2],Titanium dioxide,Titanium dioxide
+49,E172,172,172,,None,[2],Iron oxides and hydroxides,
+50,E173,173,173,,None,[2],Aluminium,
+51,E174,174,174,,None,[2],Silver,
+52,E175,175,175,,None,[2],Gold,
+53,E180,180,180,,None,[2],Litholrubine BK,
+54,E181,181,181,,None,[1],Tannic acid (Tannins),Tannins (food grade)*

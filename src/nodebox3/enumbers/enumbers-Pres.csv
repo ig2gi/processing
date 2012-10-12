@@ -1,0 +1,48 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E200,200,200,,None,[2],Sorbic acid,
+2,E202,202,202,,None,[2],Potassium sorbate,
+3,E203,203,203,,None,[2],Calcium sorbate,
+4,E210,210,210,,None,[2],Benzoic acid,
+5,E211,211,211,,None,[2],Sodium benzoate,
+6,E212,212,212,,None,[2],Potassium benzoate,
+7,E213,213,213,,None,[2],Calcium benzoate,
+8,E214,214,214,,None,[2],Ethyl-p-hydroxybenzoate,
+9,E215,215,215,,None,[2],Sodium ethyl p-hydroxybenzoate,
+10,E218,218,218,,None,[2],Methyl p-hydroxybenzoate,
+11,E219,219,219,,None,[2],Sodium methyl p-hydroxybenzoate,
+12,E220,220,220,,None,[2],Sulphur dioxide,
+13,E221,221,221,,None,[2],Sodium sulphite,
+14,E222,222,222,,None,[2],Sodium hydrogen sulphite,
+15,E223,223,223,,None,[2],Sodium metabisulphite,
+16,E224,224,224,,None,[2],Potassium metabisulphite,
+17,E226,226,226,,None,[2],Calcium sulphite,
+18,E227,227,227,,None,[2],Calcium hydrogen sulphite,
+19,E228,228,228,,None,[2],Potassium hydrogen sulphite,
+20,E230,230,230,,None,[1],Diphenyl,Diphenyl
+21,E234,234,234,,None,[1][2],Nisin,Nisin
+22,E235,235,235,,None,[1][2],Natamycin (Pimaricin),Natamycin (Pimaricin)
+23,E236,236,236,,None,[1],Formic acid,Methanoic Acid*
+24,E239,239,239,,None,[1][2],Hexamethylene tetramine,Methenamine*
+25,E242,242,242,,None,[1][2],Dimethyl dicarbonate,DMDC*
+26,E243,243,243,,None,[1],Lauric arginate ethyl ester,Lauric arginate ethyl ester
+27,E249,249,249,,None,[2],Potassium nitrite,
+28,E250,250,250,,None,[2],Sodium nitrite,
+29,E251,251,251,,None,[2],Sodium nitrate,
+30,E252,252,252,,None,[2],Potassium nitrate,
+31,E260,260,260,,None,[1][2],Acetic acid; glacial,Acetic acid; glacial
+32,E261,261,261,,None,[1][2],Potassium acetates,Potassium acetates
+33,E262,262(i),262,(i),None,[1],Sodium acetate,Sodium acetate
+34,E262,262(ii),262,(ii),None,[1],Sodium diacetate,Sodium diacetate
+35,E262,262,262,,None,[2],Sodium acetates,
+36,E263,263,263,,None,[1][2],Calcium acetate,Calcium acetate
+37,E264,264,264,,None,[1],Ammonium acetate,Ammonium acetate
+38,E270,270,270,,None,[1][2],Lactic acid; L-; D- and DL-,Lactic acid; L-; D- and DL-
+39,E280,280,280,,None,[1][2],Propionic acid,Propionic acid
+40,E281,281,281,,None,[1][2],Sodium propionate,Sodium propionate
+41,E282,282,282,,None,[1][2],Calcium propionate,Calcium propionate
+42,E283,283,283,,None,[1][2],Potassium propionate,Potassium propionate
+43,E284,284,284,,None,[2],Boric acid,
+44,E285,285,285,,None,[2],Sodium tetraborate ,borax
+45,E290,290,290,,None,[1][2],Carbon dioxide,Dry Ice (Solid Form)*
+46,E296,296,296,,None,[1][2],Malic acid; DL-,Pomalous Acid*
+47,E297,297,297,,None,[1][2],Fumaric acid,Fumaric acid

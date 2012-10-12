@@ -1,0 +1,85 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E400,400,400,,None,[1][2],Alginic acid,Alginic acid
+2,E401,401,401,,None,[1][2],Sodium alginate,Sodium alginate
+3,E402,402,402,,None,[1][2],Potassium alginate,Potassium alginate
+4,E403,403,403,,None,[1][2],Ammonium alginate,Ammonium alginate
+5,E404,404,404,,None,[1][2],Calcium alginate,Calcium alginate
+6,E405,405,405,,None,[1][2],Propylene glycol alginate,Propylene glycol alginate
+7,E406,406,406,,None,[1][2],Agar,Layor Carang*
+8,E407,407,407,,None,[1][2],Carrageenan,Irish moss gelose (from Chondrus spp.)*
+9,E407,407a,407,a,None,[1][2],Processed eucheuma seaweed (PES),semi-refined carrageenan*
+10,E410,410,410,,None,[1][2],Carob bean gum,Locust bean gum*
+11,E412,412,412,,None,[1][2],Guar gum,Gum Cyamopsis*
+12,E413,413,413,,None,[1][2],Tragacanth gum,Tragacanth gum
+13,E414,414,414,,None,[1][2],Gum arabic (Acacia gum),Gum arabic (Acacia seyal)*
+14,E415,415,415,,None,[1][2],Xanthan gum,Xanthan gum
+15,E416,416,416,,None,[1][2],Karaya gum,Sterculia*
+16,E417,417,417,,None,[1][2],Tara gum,Tara gum
+17,E418,418,418,,None,[1][2],Gellan gum,Gellan gum
+18,E420,420(i),420,(i),None,[1],Sorbitol,Sorbol*
+19,E420,420(ii),420,(ii),None,[1],Sorbitol syrup,Sorbitol syrup
+20,E420,420,420,,None,[2],Sorbitols,
+21,E421,421,421,,None,[1][2],Mannitol,D-Mannitol*
+22,E422,422,422,,None,[1][2],Glycerol,Glycerol
+23,E424,424,424,,None,[1],Curdlan,Beta-1;3-glucan*
+24,E425,425,425,,None,[1][2],Konjac flour,Konnyaleu*
+25,E426,426,426,,None,[2],Soybean hemicellulose,
+26,E427,427,427,,None,[1][2],Cassia gum,Cassia gum
+27,E431,431,431,,None,[2],Polyoxyethylene  stearate,40
+28,E432,432,432,,None,[2],Polyoxyethylene sorbitan monolaurate ,polysorbate 20
+29,E433,433,433,,None,[2],Polyoxyethylene sorbitan monooleate ,polysorbate 80
+30,E434,434,434,,None,[2],Polyoxyethylene sorbitan monopalmitate ,polysorbate 40
+31,E435,435,435,,None,[2],Polyoxyethylene sorbitan monostearate ,polysorbate 60
+32,E436,436,436,,None,[2],Polyoxyethylene sorbitan tristearate ,polysorbate 65
+33,E440,440,440,,None,[1][2],Pectins,Pectins (amidated and non-amidated)*
+34,E442,442,442,,None,[1][2],Ammonium salts of phosphatidic acid,Ammonium salts of phosphatidic acid
+35,E444,444,444,,None,[1][2],Sucrose acetate isobutyrate,Sucrose acetate isobutyrate
+36,E445,445(iii),445,(iii),None,[1],Glycerol ester of wood rosin,Glycerol ester of wood rosin
+37,E445,445,445,,None,[2],Glycerol esters of wood rosins,
+38,E450,450,450,,None,[2],Diphosphates,
+39,E451,451,451,,None,[2],Triphosphates,
+40,E452,452,452,,None,[2],Polyphosphates,
+41,E457,457,457,,None,[1],Cyclodextrin; alpha-,Cyclodextrin; alpha-
+42,E458,458,458,,None,[1],Cyclodextrin; gamma-,Cyclodextrin; gamma-
+43,E459,459,459,,None,[1][2],Cyclodextrin; beta-,beta-Schardinger dextrin*
+44,E460,460(i),460,(i),None,[1],Microcrystalline cellulose (Cellulose gel),Microcrystalline cellulose (Cellulose gel)
+45,E460,460(ii),460,(ii),None,[1],Powdered cellulose,Powdered cellulose
+46,E460,460,460,,None,[2],Cellulose,
+47,E461,461,461,,None,[1][2],Methyl cellulose,Methyl Ether of Cellulose*
+48,E462,462,462,,None,[1][2],Ethyl cellulose,Ethyl cellulose
+49,E463,463,463,,None,[1][2],Hydroxypropyl cellulose,Modified cellulose*
+50,E464,464,464,,None,[1][2],Hydroxypropyl methyl cellulose,Hydroxypropyl methyl cellulose
+51,E465,465,465,,None,[1][2],Methyl ethyl cellulose,Methyl Ethyl Ether of Cellulose*
+52,E466,466,466,,None,[1][2],Sodium carboxymethyl cellulose (Cellulose gum),Sodium CMC*
+53,E467,467,467,,None,[1],Ethyl hydroxyethyl cellulose,Ethyl hydroxyethyl cellulose
+54,E468,468,468,,None,[1][2],Cross-linked sodium carboxymethyl cellulose (Cross-linked-cellulose gum),Cross-linked sodium carboxymethyl cellulose (Cross-linked-cellulose gum)
+55,E469,469,469,,None,[1][2],Sodium carboxymethyl cellulose; enzymatically hydrolysed (Cellulose gum; enzymatically hydrolyzed),Sodium carboxymethyl cellulose; enzymatically hydrolysed (Cellulose gum; enzymatically hydrolyzed)
+56,E470,470(i),470,(i),None,[1],Salts of myristic; palmitic and stearic acids with ammonia; calcium; potassium and sodium,Salts of myristic; palmitic and stearic acids with ammonia; calcium; potassium and sodium
+57,E470,470(ii),470,(ii),None,[1],Salts of oleic acid with calcium; potassium and sodium,Salts of oleic acid with calcium; potassium and sodium
+58,E470,470a,470,a,None,[2],Sodium; potassium and calcium salts of fatty acids,
+59,E470,470b,470,b,None,[2],Magnesium salts of fatty acids,
+60,E471,471,471,,None,[1][2],Mono- and di-glycerides of fatty acids,Monostearin*
+61,E472,472a,472,a,None,[1][2],Acetic and fatty acid esters of glycerol,Acetylated mono- and diglycerides*
+62,E472,472c,472,c,None,[1][2],Citric and fatty acid esters of glycerol,Citroglycerides*
+63,E472,472e,472,e,None,[1][2],Diacetyltartaric and fatty acid esters of glycerol,Tartaric; acetic and fatty acid esters of glycerol; mixed; *
+64,E472,472b,472,b,None,[1][2],Lactic and fatty acid esters of glycerol,Lactoglycerides*
+65,E472,472d,472,d,None,[2],Tartaric acid esters of mono- and diglycerides of fatty acids,
+66,E472,472f,472,f,None,[2],Mixed acetic and tartaric acid esters of mono- and diglycerides of fatty acids,
+67,E473,473,473,,None,[1][2],Sucrose esters of fatty acids,Sucrose fatty acid esters*
+68,E473,473a,473,a,None,[1],Sucrose Oligoesters; Type I and Type II,Sucrose Oligoesters; Type I and Type II
+69,E474,474,474,,None,[1][2],Sucroglycerides,Sucroglycerides
+70,E475,475,475,,None,[1][2],Polyglycerol esters of fatty acids,Polyglycerol fatty acid esters*
+71,E476,476,476,,None,[1][2],Polyglycerol esters of interesterified ricinoleic acid,Polyglycerol esters of polycondensed fatty acids from castor oil*
+72,E477,477,477,,None,[1][2],Propylene glycol esters of fatty acids,Propylene glycol esters of fatty acids
+73,E479,479,479,,None,[1],Thermally oxidized soya bean oil interacted with mono- and diglycerides of fatty acids,TOSOM*
+74,E479,479b,479,b,None,[2],Thermally oxidised soya bean oil interacted with mono- and diglycerides of fatty acids,
+75,E480,480,480,,None,[1],Dioctyl sodium sulfosuccinate,DSS*
+76,E481,481,481,,None,[2],Sodium stearoyl-2-lactylate,
+77,E482,482,482,,None,[2],Calcium stearoyl-2-lactylate,
+78,E483,483,483,,None,[1][2],Stearyl tartrate,Stearyl tartrate
+79,E484,484,484,,None,[1],Stearyl citrate,Stearyl citrate
+80,E491,491,491,,None,[2],Sorbitan monostearate,
+81,E492,492,492,,None,[2],Sorbitan tristearate,
+82,E493,493,493,,None,[2],Sorbitan monolaurate,
+83,E494,494,494,,None,[2],Sorbitan monooleate,
+84,E495,495,495,,None,[2],Sorbitan monopalmitate,

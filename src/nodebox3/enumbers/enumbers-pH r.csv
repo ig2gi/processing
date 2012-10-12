@@ -1,0 +1,66 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E500,500(i),500,(i),None,[1],Sodium carbonate,Sodium carbonate
+2,E500,500(ii),500,(ii),None,[1],Sodium hydrogen carbonate,Sodium hydrogen carbonate
+3,E500,500(iii),500,(iii),None,[1],Sodium sesquicarbonate,Sodium sesquicarbonate
+4,E500,500,500,,None,[2],Sodium carbonates,
+5,E501,501(i),501,(i),None,[1],Potassium carbonate,Potassium carbonate
+6,E501,501(ii),501,(ii),None,[1],Potassium hydrogen carbonate,Potassium hydrogen carbonate
+7,E501,501,501,,None,[2],Potassium carbonates,
+8,E503,503(i),503,(i),None,[1],Ammonium carbonate,Ammonium carbonate
+9,E503,503(ii),503,(ii),None,[1],Ammonium hydrogen carbonate,Ammonium hydrogen carbonate
+10,E503,503,503,,None,[2],Ammonium carbonates,
+11,E504,504(i),504,(i),None,[1],Magnesium carbonate,Magnesium carbonate
+12,E504,504(ii),504,(ii),None,[1],Magnesium hydroxide carbonate,Magnesium Subcarbonate (Light or Heavy)*
+13,E504,504,504,,None,[2],Magnesium carbonates,
+14,E507,507,507,,None,[1][2],Hydrochloric acid,Muriatic acid*
+15,E508,508,508,,None,[1][2],Potassium chloride,Sylvite*
+16,E509,509,509,,None,[1][2],Calcium chloride,Calcium chloride
+17,E510,510,510,,None,[1],Ammonium chloride,Sal ammoniac*
+18,E511,511,511,,None,[1][2],Magnesium chloride,Magnesium Chloride Hexahydrate*
+19,E512,512,512,,None,[1][2],Stannous chloride,Tin dichloride*
+20,E513,513,513,,None,[2],Sulphuric acid,
+21,E514,514(ii),514,(ii),None,[1],Sodium hydrogen sulfate,Sodium hydrogen sulfate
+22,E514,514(i),514,(i),None,[1],Sodium sulfate,Sodium sulfate
+23,E514,514,514,,None,[2],Sodium sulphates,
+24,E515,515(ii),515,(ii),None,[1],Potassium hydrogen sulfate,Potassium hydrogen sulfate
+25,E515,515(i),515,(i),None,[1],Potassium sulfate,Potassium sulfate
+26,E515,515,515,,None,[2],Potassium sulphates,
+27,E516,516,516,,None,[1][2],Calcium sulfate,Calcium sulfate
+28,E517,517,517,,None,[2],Ammonium sulphate,
+29,E518,518,518,,None,[1],Magnesium sulfate,Magnesium sulfate
+30,E520,520,520,,None,[2],Aluminium sulphate,
+31,E521,521,521,,None,[2],Aluminium sodium sulphate,
+32,E522,522,522,,None,[2],Aluminium potassium sulphate,
+33,E523,523,523,,None,[1][2],Aluminium ammonium sulfate,Ammonium alum*
+34,E524,524,524,,None,[1][2],Sodium hydroxide,Sodium hydroxide
+35,E525,525,525,,None,[1][2],Potassium hydroxide,Potassium hydroxide
+36,E526,526,526,,None,[1][2],Calcium hydroxide,Slaked lime*
+37,E527,527,527,,None,[1][2],Ammonium hydroxide,Ammonium hydroxide
+38,E528,528,528,,None,[1][2],Magnesium hydroxide,Magnesium hydroxide
+39,E529,529,529,,None,[1][2],Calcium oxide,Lime*
+40,E530,530,530,,None,[1][2],Magnesium oxide,Magnesium oxide
+41,E535,535,535,,None,[2],Sodium ferrocyanide,
+42,E536,536,536,,None,[2],Potassium ferrocyanide,
+43,E538,538,538,,None,[2],Calcium ferrocyanide,
+44,E541,541,541,,None,[2],Sodium aluminium phosphate acidic,
+45,E551,551,551,,None,[1][2],Silicon dioxide; amorphous,Silicon dioxide; amorphous
+46,E552,552,552,,None,[1][2],Calcium silicate,Calcium silicate
+47,E553,553(i),553,(i),None,[1],Magnesium silicate; synthetic,Magnesium silicate; synthetic
+48,E553,553(iii),553,(iii),None,[1],Talc,Talcum*
+49,E553,553a,553,a,None,[2],Magnesium silicate,
+50,E553,553b,553,b,None,[2],Talc,
+51,E554,554,554,,None,[1][2],Sodium aluminosilicate,Sodium silicoaluminate*
+52,E555,555,555,,None,[2],Potassium aluminium silicate,
+53,E556,556,556,,None,[1][2],Calcium aluminium silicate,Sodium calcium silicoaluminate*
+54,E558,558,558,,None,[2],Bentonite,
+55,E559,559,559,,None,[1][2],Aluminium silicate,Kaolin; light or heavy*
+56,E570,570,570,,None,[2],Fatty acids,
+57,E574,574,574,,None,[2],Gluconic acid,
+58,E575,575,575,,None,[1][2],Glucono delta-lactone,Delta-Gluconolactone*
+59,E576,576,576,,None,[1][2],Sodium gluconate,Sodium gluconate
+60,E577,577,577,,None,[1][2],Potassium gluconate,Potassium gluconate
+61,E578,578,578,,None,[1][2],Calcium gluconate,Calcium gluconate
+62,E579,579,579,,None,[1][2],Ferrous gluconate,Iron Gluconate*
+63,E580,580,580,,None,[1],Magnesium gluconate,Magnesium gluconate
+64,E585,585,585,,None,[1][2],Ferrous lactate,Iron (II) Lactate*
+65,E586,586,586,,None,[2],4-Hexylresorcinol,

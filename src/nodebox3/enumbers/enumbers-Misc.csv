@@ -1,0 +1,49 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E900,900a,900,a,None,[1],Polydimethylsiloxane,Polydimethylsiloxane
+2,E900,900,900,,None,[2],Dimethyl polysiloxane,
+3,E901,901,901,,None,[1][2],Beeswax,Beeswax
+4,E902,902,902,,None,[1][2],Candelilla wax,Candelilla wax
+5,E903,903,903,,None,[1][2],Carnauba wax,Carnauba wax
+6,E904,904,904,,None,[1][2],Shellac; bleached,Shellac; bleached*
+7,E905,905c(i),905,c(i),None,[1],Microcrystalline wax,Petroleum Wax*
+8,E905,905d,905,d,None,[1],Mineral oil; high viscosity,White mineral oil*
+9,E905,905e,905,e,None,[1],Mineral oil; medium and low viscosity; class I,White mineral oil*
+10,E905,905,905,,None,[2],Microcrystalline wax,
+11,E907,907,907,,None,[1][2],Hydrogenated poly-1-decenes,Hydrogenated poly-alpha-olefin*
+12,E912,912,912,,None,[2],Montan acid esters,
+13,E914,914,914,,None,[2],Oxidised polyethylene wax,
+14,E920,920,920,,None,[2],L-cysteine,
+15,E925,925,925,,None,[1],Chlorine,Chlorine
+16,E926,926,926,,None,[1],Chlorine dioxide,Chlorine peroxide*
+17,E927,927a,927,a,None,[1],Azodicarbonamide,Azodicarbonamide
+18,E927,927b,927,b,None,[2],Carbamide,
+19,E928,928,928,,None,[1],Benzoyl peroxide,Benzoyl superoxide*
+20,E938,938,938,,None,[2],Argon,
+21,E939,939,939,,None,[2],Helium,
+22,E941,941,941,,None,[1][2],Nitrogen,Nitrogen
+23,E942,942,942,,None,[1][2],Nitrous oxide,Nitrous oxide
+24,E943,943a,943,a,None,[2],Butane,
+25,E943,943b,943,b,None,[2],Isobutane,
+26,E944,944,944,,None,[1][2],Propane,Propane
+27,E948,948,948,,None,[2],Oxygen,
+28,E949,949,949,,None,[2],Hydrogen,
+29,E950,950,950,,None,[1][2],Acesulfame potassium,Acesulfame potassium
+30,E951,951,951,,None,[1][2],Aspartame,Aspartyl phenylalanine methyl ester*
+31,E952,952,952,,None,[2],Cyclamates,
+32,E953,953,953,,None,[1][2],Isomalt (Hydrogenated isomaltulose),Isomaltitol*
+33,E954,954,954,,None,[2],Saccharins,
+34,E955,955,955,,None,[1][2],Sucralose (Trichlorogalactosucrose),4;1';6'-trichlorogalactosucrose*
+35,E956,956,956,,None,[1],Alitame,Alitame
+36,E957,957,957,,None,[1][2],Thaumatin,Thaumatin
+37,E959,959,959,,None,[2],Neohesperidine DC,
+38,E960,960,960,,None,[1][2],Steviol glycosides,Steviol glycosides
+39,E961,961,961,,None,[1][2],Neotame,Neotame
+40,E962,962,962,,None,[1][2],Aspartame-acesulfame salt,Aspartame-acesulfame salt
+41,E964,964,964,,None,[1],Polyglycitol syrup,Polyglycitol syrup
+42,E965,965(i),965,(i),None,[1],Maltitol,Maltitol Syrup Powder*
+43,E965,965(ii),965,(ii),None,[1],Maltitol syrup,Maltitol syrup
+44,E965,965,965,,None,[2],Maltitols,
+45,E966,966,966,,None,[1][2],Lactitol,Lactositol*
+46,E967,967,967,,None,[1][2],Xylitol,Xylitol
+47,E968,968,968,,None,[1][2],Erythritol,Tetrahydroxybutane*
+48,E999,999,999,,None,[2],Quillaia extract,

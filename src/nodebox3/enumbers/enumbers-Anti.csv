@@ -1,0 +1,64 @@
+id,e,code,number,subcode,since,sources,name,synonym
+1,E300,300,300,,None,[1][2],Ascorbic acid; L-,Vitamin C*
+2,E301,301,301,,None,[1][2],Sodium ascorbate,Sodium ascorbate
+3,E302,302,302,,None,[1][2],Calcium ascorbate,Calcium ascorbate
+4,E303,303,303,,None,[1],Potassium ascorbate,Potassium ascorbate
+5,E304,304,304,,None,[2],Fatty acid esters of ascorbic acid,
+6,E306,306,306,,None,[2],Tocopherol-rich extract,
+7,E307,307,307,,None,[2],Alpha-tocopherol,
+8,E308,308,308,,None,[2],Gamma-tocopherol,
+9,E309,309,309,,None,[2],Delta-tocopherol,
+10,E310,310,310,,None,[1][2],Propyl gallate,Propyl Gallate*
+11,E311,311,311,,None,[2],Octyl gallate,
+12,E312,312,312,,None,[2],Dodecyl gallate,
+13,E314,314,314,,None,[1],Guaiac resin,Gum Guaiac*
+14,E315,315,315,,None,[1][2],Erythorbic Acid (Isoascorbic acid),Isoascorbic acid*
+15,E316,316,316,,None,[1][2],Sodium erythorbate (Sodium isoascorbate),Sodium Isoascorbate*
+16,E319,319,319,,None,[1][2],Tertiary butylhydroquinone (TBHQ),Tertiary butylhydroquinone (TBHQ)
+17,E320,320,320,,None,[1][2],Butylated hydroxyanisole (BHA),Butylated hydroxyanisole (BHA)
+18,E321,321,321,,None,[1][2],Butylated hydroxytoluene (BHT),Butylated hydroxytoluene (BHT)
+19,E322,322(i),322,(i),None,[1],Lecithin,Phospholipids*
+20,E322,322,322,,None,[2],Lecithins,
+21,E325,325,325,,None,[1][2],Sodium lactate,Sodium lactate
+22,E326,326,326,,None,[1][2],Potassium lactate,Potassium Lactate (Solution)*
+23,E327,327,327,,None,[1][2],Calcium lactate,Calcium lactate
+24,E328,328,328,,None,[1],Ammonium lactate,Ammonium lactate
+25,E329,329,329,,None,[1],Magnesium lactate; DL-,Magnesium lactate; DL-
+26,E330,330,330,,None,[1][2],Citric acid,Citric acid
+27,E331,331(i),331,(i),None,[1],Sodium dihydrogen citrate,Sodium dihydrogen citrate
+28,E331,331(iii),331,(iii),None,[1],Trisodium citrate,Trisodium citrate
+29,E331,331,331,,None,[2],Sodium citrates,
+30,E332,332(i),332,(i),None,[1],Potassium dihydrogen citrate,Potassium dihydrogen citrate
+31,E332,332(ii),332,(ii),None,[1],Tripotassium citrate,Tripotassium citrate
+32,E332,332,332,,None,[2],Potassium citrates,
+33,E333,333(iii),333,(iii),None,[1],Tricalcium citrate,Tricalcium citrate
+34,E333,333,333,,None,[2],Calcium citrates,
+35,E334,334,334,,None,[2],Tarartaric acid ,L(+)-
+36,E335,335,335,,None,[2],Sodium tartrates,
+37,E336,336,336,,None,[2],Potassium tartrates,
+38,E337,337,337,,None,[2],Sodium potassium tartrate,
+39,E338,338,338,,None,[2],Phosphoric acid,
+40,E339,339,339,,None,[2],Sodium phosphates,
+41,E340,340,340,,None,[2],Potassium phosphates,
+42,E341,341,341,,None,[2],Calcium phosphates,
+43,E343,343,343,,None,[2],Magnesium phosphates,
+44,E350,350(ii),350,(ii),None,[1],Sodium DL-malate,Sodium DL-malate
+45,E350,350(i),350,(i),None,[1],Sodium hydrogen DL-malate,Sodium hydrogen DL-malate
+46,E350,350,350,,None,[2],Sodium malates,
+47,E351,351(i),351,(i),None,[1],Potassium hydrogen malate,Potassium hydrogen malate
+48,E351,351(ii),351,(ii),None,[1],Potassium malate,Potassium malate
+49,E351,351,351,,None,[2],Potassium malate,
+50,E352,352(ii),352,(ii),None,[1],Calcium malate; DL-,Monocalcium Malate; D; L-*
+51,E352,352,352,,None,[2],Calcium malates,
+52,E353,353,353,,None,[2],Metatartaric acid,
+53,E354,354,354,,None,[2],Calcium tartrate,
+54,E355,355,355,,None,[2],Adipic acid,
+55,E356,356,356,,None,[2],Sodium adipate,
+56,E357,357,357,,None,[2],Potassium adipate,
+57,E363,363,363,,None,[2],Succinic acid,
+58,E365,365,365,,None,[1],Sodium fumarates,Sodium fumarates
+59,E380,380,380,,None,[1][2],Triammonium citrate,Triammonium citrate
+60,E381,381,381,,None,[1],Ferric ammonium citrate,Iron Ammonium Citrate*
+61,E384,384,384,,None,[1],Isopropyl citrates,Isopropyl citrates
+62,E385,385,385,,None,[2],Calcium disodium ethylene diamine tetra-acetate ,Calcium disodium EDTA
+63,E392,392,392,,None,[2],Extracts of rosemary,
