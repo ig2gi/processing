@@ -122,7 +122,10 @@ class ENumberClass(object):
     
   def csv(self):
     s = "%s - %s" % (self.n1, self.n2)
-    return [s, self.n1, self.n2, self.parent.name, self.name, self.count_enumbers(), self.cumul]
+    s2 = ''
+    if self.parent:
+      s2 = self.parent.name
+    return [s, self.n1, self.n2, s2, self.name, self.count_enumbers(), self.cumul]
     
   @classmethod
   def csvtitle(cls):
@@ -239,8 +242,11 @@ def main():
       c2 = ENumberClass(n1,n2, name)
       c.add_subclass(c2)
     
-
-  
+    for row in article.tables[2]:
+      print row
+    #article2 = web.wikipedia.search("List_of_food_additives,_Codex_Alimentarius", language="en", light=False, cached=True)
+    #for row in article2.tables[0]:
+    #  print row
   
   
   # ==============================================================
@@ -313,6 +319,7 @@ def main():
   # ==============================================================
   CSVWriter('../../nodebox3/enumbers/eclasses1.csv', [x for x in root_eclasses.all(1)]).write()
   CSVWriter('../../nodebox3/enumbers/eclasses2.csv', [x for x in root_eclasses.all(2)]).write()
+  CSVWriter('../../nodebox3/enumbers/eclasses-all.csv', [x for x in root_eclasses.all()]).write()
   CSVWriter('../../nodebox3/enumbers/enumbers-all.csv', sort_enumbers).write()
   
   for ec in root_eclasses.subclasses:
