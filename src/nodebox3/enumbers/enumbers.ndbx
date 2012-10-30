@@ -8,7 +8,7 @@
     <link href="python:libraries/corevector/corevector.py" rel="functions"/>
     <link href="python:libraries/l_system/l_system.py" rel="functions"/>
     <link href="python:libraries/packing/packing.py" rel="functions"/>
-    <node name="root" renderedChild="combine9">
+    <node name="root" renderedChild="combine3">
         <node name="E" position="320.00,120.00" prototype="data.lookup">
             <port name="key" type="string" value="e"/>
         </node>
@@ -144,7 +144,7 @@
         <node name="combine1" position="1420.00,820.00" prototype="list.combine"/>
         <node name="combine10" position="2360.00,1920.00" prototype="list.combine"/>
         <node name="combine11" position="1340.00,3700.00" prototype="list.combine"/>
-        <node name="combine2" position="1520.00,400.00" prototype="list.combine"/>
+        <node name="combine2" position="1740.00,200.00" prototype="list.combine"/>
         <node name="combine3" position="2040.00,1840.00" prototype="list.combine"/>
         <node name="combine4" position="1400.00,1520.00" prototype="list.combine"/>
         <node name="combine5" position="1520.00,1580.00" prototype="list.combine"/>
@@ -300,7 +300,7 @@
         <node name="rotate4" position="1200.00,740.00" prototype="corevector.rotate">
             <port name="angle" type="float" value="0.5"/>
         </node>
-        <node name="rotate5" position="1780.00,1560.00" prototype="corevector.rotate">
+        <node name="rotate5" position="1840.00,1540.00" prototype="corevector.rotate">
             <port name="angle" type="float" value="0.5"/>
         </node>
         <node name="rotate6" position="1240.00,1860.00" prototype="corevector.rotate">
@@ -468,9 +468,7 @@
         <conn input="combine2.list3" output="colorize4"/>
         <conn input="combine2.list1" output="combine1"/>
         <conn input="combine2.list2" output="translate1"/>
-        <conn input="combine3.list1" output="combine2"/>
         <conn input="rotate5.shape" output="ungroup1"/>
-        <conn input="combine3.list2" output="rotate5"/>
         <conn input="combine5.list2" output="combine4"/>
         <conn input="ungroup1.shape" output="combine5"/>
         <conn input="n1n2.list" output="eclasses1"/>
@@ -530,5 +528,7 @@
         <conn input="align7.shape" output="combine11"/>
         <conn input="group6.shapes" output="align7"/>
         <conn input="combine9.list3" output="group6"/>
+        <conn input="combine3.list1" output="combine2"/>
+        <conn input="combine3.list2" output="rotate5"/>
     </node>
 </ndbx>

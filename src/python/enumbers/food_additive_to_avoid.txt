@@ -1,0 +1,94 @@
+# http://www.traditionaloven.com/articles/122/dangerous-food-additives-to-avoid
+
+102 & E102	Tartrazine (food color)	H	A	C
+104 & E104	Quinoline Yellow (food color)	H	A	C
+107 & E107	Yellow 2G (food color)	H	A	C
+110 & E110	Sunset Yellow (Yellow food color #6)	H	A	C
+120 & E120	Carmines, Cochineal (food color)	H	A	-
+122 & E122	Azorubine, Carmoisine (food color)	H	A	C
+123 & E123	Amaranth (Red food color #2)	H	A	C
+124 & E124	Ponceau, Brilliant Scarlet (food color)	H	A	C
+127 & E127	Erythrosine (Red food color #2)	H	A	C
+E128	Red 2G (Red food color)	H	A	C
+129 & E129	Allura Red AC (food color)	H	A	C
+E131	Patent Blue (food color)	H	A	C
+132 & E132	Indigotine, Indigo Carmine (food color)	H	A	C
+133 & E133	Brilliant Blue (food color)	H	A	C
+142 & E142	Acid Brilliant Green, Green S, Food Green (food color)	H	A	-
+143	Fast Green (food color)	-	A	-
+150 & E150	Caramel (food color)	H	-	-
+151 & E151	Activated Vegetable Carbons, Brilliant Black (food color)	H	A	C
+154	Food Brown, Kipper Brown, Brown FK (food color)	H	A	C
+155 & E155	Chocolate Brown HT, Brown HT (food color)	H	A	C
+160b & E160b	Bixin, Norbixin, Annatto Extracts (yellow, red to brown natural colors)	H	A	-
+E171	Titanium Dioxide, TiO2 (to give foods an opaque color)
+more on Titanium Dioxide in comments below ↴	?	?	?
+E173	Aluminium (preservatives)	-	-	C
+E180	Latol Rubine, Pigment Rubine (preservatives)	H	A	C
+200 &
+E200-203	Potassium & Calcium Sorbates ,Sorbic Acid (preservatives)	H	A	-
+210 & E210	Benzoic Acid (preservatives)	H	A	-
+211 & E211	Sodium Benzoate (preservatives)	H	A	C
+212 & E212	Potassium Benzoate (preservatives)	-	A	-
+213 & E213	Calcium Benzoate (preservatives)	-	A	-
+E214	Ethyl Para Hydroxybenzonate (preservatives)	-	A	-
+E215	Sodium Ethyl Para Hydroxybenzonate (preservatives)	-	A	-
+216 & E216	Propyl P Hydroxybenzonate, Propylparaben (preservatives)	-	A	-
+E217	Sodium Propyl P Hydroxybenzonate (preservatives)	-	A	-
+220 & E220	Sulphur Dioxide also Sulfur dioxide (preservatives)	H	A	-
+221 & E221	Sodium Sulfite or Sodium Sulphite (preservatives)	-	A	-
+222	Sodium Bisulfite or Sodium Bisulphite (preservatives)	-	A	-
+223 & E223	Sodium Metabisulfite or Sodium Metabisulphite (preservatives)	-	A	-
+224 & E224	Potassium Metabisulphite or Potassium Metabisulfite (preservatives)	-	A	-
+225 & E225	Potassium Sulfite or Potassium Sulphite (preservatives)	-	A	-
+E226	Calcium Sulfite or Calcium Sulphite (preservatives)	-	A	-
+E227	Calcium Hydrogen Sulphite or Calcium Hydrogen Sulfite (preservatives)	-	A	-
+E228	Potassium Bisulfite, Potassium Hydrogen Sulfite or Potassium Bisulphite, Potassium Hydrogen Sulphite (preservatives)	H	A	-
+E230	Diphenyl, Biphenyl (preservatives)	-	-	C
+E231	Orthophenyl Phenol (preservatives)	-	-	C
+E236	Formic Acid (preservative)	-	-	C
+E239	Hexamine, Hexamethylene Tetramine (preservatives)	-	-	C
+249 & E249	Potassium Nitrate (preservative)	-	A	C
+250 & E250	Sodium Nitrite (preservative)	H	A	C
+251 & E251	Sodium Nitrate (preservative)	H	-	C
+252 & E252	Potassium Nitrate (preservative)	H	-	C
+260 & E260	Acetic Acid, Glacial (preservatives)	-	A	-
+280 to 283	Calcium or Potassium or Sodium Propionates, Propionic Acid (preservatives)	H	A	-
+310 & E310	Propyl Gallate (Synthetic Antioxidant)	-	A	C
+311 & E311	Octyl Gallate (Synthetic Antioxidant)	-	A	-
+312 & E312	Dodecyl Gallate (Synthetic Antioxidant)	-	A	-
+319 & E319	TBHQ, Tert Butylhydroquinone (Synthetic Antioxidants)	H	A	-
+320 & E320	Butylated Hydroxyanisole (BHA) (Synthetic Antioxidants)	H	A	C
+321 & E321	Butylated Hydroxytoluene (BHT) or Butylhydroxytoluene (Synthetic Antioxidants)	H	A	C
+330 & E330	Citric Acid (NOT DANGEROUS if naturally occurring e330 & 330 citric acid additive – but other can contain sulfites and mold, explained earlier in the article above this table and the printable version link.)	-	-	-
+407 & E407	Carrageenan (Thickening & Stabilizing Agent)	-	A	C
+413 & E413	Tragacanth (thickener & Emulsifier)	-	A	-
+414 & E414	Acacia Gum (Food Stabilizer)	-	A	-
+416	Karaya Gum (Laxative, Food Thickener & Emulsifier)	-	A	-
+421 & E421	Mannitol (Artificial Sweetener)	H	-	-
+430	Polyxyethylene Stearate (Emulsifier)	-	-	C
+431	Polyxyl Stearate (Emulsifier)	-	-	C
+E432 – E435	Polyoxyethylene Sorbitan Monostearate (Emulsifiers Gelling Stabilisers Thickeners Agents)	-	-	C
+433 – 436	Polysorbate (Emulsifiers)	-	-	C
+441 & E441	Gelatine (Food Gelling Agent)	-	A	-
+466	Sodium CarboxyMethyl Cellulose	-	-	C
+507 & E507	Hydrochloric Acid (Hydrolyzing Enhancer & Gelatin Production)	-	-	C
+518 & E518	Magnesium Sulphate (Tofu Coagulant)	-	-	C
+536 & E536	Potassium Ferrocyanide (Anti Caking Agent)	-	A	-
+553 & E553 & E553b	Talc (Anti Caking, Filling, Softener, Agent)	-	-	C
+620 – 625	MSG Monosodium Glutamate, Glutamic Acid, all Glutamates (Flavour Enhancers)	H	A	C
+627 & E627	Disodium Guanylate (Flavour Enhancers)	H	A	-
+631 & E631	Disodium Inosinate 5 (Flavour Enhancers)	-	A	-
+635 & E635	Disodium Ribonucleotides 5 (Flavour Enhancers)	-	A	-
+903 & E903	Camauba Wax (used in Chewing Gums, Coating and Glazing Agents)	-	-	C
+905 & 905 a,b,c	Paraffin and Vaseline, White Mineral Oil (Solvents, Coating and Glazing, Anti Foaming Agents, Lubricant in Chewing Gums)	-	-	C
+924 & E924	Potassium Bromate (Agent used in Bleaching Flour)	-	-	C
+925 & E925	Chlorine (Agent used in Bleaching Flour, Bread Enhancer and Stabiliser)	-	-	C
+926	Chlorine Dioxide (Bleaching Flour and Preservative Agent)	-	-	C
+928 & E928	Benzoyl Peroxide (Bleaching Flour and Bread enhancer Agent)	-	A	-
+950 & E950	Potassium Acesulphame (Sweetener)	-	-	C
+951	Aspartame (Sweetener)	H	A	-
+952 & E952	Cyclamate and Cyclamic Acid (Sweeteners)	-	-	C
+954 & E954	Saccharine (Sweetener)	-	-	C
+1202 & E1202	Insoluble Polyvinylpyrrolidone Insoluble (Stabiliser and Clarifying Agent added to Wine, Beer, Pharmaceuticals)	-	-	C
+1403	Bleached Starch (Thickener and Stabiliser)	-	A	-

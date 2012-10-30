@@ -244,7 +244,7 @@ def main():
     
     for row in article.tables[2]:
       print row
-    #article2 = web.wikipedia.search("List_of_food_additives,_Codex_Alimentarius", language="en", light=False, cached=True)
+    article2 = web.wikipedia.search("List_of_food_additives,_Codex_Alimentarius", language="en", light=False, cached=True)
     #for row in article2.tables[0]:
     #  print row
   
