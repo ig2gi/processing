@@ -8,7 +8,7 @@
     <link href="python:libraries/corevector/corevector.py" rel="functions"/>
     <link href="python:libraries/l_system/l_system.py" rel="functions"/>
     <link href="python:libraries/packing/packing.py" rel="functions"/>
-    <node name="root" renderedChild="combine16">
+    <node name="root" renderedChild="combine14">
         <node name="align1" position="840.00,200.00" prototype="corevector.align">
             <port name="halign" type="string" value="right"/>
             <port name="valign" type="string" value="none"/>
@@ -63,8 +63,8 @@
         <node name="colorize13" position="3900.00,1080.00" prototype="corevector.colorize">
             <port name="fill" type="color" value="#686868ff"/>
         </node>
-        <node name="colorize14" position="1520.00,2880.00" prototype="corevector.colorize"/>
-        <node name="colorize15" position="1500.00,3060.00" prototype="corevector.colorize"/>
+        <node name="colorize14" position="1540.00,2920.00" prototype="corevector.colorize"/>
+        <node name="colorize15" position="1480.00,3080.00" prototype="corevector.colorize"/>
         <node name="colorize16" position="3260.00,2640.00" prototype="corevector.colorize">
             <port name="fill" type="color" value="#767676ff"/>
         </node>
@@ -211,10 +211,10 @@
         <node name="group1" position="3540.00,400.00" prototype="corevector.group"/>
         <node name="group2" position="3880.00,1520.00" prototype="corevector.group"/>
         <node name="import_csv1" position="-160.00,200.00" prototype="data.import_csv">
-            <port name="file" type="string" value="w2/words_convention.csv"/>
+            <port name="file" type="string" value="data/words_convention.csv"/>
         </node>
         <node name="import_csv2" position="400.00,2140.00" prototype="data.import_csv">
-            <port name="file" type="string" value="w2/words_convention_top_ten.csv"/>
+            <port name="file" type="string" value="data/words_convention_top_ten.csv"/>
         </node>
         <node name="line_angle1" position="300.00,120.00" prototype="corevector.line_angle">
             <port name="position" type="point" value="17.00,0.00"/>
@@ -242,12 +242,12 @@
         </node>
         <node name="line_angle6" position="1300.00,1900.00" prototype="corevector.line_angle">
             <port name="angle" type="float" value="90.0"/>
-            <port name="distance" type="float" value="350.0"/>
+            <port name="distance" type="float" value="460.0"/>
         </node>
         <node name="line_angle7" position="2300.00,2520.00" prototype="corevector.line_angle">
             <port name="position" type="point" value="0.00,-32.00"/>
             <port name="angle" type="float" value="90.0"/>
-            <port name="distance" type="float" value="410.0"/>
+            <port name="distance" type="float" value="510.0"/>
         </node>
         <node name="link1" position="1100.00,680.00" prototype="corevector.link"/>
         <node name="link2" position="1120.00,980.00" prototype="corevector.link"/>
@@ -290,10 +290,10 @@
             <port name="width" type="float" value="128.0"/>
             <port name="height" type="float" value="241.0"/>
         </node>
-        <node name="rect3" position="1180.00,2800.00" prototype="corevector.rect">
+        <node name="rect3" position="1280.00,2760.00" prototype="corevector.rect">
             <port name="height" type="float" value="30.0"/>
         </node>
-        <node name="rect4" position="1180.00,3020.00" prototype="corevector.rect">
+        <node name="rect4" position="1220.00,3040.00" prototype="corevector.rect">
             <port name="height" type="float" value="30.0"/>
         </node>
         <node name="rect5" position="2700.00,2820.00" prototype="corevector.rect">
@@ -301,9 +301,9 @@
             <port name="height" type="float" value="38.0"/>
         </node>
         <node name="rect6" position="3480.00,2860.00" prototype="corevector.rect">
-            <port name="position" type="point" value="0.00,181.00"/>
+            <port name="position" type="point" value="0.00,220.00"/>
             <port name="width" type="float" value="376.0"/>
-            <port name="height" type="float" value="546.0"/>
+            <port name="height" type="float" value="635.0"/>
             <port name="roundness" type="point" value="4.00,4.00"/>
         </node>
         <node name="reflect1" position="3320.00,380.00" prototype="corevector.reflect">
@@ -326,11 +326,11 @@
         <node name="repeat4" position="900.00,1040.00" prototype="list.repeat">
             <port name="amount" type="int" value="58"/>
         </node>
-        <node name="repeat5" position="900.00,1740.00" prototype="list.repeat">
-            <port name="amount" type="int" value="10"/>
+        <node name="repeat5" position="680.00,1800.00" prototype="list.repeat">
+            <port name="amount" type="int" value="15"/>
         </node>
-        <node name="repeat6" position="1060.00,500.00" prototype="list.repeat">
-            <port name="amount" type="int" value="10"/>
+        <node name="repeat6" position="1080.00,1760.00" prototype="list.repeat">
+            <port name="amount" type="int" value="15"/>
         </node>
         <node name="republicans" position="780.00,1080.00" prototype="corevector.ellipse">
             <port name="position" type="point" value="533.00,912.00"/>
@@ -356,12 +356,15 @@
         </node>
         <node name="resample4" position="1500.00,2020.00" prototype="corevector.resample">
             <port name="method" type="string" value="amount"/>
+            <port name="points" type="int" value="15"/>
         </node>
         <node name="resample_by_amount1" position="460.00,40.00" prototype="corevector.resample_by_amount"/>
         <node name="rotate1" position="2660.00,220.00" prototype="corevector.rotate">
             <port name="angle" type="float" value="30.0"/>
         </node>
-        <node name="slice1" position="760.00,2060.00" prototype="list.slice"/>
+        <node name="slice1" position="760.00,2060.00" prototype="list.slice">
+            <port name="size" type="int" value="15"/>
+        </node>
         <node name="sum1" position="1500.00,1220.00" prototype="math.sum"/>
         <node name="sum2" position="1500.00,1580.00" prototype="math.sum"/>
         <node name="textpath1" position="580.00,200.00" prototype="corevector.textpath">
@@ -399,7 +402,7 @@
         </node>
         <node name="textpath15" position="1800.00,2280.00" prototype="corevector.textpath"/>
         <node name="textpath16" position="2660.00,2640.00" prototype="corevector.textpath">
-            <port name="text" type="string" value="Top 10 Words"/>
+            <port name="text" type="string" value="Top 15 Words"/>
             <port name="font_name" type="string" value="GenevaBold"/>
             <port name="font_size" type="float" value="32.0"/>
         </node>
