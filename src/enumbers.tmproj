@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>python/knightcenter/extractor.py</string>
+	<string>nodebox3/knightcenter/w2/data/words_republicans_top.csv</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -185,7 +185,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>nodebox3/knightcenter/w2.ndbx</key>
+		<key>nodebox3/knightcenter/w2/data/words_convention.csv</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -199,14 +199,42 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>nodebox3/knightcenter/w2/words_convention.csv</key>
+		<key>nodebox3/knightcenter/w2/data/words_convention_top_ten.csv</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>23</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>25</integer>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>nodebox3/knightcenter/w2/data/words_democrats_top.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>34</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>nodebox3/knightcenter/w2/data/words_republicans_top.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>64</integer>
+				<key>line</key>
+				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -304,14 +332,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>27</integer>
 				<key>line</key>
-				<integer>23</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>9</integer>
+			<integer>0</integer>
 		</dict>
 		<key>python/knightcenter/extractor.txt</key>
 		<dict>
@@ -332,9 +360,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>25</integer>
+				<integer>67</integer>
 				<key>line</key>
-				<integer>20</integer>
+				<integer>17</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
@@ -357,6 +385,80 @@
 				<integer>59</integer>
 			</dict>
 		</dict>
+		<key>python/knightcenter/words_convention_top_ten.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>python/knightcenter/words_democrats_top.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>34</integer>
+			</dict>
+		</dict>
+		<key>python/knightcenter/words_republicans_top.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
@@ -365,9 +467,14 @@
 		<string>nodebox3/enumbers/enumbers.ndbx</string>
 		<string>python/enumbers/extractor.py</string>
 		<string>python/knightcenter/extractor.py</string>
+		<string>python/knightcenter/words_republicans_top.csv</string>
+		<string>python/knightcenter/words_democrats_top.csv</string>
+		<string>nodebox3/knightcenter/w2/data/words_democrats_top.csv</string>
+		<string>python/knightcenter/words_convention_top_ten.csv</string>
 		<string>python/knightcenter/words_convention.csv</string>
-		<string>nodebox3/knightcenter/w2/words_convention.csv</string>
-		<string>nodebox3/knightcenter/w2.ndbx</string>
+		<string>nodebox3/knightcenter/w2/data/words_convention.csv</string>
+		<string>nodebox3/knightcenter/w2/data/words_convention_top_ten.csv</string>
+		<string>nodebox3/knightcenter/w2/data/words_republicans_top.csv</string>
 		<string>nodebox3/enumbers/enumbers-Flav-estats.csv</string>
 		<string>python/knightcenter/extractor.txt</string>
 		<string>python/enumbers/enumbers_EU_approved.txt</string>
@@ -385,6 +492,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{1254, -0}, {1254, 1418}}</string>
+	<string>{{1254, 0}, {1254, 1418}}</string>
 </dict>
 </plist>

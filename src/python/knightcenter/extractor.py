@@ -94,7 +94,7 @@ def main():
         republicans.append(wc)
       i = i + 2
   democrats.sort(key = lambda x: x.ratio1(), reverse=True)
-  republicans.sort(key = lambda x: x.ratio2(), reverse=True)
+  republicans.sort(key = lambda x: x.ratio2(), reverse=False)
   wordcounts.extend(democrats)
   wordcounts.extend(equals)
   wordcounts.extend(republicans)
