@@ -12,6 +12,7 @@ import os
 import re
 import math
 
+data_dir = '../../nodebox3/knightcenter/w2/data/'
 
 class WordCount(object):
   """
@@ -85,9 +86,9 @@ def main():
   for w in words:
     if w:
       wc = WordCount(w, counts[i],counts[i+1])
-      if wc.delta == 0:
+      if wc.delta() == 0:
         equals.append(wc)
-      elif wc.delta > 0:
+      elif wc.delta() > 0:
         democrats.append(wc)
       else:
         republicans.append(wc)
@@ -98,22 +99,42 @@ def main():
   wordcounts.extend(equals)
   wordcounts.extend(republicans)
   
+  for wc in democrats:
+    print wc.delta()
   
   
-  
-  f = open("words_convention.csv", 'w+')
+  f = open(data_dir + "words_convention.csv", 'w+')
   f.write("word,d,r,delta,total,counts,ratio1,ratio2,fontname1,fontname2" + '\n')
   for wc in wordcounts:
     f.write(wc.csv() + '\n')
   f.close()
   
-  # top 10
+  # top 15
   wordcounts.sort(key = lambda x: x.total(), reverse=True)
-  f = open("words_convention_top_ten.csv", 'w+')
+  f = open(data_dir + "words_convention_top_ten.csv", 'w+')
   f.write("word,d,r,delta,total,counts,ratio1,ratio2" + '\n')
   for wc in wordcounts:
     f.write(wc.csv() + '\n')
   f.close()
+  
+  # top 15 words democrats
+  democrats.sort(key = lambda x: x.c1, reverse=True)
+  f = open(data_dir + "words_democrats_top.csv", 'w+')
+  f.write("word,d,r,delta,total,counts,ratio1,ratio2" + '\n')
+  for wc in democrats:
+    f.write(wc.csv() + '\n')
+  f.close()
+  
+  # top 15 words republicans
+  republicans.sort(key = lambda x: x.c2, reverse=True)
+  f = open(data_dir + "words_republicans_top.csv", 'w+')
+  f.write("word,d,r,delta,total,counts,ratio1,ratio2" + '\n')
+  for wc in republicans:
+    print wc
+    f.write(wc.csv() + '\n')
+    
+  f.close()
+  
     
  
 
