@@ -69,10 +69,10 @@
             <port name="color" type="color" value="#8db3d7ff"/>
         </node>
         <node name="color2" position="1540.00,-360.00" prototype="color.color">
-            <port name="color" type="color" value="#c2db99ff"/>
+            <port name="color" type="color" value="#fc636dff"/>
         </node>
         <node name="color3" position="1620.00,-500.00" prototype="color.color">
-            <port name="color" type="color" value="#c2db991e"/>
+            <port name="color" type="color" value="#fc636d1e"/>
         </node>
         <node name="color4" position="1340.00,-460.00" prototype="color.color">
             <port name="color" type="color" value="#8db3d71e"/>
@@ -84,7 +84,7 @@
             <port name="strokeWidth" type="float" value="7.0"/>
         </node>
         <node name="colorize11" position="2960.00,-20.00" prototype="corevector.colorize"/>
-        <node name="colorize12" position="3000.00,440.00" prototype="corevector.colorize">
+        <node name="colorize12" position="3800.00,660.00" prototype="corevector.colorize">
             <port name="fill" type="color" value="#8686862b"/>
         </node>
         <node name="colorize13" position="5800.00,840.00" prototype="corevector.colorize">
@@ -155,7 +155,7 @@
         </node>
         <node name="combine1" position="2340.00,1040.00" prototype="list.combine"/>
         <node name="combine10" position="4500.00,1420.00" prototype="list.combine"/>
-        <node name="combine11" position="3760.00,620.00" prototype="list.combine"/>
+        <node name="combine11" position="3580.00,620.00" prototype="list.combine"/>
         <node name="combine12" position="3400.00,20.00" prototype="list.combine"/>
         <node name="combine13" position="3820.00,1560.00" prototype="list.combine"/>
         <node name="combine14" position="3800.00,2400.00" prototype="list.combine"/>
@@ -201,7 +201,6 @@
         <node name="compound18" position="7440.00,1840.00" prototype="corevector.compound"/>
         <node name="compound2" position="4440.00,1020.00" prototype="corevector.compound"/>
         <node name="compound3" position="4420.00,1140.00" prototype="corevector.compound"/>
-        <node name="compound5" position="2900.00,420.00" prototype="corevector.compound"/>
         <node name="compound6" position="3680.00,3220.00" prototype="corevector.compound"/>
         <node name="compound7" position="5300.00,840.00" prototype="corevector.compound"/>
         <node name="compound8" position="3080.00,2700.00" prototype="corevector.compound">
@@ -310,6 +309,14 @@
             <port name="angle" type="float" value="90.0"/>
             <port name="distance" type="float" value="1430.0"/>
         </node>
+        <node name="line_angle4" position="2640.00,420.00" prototype="corevector.line_angle">
+            <port name="angle" type="float" value="90.0"/>
+            <port name="distance" type="float" value="119.0"/>
+        </node>
+        <node name="line_angle5" position="2660.00,580.00" prototype="corevector.line_angle">
+            <port name="angle" type="float" value="90.0"/>
+            <port name="distance" type="float" value="119.0"/>
+        </node>
         <node name="line_angle6" position="1300.00,1900.00" prototype="corevector.line_angle">
             <port name="angle" type="float" value="90.0"/>
             <port name="distance" type="float" value="437.0"/>
@@ -352,6 +359,12 @@
         </node>
         <node name="make_strings1" position="3420.00,1680.00" prototype="string.make_strings">
             <port name="string" type="string" value="10;50;100;150;200"/>
+        </node>
+        <node name="make_strings2" position="2660.00,280.00" prototype="string.make_strings">
+            <port name="string" type="string" value="Words;favored;by;Democrats"/>
+        </node>
+        <node name="make_strings3" position="2900.00,520.00" prototype="string.make_strings">
+            <port name="string" type="string" value="Words;favored;by;Republicans"/>
         </node>
         <node name="multiply1" position="3200.00,3460.00" prototype="math.multiply">
             <port name="value2" type="float" value="360.0"/>
@@ -481,6 +494,12 @@
         <node name="resample_by_amount1" position="660.00,-160.00" prototype="corevector.resample_by_amount">
             <port name="points" type="int" value="58"/>
         </node>
+        <node name="resample_by_amount2" position="2740.00,360.00" prototype="corevector.resample_by_amount">
+            <port name="points" type="int" value="4"/>
+        </node>
+        <node name="resample_by_amount3" position="2780.00,640.00" prototype="corevector.resample_by_amount">
+            <port name="points" type="int" value="4"/>
+        </node>
         <node name="rest1" position="1180.00,1260.00" prototype="list.rest"/>
         <node name="rest2" position="1180.00,1500.00" prototype="list.rest"/>
         <node name="rotate1" position="5260.00,-80.00" prototype="corevector.rotate">
@@ -522,29 +541,21 @@
             <port name="font_size" type="float" value="13.0"/>
             <port name="align" type="string" value="LEFT"/>
         </node>
-        <node name="textpath10" position="2680.00,420.00" prototype="corevector.textpath">
-            <port name="text" type="string" value="Words favored by Democrats"/>
+        <node name="textpath10" position="3000.00,300.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="Words favored"/>
             <port name="font_name" type="string" value="Arial Black"/>
             <port name="font_size" type="float" value="50.0"/>
-            <port name="position" type="point" value="0.00,260.00"/>
         </node>
-        <node name="textpath11" position="2680.00,500.00" prototype="corevector.textpath">
-            <port name="text" type="string" value="Words favored by Republicans"/>
+        <node name="textpath11" position="3060.00,580.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="Words favored"/>
             <port name="font_name" type="string" value="Arial Black"/>
             <port name="font_size" type="float" value="50.0"/>
-            <port name="position" type="point" value="0.00,960.00"/>
         </node>
         <node name="textpath12" position="4920.00,620.00" prototype="corevector.textpath">
             <port name="text" type="string" value="Number of mentions per 25,000 spoken words by Democrats and Republicans"/>
             <port name="font_name" type="string" value="Geneva"/>
             <port name="font_size" type="float" value="15.0"/>
             <port name="position" type="point" value="0.00,-100.00"/>
-        </node>
-        <node name="textpath13" position="4900.00,880.00" prototype="corevector.textpath">
-            <port name="text" type="string" value="Word, font size is proportional to the total number of mentions"/>
-            <port name="font_name" type="string" value="Geneva"/>
-            <port name="font_size" type="float" value="10.0"/>
-            <port name="position" type="point" value="500.00,-44.00"/>
         </node>
         <node name="textpath14" position="4920.00,760.00" prototype="corevector.textpath">
             <port name="text" type="string" value="Number of mentions per 25,000 spoken words by Democrats and Republicans"/>
@@ -691,6 +702,8 @@
         <node name="to_points3" position="1220.00,960.00" prototype="corevector.to_points"/>
         <node name="to_points4" position="1560.00,1520.00" prototype="corevector.to_points"/>
         <node name="to_points5" position="1680.00,2060.00" prototype="corevector.to_points"/>
+        <node name="to_points6" position="2880.00,380.00" prototype="corevector.to_points"/>
+        <node name="to_points7" position="2940.00,660.00" prototype="corevector.to_points"/>
         <node name="total" position="220.00,560.00" prototype="data.lookup">
             <port name="key" type="string" value="total"/>
         </node>
@@ -737,6 +750,12 @@
         <node name="translate26" position="7640.00,1740.00" prototype="corevector.translate">
             <port name="translate" type="point" value="200.00,1531.00"/>
         </node>
+        <node name="translate27" position="3180.00,360.00" prototype="corevector.translate">
+            <port name="translate" type="point" value="-350.00,100.00"/>
+        </node>
+        <node name="translate28" position="3220.00,580.00" prototype="corevector.translate">
+            <port name="translate" type="point" value="350.00,940.00"/>
+        </node>
         <node name="translate3" position="1060.00,680.00" prototype="corevector.translate"/>
         <node name="translate4" position="4700.00,1080.00" prototype="corevector.translate">
             <port name="translate" type="point" value="224.00,-224.00"/>
@@ -744,7 +763,7 @@
         <node name="translate5" position="5440.00,0.00" prototype="corevector.translate">
             <port name="translate" type="point" value="0.00,-22.00"/>
         </node>
-        <node name="translate6" position="3940.00,760.00" prototype="corevector.translate">
+        <node name="translate6" position="4060.00,800.00" prototype="corevector.translate">
             <port name="translate" type="point" value="0.00,68.00"/>
         </node>
         <node name="translate7" position="4140.00,2320.00" prototype="corevector.translate">
@@ -781,11 +800,6 @@
         <conn input="compound3.shape2" output="textpath9"/>
         <conn input="compound3.shape1" output="textpath8"/>
         <conn input="compound2.shape2" output="compound3"/>
-        <conn input="compound5.shape1" output="textpath10"/>
-        <conn input="compound5.shape2" output="textpath11"/>
-        <conn input="colorize12.shape" output="compound5"/>
-        <conn input="combine11.list2" output="colorize12"/>
-        <conn input="translate6.shape" output="combine11"/>
         <conn input="combine10.list2" output="translate6"/>
         <conn input="resample1.shape" output="line_angle3"/>
         <conn input="to_points2.shape" output="resample1"/>
@@ -1090,5 +1104,19 @@
         <conn input="combine27.list2" output="group8"/>
         <conn input="combine27.list3" output="group6"/>
         <conn input="repeat3.list" output="color4"/>
+        <conn input="colorize12.shape" output="combine11"/>
+        <conn input="translate6.shape" output="colorize12"/>
+        <conn input="textpath10.text" output="make_strings2"/>
+        <conn input="translate27.shape" output="textpath10"/>
+        <conn input="resample_by_amount2.shape" output="line_angle4"/>
+        <conn input="to_points6.shape" output="resample_by_amount2"/>
+        <conn input="textpath10.position" output="to_points6"/>
+        <conn input="textpath11.text" output="make_strings3"/>
+        <conn input="translate28.shape" output="textpath11"/>
+        <conn input="resample_by_amount3.shape" output="line_angle5"/>
+        <conn input="to_points7.shape" output="resample_by_amount3"/>
+        <conn input="textpath11.position" output="to_points7"/>
+        <conn input="combine11.list2" output="translate28"/>
+        <conn input="combine11.list1" output="translate27"/>
     </node>
 </ndbx>
