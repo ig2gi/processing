@@ -28,7 +28,22 @@ class WordCount(object):
   def delta(self):
     return self.c1 - self.c2
     
-  def ratio1(self):
+    
+  def fontname1(self):
+    if self.ratio1() >= 1000 and self.c1 > 10:
+        return "EurostileBold"
+    if self.c1 > 10 and self.ratio1() > 2: 
+        return "EurostileBold"
+    return "Eurostile"
+    
+  def fontname2(self):
+      if self.ratio2() >= 1000 and self.c2 > 10:
+          return "EurostileBold"
+      if self.c2 > 10 and self.ratio2() > 2: 
+          return "EurostileBold"
+      return "Eurostile"
+    
+  def ratio1(self):    
     if self.c2 == 0:
       return 1000
     return float(self.c1) / float(self.c2)
@@ -40,15 +55,15 @@ class WordCount(object):
     return float(self.c2) / float(self.c1)
 
   def csv(self):
-    return "%s,%i,%i,%i,%i,%s,%f,%f" % (self.w, self.c1, self.c2,self.delta(),self.total(),"%i - %i" % (self.c1, self.c2), self.ratio1(), self.ratio2())
+    return "%s,%i,%i,%i,%i,%s,%f,%f,%s,%s" % (self.w, self.c1, self.c2,self.delta(),self.total(),"%i - %i" % (self.c1, self.c2), self.ratio1(), self.ratio2(), self.fontname1(),self.fontname2() )
      
   def __cmp__(self, other):
-    return math.fabs(self.delta) - math.fabs(other.delta)      
+    return math.fabs(self.delta) - math.fabs(other.delta)          
        
 
-        
+      
 def main():
-  lines = [line.strip() for line in open('extractor.txt')]     
+  lines = [line.strip() for line in open('extractor.txt')]      
   regex = "([a-zA-Z /]*)"
   regex2 = "([0-9]*) - ([0-9]*)"
   words = []
@@ -87,7 +102,7 @@ def main():
   
   
   f = open("words_convention.csv", 'w+')
-  f.write("word,d,r,delta,total,counts,ratio1,ratio2" + '\n')
+  f.write("word,d,r,delta,total,counts,ratio1,ratio2,fontname1,fontname2" + '\n')
   for wc in wordcounts:
     f.write(wc.csv() + '\n')
   f.close()
@@ -99,7 +114,7 @@ def main():
   for wc in wordcounts:
     f.write(wc.csv() + '\n')
   f.close()
-  
+    
  
 
 if __name__ == '__main__':
