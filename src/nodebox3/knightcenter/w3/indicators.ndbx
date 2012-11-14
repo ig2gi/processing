@@ -8,7 +8,7 @@
     <link href="python:libraries/corevector/corevector.py" rel="functions"/>
     <link href="python:libraries/l_system/l_system.py" rel="functions"/>
     <link href="python:libraries/packing/packing.py" rel="functions"/>
-    <node name="root" renderedChild="combine13">
+    <node name="root" renderedChild="combine3">
         <node name="align1" position="800.00,1160.00" prototype="corevector.align">
             <port name="halign" type="string" value="left"/>
             <port name="valign" type="string" value="top"/>
@@ -69,7 +69,7 @@
             <port name="fill" type="color" value="#abababff"/>
         </node>
         <node name="colorize4" position="2160.00,480.00" prototype="corevector.colorize">
-            <port name="fill" type="color" value="#fdfdfdff"/>
+            <port name="fill" type="color" value="#ffffffff"/>
             <port name="stroke" type="color" value="#383838ff"/>
         </node>
         <node name="colorize5" position="1180.00,220.00" prototype="corevector.colorize">
@@ -321,7 +321,7 @@
             <port name="translate" type="point" value="190.00,0.00"/>
         </node>
         <node name="translate4" position="960.00,580.00" prototype="corevector.translate">
-            <port name="translate" type="point" value="209.00,0.00"/>
+            <port name="translate" type="point" value="213.00,0.00"/>
         </node>
         <node name="translate5" position="2200.00,1420.00" prototype="corevector.translate">
             <port name="translate" type="point" value="598.00,364.00"/>
@@ -434,7 +434,6 @@
         <conn input="colorize7.shape" output="compound4"/>
         <conn input="combine1.list2" output="translate11"/>
         <conn input="translate5.shape" output="colorize7"/>
-        <conn input="combine1.list3" output="translate5"/>
         <conn input="align2.shape" output="rect5"/>
         <conn input="compound4.shape2" output="align2"/>
         <conn input="combine8.list1" output="combine3"/>
