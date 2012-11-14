@@ -8,7 +8,7 @@
     <link href="python:libraries/corevector/corevector.py" rel="functions"/>
     <link href="python:libraries/l_system/l_system.py" rel="functions"/>
     <link href="python:libraries/packing/packing.py" rel="functions"/>
-    <node name="root" renderedChild="combine8">
+    <node name="root" renderedChild="combine13">
         <node name="align1" position="800.00,1160.00" prototype="corevector.align">
             <port name="halign" type="string" value="left"/>
             <port name="valign" type="string" value="top"/>
@@ -28,6 +28,12 @@
         <node name="color1" position="640.00,760.00" prototype="color.color">
             <port name="color" type="color" value="#e0733fc8"/>
         </node>
+        <node name="color10" position="-60.00,1260.00" prototype="color.color">
+            <port name="color" type="color" value="#5d7fa5ff"/>
+        </node>
+        <node name="color11" position="-60.00,1340.00" prototype="color.color">
+            <port name="color" type="color" value="#346390ff"/>
+        </node>
         <node name="color2" position="640.00,860.00" prototype="color.color">
             <port name="color" type="color" value="#eba481c8"/>
         </node>
@@ -36,6 +42,21 @@
         </node>
         <node name="color4" position="3140.00,1380.00" prototype="color.color">
             <port name="color" type="color" value="#4e8fd1ff"/>
+        </node>
+        <node name="color5" position="-60.00,1020.00" prototype="color.color">
+            <port name="color" type="color" value="#e3e8edff"/>
+        </node>
+        <node name="color6" position="120.00,780.00" prototype="color.color">
+            <port name="color" type="color" value="#8dc36eff"/>
+        </node>
+        <node name="color7" position="120.00,860.00" prototype="color.color">
+            <port name="color" type="color" value="#cc312dff"/>
+        </node>
+        <node name="color8" position="-60.00,1100.00" prototype="color.color">
+            <port name="color" type="color" value="#ccd4dfff"/>
+        </node>
+        <node name="color9" position="-60.00,1180.00" prototype="color.color">
+            <port name="color" type="color" value="#a3b2c9ff"/>
         </node>
         <node name="colorize1" position="1140.00,1220.00" prototype="corevector.colorize">
             <port name="stroke" type="color" value="#ffffffff"/>
@@ -67,6 +88,10 @@
             <port name="fill" type="color" value="#eeeeeeff"/>
         </node>
         <node name="combine1" position="2320.00,1060.00" prototype="list.combine"/>
+        <node name="combine10" position="300.00,820.00" prototype="list.combine"/>
+        <node name="combine11" position="380.00,940.00" prototype="list.combine"/>
+        <node name="combine12" position="100.00,1080.00" prototype="list.combine"/>
+        <node name="combine13" position="140.00,1220.00" prototype="list.combine"/>
         <node name="combine2" position="2040.00,680.00" prototype="list.combine"/>
         <node name="combine3" position="2660.00,840.00" prototype="list.combine"/>
         <node name="combine4" position="900.00,1020.00" prototype="list.combine"/>
@@ -432,5 +457,16 @@
         <conn input="align3.shape" output="rect6"/>
         <conn input="translate13.shape" output="align3"/>
         <conn input="colorize9.shape" output="translate13"/>
+        <conn input="combine10.list1" output="color6"/>
+        <conn input="combine11.list1" output="combine10"/>
+        <conn input="combine10.list2" output="color7"/>
+        <conn input="combine11.list2" output="color7"/>
+        <conn input="combine11.list3" output="color7"/>
+        <conn input="combine12.list1" output="color5"/>
+        <conn input="combine12.list2" output="color8"/>
+        <conn input="combine12.list3" output="color9"/>
+        <conn input="combine13.list1" output="combine12"/>
+        <conn input="combine13.list2" output="color10"/>
+        <conn input="combine13.list3" output="color11"/>
     </node>
 </ndbx>
