@@ -1,0 +1,72 @@
+id,SHORT NAME,Donor tag,CHART NAME,Organisation,Country,Activity,TOTAL %,Organisation level,Country level,Activity level,RANK
+61,UK-DFID,Bilateral,1. UK-DFID,100%,86%,88%,91%,33%,29%,29%,1
+71,World Bank-IDA,Multilateral,2. World Bank-IDA,86%,86%,92%,88%,29%,29%,31%,2
+46,Netherlands,Bilateral,3. Netherlands,89%,71%,72%,77%,30%,24%,24%,3
+31,Global Fund,Multilateral,4. Global Fund,69%,86%,76%,77%,23%,29%,25%,4
+18,EC-DEVCO,Multilateral,5. EC-DEVCO,92%,71%,68%,77%,31%,24%,23%,5
+14,Denmark,Bilateral,6. Denmark,92%,86%,52%,76%,31%,29%,17%,6
+55,Sweden,Bilateral,7. Sweden,100%,71%,44%,72%,33%,24%,15%,7
+2,AfDB,Multilateral,8. AfDB,67%,71%,76%,71%,22%,24%,25%,8
+66,US-MCC,Bilateral,9. US-MCC,69%,71%,68%,70%,23%,24%,23%,9
+63,UNDP,Multilateral,10. UNDP,64%,86%,56%,69%,21%,29%,19%,10
+35,IADB,IFI/DFI,11. IADB,81%,57%,64%,67%,27%,19%,21%,11
+3,AsDB,Multilateral,12. AsDB,78%,43%,68%,63%,26%,14%,23%,12
+29,GAVI,Multilateral,13. GAVI,75%,43%,68%,62%,25%,14%,23%,13
+16,EC-ECHO,Multilateral,14. EC-ECHO,72%,57%,52%,60%,24%,19%,17%,14
+62,UNOCHA,Multilateral,15. UNOCHA,47%,86%,48%,60%,16%,29%,16%,15
+47,New Zealand,Bilateral,16. New Zealand,61%,57%,60%,59%,20%,19%,20%,16
+1,Adaptation Fund,CFF,17. Adaptation Fund,42%,57%,76%,58%,14%,19%,25%,17
+4,Australia,Bilateral,18. Australia,81%,29%,64%,58%,27%,10%,21%,18
+72,World Bank-IFC,IFI/DFI,19. World Bank-IFC,69%,43%,56%,56%,23%,14%,19%,19
+22,Finland,Bilateral,20. Finland,78%,71%,16%,55%,26%,24%,5%,20
+15,EBRD,IFI/DFI,21. EBRD,69%,43%,52%,55%,23%,14%,17%,21
+13,Czech Republic,Bilateral,22. Czech Republic,64%,57%,40%,54%,21%,19%,13%,22
+39,Japan-MFA,Bilateral,23. Japan-MFA,56%,57%,48%,54%,19%,19%,16%,23
+30,GEF,CFF,24. GEF,50%,43%,64%,52%,17%,14%,21%,24
+38,Japan-JICA,Bilateral,25. Japan-JICA,64%,43%,48%,52%,21%,14%,16%,25
+19,Estonia,Bilateral,26. Estonia,64%,29%,60%,51%,21%,10%,20%,26
+70,US-USAID,Bilateral,27. US-USAID,61%,57%,32%,50%,20%,19%,11%,27
+57,UK-DECC,Bilateral,28. UK-DECC,72%,29%,48%,50%,24%,10%,16%,28
+67,US-PEPFAR,Bilateral,29. US-PEPFAR,53%,43%,52%,49%,18%,14%,17%,29
+6,Belgium,Bilateral,30. Belgium,53%,43%,44%,47%,18%,14%,15%,30
+33,Hewlett,PFT,31. Hewlett,58%,29%,52%,46%,19%,10%,17%,31
+9,Canada,Bilateral,32. Canada,61%,29%,48%,46%,20%,10%,16%,32
+26,Gates,PFT,33. Gates,50%,43%,44%,46%,17%,14%,15%,33
+69,US-Treasury,Bilateral,34. US-Treasury,53%,29%,52%,44%,18%,10%,17%,34
+48,Norway,Bilateral,35. Norway,64%,29%,40%,44%,21%,10%,13%,35
+20,EIB,IFI/DFI,36. EIB,56%,29%,48%,44%,19%,10%,16%,36
+40,Korea-EDCF,IFI/DFI,37. Korea-EDCF,39%,43%,44%,42%,13%,14%,15%,37
+11,CTF,CFF,38. CTF,25%,43%,52%,40%,8%,14%,17%,38
+27,Germany-GIZ,Bilateral,39. Germany-GIZ,67%,29%,24%,40%,22%,10%,8%,39
+44,Luxembourg,Bilateral,40. Luxembourg,42%,29%,48%,39%,14%,10%,16%,40
+41,Korea-KOICA,Bilateral,41. Korea-KOICA,39%,43%,36%,39%,13%,14%,12%,41
+5,Austria,Bilateral,42. Austria,44%,43%,20%,36%,15%,14%,7%,42
+17,EC-Enlargement,Multilateral,43. EC-Enlargement,64%,14%,28%,35%,21%,5%,9%,43
+23,France-AFD,Bilateral,44. France-AFD,39%,14%,52%,35%,13%,5%,17%,44
+54,Spain,Bilateral,45. Spain,36%,29%,32%,32%,12%,10%,11%,45
+68,US- State,Bilateral,46. US- State,53%,29%,12%,31%,18%,10%,4%,46
+21,EC-FPI,Multilateral,47. EC-FPI,56%,29%,4%,29%,19%,10%,1%,47
+43,Lithuania,Bilateral,48. Lithuania,47%,29%,8%,28%,16%,10%,3%,48
+7,Brazil,Bilateral,49. Brazil,33%,14%,36%,28%,11%,5%,12%,49
+28,Germany-KfW,IFI/DFI,50. Germany-KfW,50%,29%,0%,26%,17%,10%,0%,50
+59,UK-MOD,Bilateral,51. UK-MOD,64%,14%,0%,26%,21%,5%,0%,51
+49,Poland,Bilateral,52. Poland,47%,14%,16%,26%,16%,5%,5%,52
+37,Italy,Bilateral,53. Italy,28%,29%,20%,25%,9%,10%,7%,53
+36,Ireland,Bilateral,54. Ireland,53%,14%,8%,25%,18%,5%,3%,54
+56,Switzerland,Bilateral,55. Switzerland,75%,0%,0%,25%,25%,0%,0%,55
+65,US-Defense,Bilateral,56. US-Defense,36%,14%,20%,23%,12%,5%,7%,56
+53,Slovenia,Bilateral,57. Slovenia,42%,29%,0%,23%,14%,10%,0%,57
+60,UK-CDC,IFI/DFI,58. UK-CDC,56%,0%,12%,23%,19%,0%,4%,58
+50,Portugal,Bilateral,59. Portugal,39%,29%,0%,22%,13%,10%,0%,59
+58,UK-FCO,Bilateral,60. UK-FCO,64%,0%,0%,21%,21%,0%,0%,60
+52,Slovakia,Bilateral,61. Slovakia,56%,0%,4%,20%,19%,0%,1%,61
+24,France-MAE,Bilateral,62. France-MAE,39%,0%,4%,14%,13%,0%,1%,62
+64,UNICEF,Multilateral,63. UNICEF,33%,0%,8%,14%,11%,0%,3%,63
+42,Latvia,Bilateral,64. Latvia,22%,14%,0%,12%,7%,5%,0%,64
+51,Romania,Bilateral,65. Romania,14%,14%,8%,12%,5%,5%,3%,65
+8,Bulgaria,Bilateral,66. Bulgaria,22%,0%,0%,7%,7%,0%,0%,66
+32,Greece,Bilateral,67. Greece,19%,0%,0%,6%,6%,0%,0%,67
+25,France-MINEFI,Bilateral,68. France-MINEFI,14%,0%,4%,6%,5%,0%,1%,68
+12,Cyprus,Bilateral,69. Cyprus,8%,0%,8%,5%,3%,0%,3%,69
+34,Hungary,Bilateral,70. Hungary,14%,0%,0%,5%,5%,0%,0%,70
+10,China,Bilateral,71. China,6%,0%,0%,2%,2%,0%,0%,71

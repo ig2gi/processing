@@ -94,7 +94,8 @@ def main():
         republicans.append(wc)
       i = i + 2
   democrats.sort(key = lambda x: x.ratio1(), reverse=True)
-  republicans.sort(key = lambda x: x.ratio2(), reverse=False)
+  republicans.sort(key = lambda x: x.ratio2(), reverse=False## Indicators
+  ![indicators](https://raw.github.com/ig2gi/processing/master/build/w3/indicators.png))
   wordcounts.extend(democrats)
   wordcounts.extend(equals)
   wordcounts.extend(republicans)
