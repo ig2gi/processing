@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>nodebox3/knightcenter/w3/data/overall-result-1.csv</string>
+	<string>nodebox3/knightcenter/w3/data/overall-result-3.csv</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -246,9 +246,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>53</integer>
 				<key>line</key>
-				<integer>20</integer>
+				<integer>10</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>nodebox3/knightcenter/w3/data/overall-result-3.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
+				<integer>58</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -390,9 +404,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>57</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>47</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -404,14 +418,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>7</integer>
+				<integer>4</integer>
 				<key>line</key>
-				<integer>12</integer>
+				<integer>5</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -437,6 +467,7 @@
 		<string>nodebox3/enumbers/enumbers-Colo.csv</string>
 		<string>nodebox3/enumbers/eclasses1.csv</string>
 		<string>python/knightcenter/w3/extractor.py</string>
+		<string>nodebox3/knightcenter/w3/data/overall-result-3.csv</string>
 		<string>nodebox3/knightcenter/w3/data/overall-result-1.csv</string>
 		<string>python/knightcenter/w2/extractor.py</string>
 		<string>python/knightcenter/w3/overall-result.csv</string>

@@ -17,7 +17,6 @@ data_dir = '../../../nodebox3/knightcenter/w3/data/'
 
 def main():
   lines = [line.strip() for line in open('overall-result.csv')]   
-  new_lines = []
   # transpose
   row = 0
   cols = []
@@ -41,6 +40,17 @@ def main():
     row = [cols[c][i] for c in range(0, len(cols)-1)]
     f.write(",".join(row) + '\n')  
   f.close()
+  
+  lines = [line.strip() for line in open('Aid transparency - 2011 and 12 comparable data.csv')]
+  new_lines = []
+  for l in lines:
+    values = l.split(',')
+    new_lines.append([v.split('%')[0] for v in values[2:6]])
+  f = open(data_dir + "overall-result-3.csv", 'w+')
+  for l in new_lines:
+    f.write(",".join(l) + '\n')  
+  f.close() 
+  
 
     
     
