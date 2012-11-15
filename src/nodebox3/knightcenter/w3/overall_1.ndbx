@@ -52,14 +52,14 @@
             <port name="fill" type="color" value="#ffffffff"/>
         </node>
         <node name="colorize5" position="1400.00,660.00" prototype="corevector.colorize">
-            <port name="fill" type="color" value="#606060ff"/>
+            <port name="fill" type="color" value="#8a8a8aff"/>
         </node>
         <node name="colorize6" position="2100.00,0.00" prototype="corevector.colorize">
             <port name="stroke" type="color" value="#afafafff"/>
             <port name="strokeWidth" type="float" value="1.0"/>
         </node>
         <node name="colorize7" position="2140.00,300.00" prototype="corevector.colorize">
-            <port name="fill" type="color" value="#3a3a3aff"/>
+            <port name="fill" type="color" value="#626262ff"/>
             <port name="stroke" type="color" value="#afafafff"/>
         </node>
         <node name="colorize8" position="2220.00,-220.00" prototype="corevector.colorize">
