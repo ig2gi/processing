@@ -27,7 +27,10 @@ def main():
       cols.append([])
       values = l.split(',')
       for k in range(1, len(values)):
-        cols[c].append(values[k])
+        v = values[k]
+        if c in [4,5,6,7,8,9,10]:
+          v = v.split('%')[0]
+        cols[c].append(v)
       c = c + 1
     row = row + 1
     
