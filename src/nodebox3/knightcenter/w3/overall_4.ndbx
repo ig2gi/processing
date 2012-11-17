@@ -124,6 +124,7 @@
         <node name="combine8" position="1720.00,740.00" prototype="list.combine"/>
         <node name="combine9" position="1380.00,-360.00" prototype="list.combine"/>
         <node name="compound1" position="2160.00,-240.00" prototype="corevector.compound"/>
+        <node name="compound2" position="3340.00,-440.00" prototype="corevector.compound"/>
         <node name="compound3" position="1360.00,320.00" prototype="corevector.compound"/>
         <node name="copy1" position="1480.00,-80.00" prototype="corevector.copy">
             <port name="copies" type="int" value="2"/>
@@ -184,7 +185,7 @@
             <port name="string" type="string" value="1 3 16 39 61"/>
         </node>
         <node name="make_numbers3" position="2400.00,-220.00" prototype="math.make_numbers">
-            <port name="string" type="string" value="3 10 26 49 67"/>
+            <port name="string" type="string" value="3 10 27 49 67"/>
         </node>
         <node name="make_point1" position="1740.00,260.00" prototype="corevector.make_point">
             <port name="x" type="float" value="-7.0"/>
@@ -306,11 +307,11 @@
             <port name="align" type="string" value="RIGHT"/>
         </node>
         <node name="textpath10" position="3140.00,-380.00" prototype="corevector.textpath">
-            <port name="text" type="string" value="Donor performances by type of organisation"/>
+            <port name="text" type="string" value="Donor ranks by type and group.  Performances by level."/>
             <port name="font_name" type="string" value="EurostileBold"/>
-            <port name="font_size" type="float" value="40.0"/>
+            <port name="font_size" type="float" value="30.0"/>
             <port name="align" type="string" value="LEFT"/>
-            <port name="position" type="point" value="-53.00,-920.00"/>
+            <port name="position" type="point" value="26.00,-871.00"/>
         </node>
         <node name="textpath11" position="2880.00,-80.00" prototype="corevector.textpath">
             <port name="text" type="string" value="Type of organisation"/>
@@ -430,7 +431,6 @@
         <conn input="combine7.list2" output="color8"/>
         <conn input="combine7.list3" output="color9"/>
         <conn input="translate6.shape" output="ellipse1"/>
-        <conn input="colorize10.shape" output="textpath8"/>
         <conn input="combine6.list3" output="colorize10"/>
         <conn input="type.list" output="import_csv1"/>
         <conn input="multiply2.value1" output="type"/>
@@ -566,5 +566,8 @@
         <conn input="combine15.list2" output="color10"/>
         <conn input="combine15.list3" output="color11"/>
         <conn input="colorize15.fill" output="combine15"/>
+        <conn input="compound2.shape1" output="textpath8"/>
+        <conn input="compound2.shape2" output="textpath10"/>
+        <conn input="colorize10.shape" output="compound2"/>
     </node>
 </ndbx>
