@@ -50,11 +50,17 @@ def main():
     
   nrows = len(cols[0])
   
+  types = {'Bilateral': '1','Multilateral': '2','IFI/DFI': '3', 'PFT': '4', 'CFF': '5', 'Donor tag': 'type'}
+  
   f = open(data_dir + "overall-result-1.csv", 'w+')
   for i in range(0, nrows -1):
     row = [cols[c][i] for c in range(0, len(cols)-1)]
+    row.append(types[row[2]])
     f.write(",".join(row) + '\n')  
   f.close()
+  
+  
+  
   
   
   scores = []
