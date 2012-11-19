@@ -1,0 +1,40 @@
+weight,name,category
+1,Ant,integration
+2,CSS,language
+2,CVS,version control
+2,DBUnit,framework
+4,DOM,standard
+5,Eclipse,IDE
+4,EJB3,standard
+3,GIT,version control
+4,Hibernate,framework
+4,J2EE,standard
+5,Java,language
+3.5,Javascript,language
+2,JAXB2,other
+2,JBoss,application server
+1,JBPM,other
+5,Jira,other
+2,JMeter,other
+5,JPA,standard
+3,JProfiler,other
+3,JQuery,framework
+5,Junit,framework
+2,Maven,integration
+4,multithreading,other
+1.5,MySQL,database
+3,Oracle,database
+2,PL-SQL,language
+4,Python,language
+4,REST,standard
+2,SAX,standard
+4,Spring,framework
+3,SQL,language
+3,STS,IDE
+1,SVN,version control
+1,Sybase,database
+4,Tomcat,application server
+1,Toplink,framework
+1,Trac,other
+3,Weblogic,application server
+1,Websphere,application server
