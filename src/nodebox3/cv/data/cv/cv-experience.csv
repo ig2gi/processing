@@ -1,19 +1,19 @@
 0 base,1 from,2 to,3 duration,4 index,5 title,6 subtitle,7 type,8 organization,9 category,10 description,11 sub postions,12 tags
-1/1/13,7/1/09,8/31/12,3.17,0.34,Analyst  & Java Developer,,consulting,Breadcrumb SA,1,"Technical analysis and development on a Web CRM.
+1/1/13,7/1/09,8/31/12,3.17,0.34,Analyst  & Java Developer,,consultant,Breadcrumb SA / Pictet,1,"Technical analysis and development on a Web CRM.
 Business and technical analysis of a new cash management module for
 a Portfolio Management System (PMS).
 Design and implementation of both server and client side.",1:2,java web jpa hibernate spring oracle j2ee jsp rest jquery javascript css oracle pl-sql tomcat weblogic cvs git maven
-1/1/13,8/30/05,6/1/08,2.76,4.59,Analyst  & Java Developer,,freelance,"TSR, Romande Energie, Pictet & Cie",1,"Architecture, design and implementation of a Workflow-based collaborative application
+1/1/13,8/30/05,6/1/08,2.76,4.59,Analyst  & Java Developer,,freelance,"TSR, Romande Energie, Pictet",1,"Architecture, design and implementation of a Workflow-based collaborative application
 for the digital production of television programs
 Wrote use-case catalog, architecture, component, implementation planning, design and implementation.",,java web JPA JBPM REST jquery oracle JSP webservice javascript ejb2 swing JMX JMS weblogic tomcat svn maven ant
-1/1/13,1/1/05,7/31/05,0.58,7.43,Analyst  & Java Developer,,internal,DALIN Software SA,1,  ,,
-1/1/13,7/1/00,12/31/04,4.50,8.01,Architect  & Java Developer,,internal,Odyssey Asset Management,1,,1:1:2,java ejb cocoon xml xsl web multithreading websphere ant
-1/1/13,8/1/98,7/1/00,1.92,12.51,Java Developer,,internal,Bipe Sirius,1,,,java RMI sql pl-sql oracle
-1/1/13,7/1/08,7/1/09,1.00,3.51,Photographer, ,freelance,Police Cantonale Vaudoise,4,"Sabbatical dedicated to photography: courses, self-training, travel (Canada), 
+1/1/13,1/1/05,7/31/05,0.58,7.43,Analyst  & Java Developer,,employee,,1,  ,,
+1/1/13,7/1/00,12/31/04,4.50,8.01,Architect  & Java Developer,,employee,Odyssey Asset Management,1,,1:1:2,java ejb cocoon xml xsl web multithreading websphere ant
+1/1/13,8/1/98,7/1/00,1.92,12.51,Java Developer,,employee,Bipe Sirius,1,,,java RMI sql pl-sql oracle
+1/1/13,7/1/08,7/1/09,1.00,3.51,Photographer, ,,Photography,4,"Sabbatical dedicated to photography: courses, self-training, travel (Canada), 
 photoreports, 4 month photo-reporter internship at Police Cantonale Vaudoise.",,photoshop CS4 RAW gimp aperture colorimetry
-1/1/13,12/1/94,7/31/97,2.67,15.43,Design Engineer,,internal,Spie Batignolles,2,,,
-1/1/13,7/1/94,12/1/94,0.42,18.10,Design Engineer,,internal,KJK,2,,,
-1/1/13,9/1/97,8/31/98,1.00,14.35,DESS,one year post graduate degree,university,DES IAO,3,Computer Science,,
-1/1/13,9/1/90,7/1/93,2.83,19.52,DEA + ENGINEER,three years engineering school,university,IUSTI,3,,,
-1/1/13,9/1/88,7/1/90,1.83,22.52,Maths SUP - SPE,,school,Lycée Militaire d’Aix-en-Provence,3,Mathematics & Physics,,
+1/1/13,12/1/94,7/31/97,2.67,15.43,Design Engineer,,employee,Spie Batignolles,2,,,
+1/1/13,7/1/94,12/1/94,0.42,18.10,Design Engineer,,employee,KJK,2,,,
+1/1/13,9/1/97,8/31/98,1.00,14.35,DESS,one year post graduate degree,university: DESS,DES IAO,3,Computer Science,,
+1/1/13,9/1/90,7/1/93,2.83,19.52,DEA + ENGINEER,three years engineering school,university: DEA + ENGINEER,IUSTI,3,,,
+1/1/13,9/1/88,7/1/90,1.83,22.52,Maths SUP - SPE,,school,Math Sup/Spe,3,Mathematics & Physics,,
 1/2/13,8/1/93,6/30/94,0.91,18.52,“Service National”,"Hydrographic vessel ""Le Borda"" ",,Marine Nationale,4,"Head quarter in PC science.  1 year navigation (Manche - Atlantic)",,
