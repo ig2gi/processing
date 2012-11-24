@@ -188,6 +188,8 @@ function draw_maplegend(){
       .attr("width", 15)
       .attr("height", 15)
       .attr('transform', 'rotate(90)')
+      .style("stroke","#000")
+      .style("stroke-width",".3px")
       .attr("class", function(d, i) { return quantize(d) + " legendbar"; })
       .attr("dx", -3) // padding-right
       .attr("dy", ".35em"); // vertical-align: middle
