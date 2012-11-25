@@ -27,24 +27,28 @@ var svg = d3.select("#map").append("svg")
     .attr("height", height);
 
 var map = svg.append("g")
-      .attr("class", "states map")
-     .attr('transform', 'translate(350, 200)');
+    .attr("class", "states map")
+    .attr('transform', 'translate(300, 200)');
 
 var index_bar = svg.append("g")
-	      .attr("class", "indexbar")
-	     .attr('transform', 'translate(20, 130)');
+    .attr("class", "indexbar")
+    .attr('transform', 'translate(20, 100)');
 	     
 var legend =  svg.append("g")
-       	      .attr("class", "legend")
-       	     .attr('transform', 'translate(350, 140)');
- 
+    .attr("class", "legend")
+    .attr('transform', 'translate(350, 100)');
+
+var difference_chart =  svg.append("g")
+    .attr("class", "diffchart")
+    .attr('transform', 'translate(350, 700)');
+
            
 // load resources
 queue()
-	    .defer(d3.json, "us-counties.json")
-	    .defer(d3.json, "us-states.json")
-	    .defer(d3.csv, "US_unemployment.csv")
-		  .defer(d3.csv,"US_unemployment_rate.csv")
+	    .defer(d3.json, "data/us-counties.json")
+	    .defer(d3.json, "data/us-states.json")
+	    .defer(d3.csv, "data/US_unemployment.csv")
+		  .defer(d3.csv,"data/US_unemployment_rate.csv")
 	    .await(ready);
 
 
@@ -138,16 +142,24 @@ function draw_map(states){
 
   svg.append('svg:text')
         .attr('class', 'maptitle')
-        .attr('transform', 'translate(500, 80)')
+        .attr('transform', 'translate(500, 30)')
         .text("Unemployment state by state across America");
 
-  svg.append("g").attr('transform', 'translate(0, 100)')
-        .append("rect")
-        .attr("x", 300)
-        .attr("y", 0)
-        .attr("width", 980)
-        .attr("height", 675)
-        .attr("class","frame");
+
+
+
+  // states.features.forEach(function(d, i) {
+  //       var centroid = path.centroid(d);
+  //       centroid.x = centroid[0];
+  //       centroid.y = centroid[1];
+  //       centroid.feature = d;
+  //       map.append("circle")
+  //         .attr("cx", centroid.x)
+  //         .attr("cy", centroid.y)
+  //         .attr("r", 5);
+
+  // });
+
 
 
 
@@ -161,22 +173,22 @@ function draw_maplegend(){
 
   svg.append('svg:text')
       .attr('class', 'maplegendtitle')
-      .attr('transform', 'translate(350, 140)')
+      .attr('transform', 'translate(350, 100)')
       .text(currentMonth);
   
   svg.append('svg:text')
       .attr('class', 'usrate')
-      .attr('transform', 'translate(350, 160)')
+      .attr('transform', 'translate(350, 120)')
       .text(us_rate());
       
   svg.append('svg:text')
       .attr('class', 'currentstate')
-      .attr('transform', 'translate(350, 190)')
+      .attr('transform', 'translate(350, 150)')
       .text('');
           
   svg.append('svg:text')
       .attr('class', 'currentstaterate')
-      .attr('transform', 'translate(350, 210)')
+      .attr('transform', 'translate(350, 170)')
       .text('');
 
   legend.selectAll("rect")
@@ -207,6 +219,17 @@ function draw_maplegend(){
 
 
 }
+
+/**
+*
+*/
+function draw_differenceChart(){
+
+// TODO
+
+}
+
+
 
 /**
 *
@@ -266,9 +289,11 @@ function draw_leftgraph(){
        .attr("r", 5)
        .on("click", function(d, i){
                 index_bar.selectAll("circle").style("fill","steelblue");
-                index_bar.selectAll(".barlabel").style("fill","#bbb");
-                index_bar.selectAll(".barvalue").style("fill","#ccc");
-                d3.selectAll('.' + d.date.replace(' ','')).style("fill","lightcoral");
+                index_bar.selectAll(".barlabel").style("fill","#bbb").style("font-weight","100");
+                index_bar.selectAll(".barvalue").style("fill","#ccc").style("font-weight","100");
+                d3.selectAll('.' + d.date.replace(' ',''))
+                    .style("fill","lightcoral")
+                    .style("font-weight","bold");
                 d3.select(this).style("fill","lightcoral");
                 currentMonth = d.month;
                 rmean = parseFloat(d.rate);
@@ -299,7 +324,7 @@ function draw_leftgraph(){
     svg.append('svg:text')
         .attr('class', 'bartitle')
         .attr('x', 20)
-        .attr('y', 60 + (15 * index))
+        .attr('y', 30 + (15 * index))
         .text(value);
   });
   
@@ -310,13 +335,13 @@ function draw_leftgraph(){
   index_bar.select(".barvalue").style("fill","lightcoral");
 
   
-  svg.append("g").attr('transform', 'translate(10, 100)')
-        .append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 260)
-        .attr("height", 675)
-        .attr("class","frame");
+  // svg.append("g").attr('transform','translate(10, 70)')
+  //       .append("rect")
+  //       .attr("x", 0)
+  //       .attr("y", 0)
+  //       .attr("width", 260)
+  //       .attr("height", 700)
+  //       .attr("class","frame");
 
 
 }
