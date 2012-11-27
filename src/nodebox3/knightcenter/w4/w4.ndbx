@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="1.0" type="file">
+    <link href="java:nodebox.function.MathFunctions" rel="functions"/>
+    <link href="java:nodebox.function.StringFunctions" rel="functions"/>
+    <link href="java:nodebox.function.ColorFunctions" rel="functions"/>
+    <link href="java:nodebox.function.ListFunctions" rel="functions"/>
+    <link href="java:nodebox.function.DataFunctions" rel="functions"/>
+    <link href="python:libraries/corevector/corevector.py" rel="functions"/>
+    <link href="python:libraries/l_system/l_system.py" rel="functions"/>
+    <link href="python:libraries/packing/packing.py" rel="functions"/>
+    <node name="root" renderedChild="combine2">
+        <node name="combine1" position="1100.00,120.00" prototype="list.combine"/>
+        <node name="combine2" position="1080.00,460.00" prototype="list.combine"/>
+        <node name="convert_range1" position="480.00,280.00" prototype="math.convert_range">
+            <port name="source_start" type="float" value="3.0"/>
+            <port name="source_end" type="float" value="11.8"/>
+            <port name="target_end" type="float" value="500.0"/>
+        </node>
+        <node name="convert_range2" position="500.00,40.00" prototype="math.convert_range">
+            <port name="source_start" type="float" value="0.4"/>
+            <port name="source_end" type="float" value="389.0"/>
+            <port name="target_end" type="float" value="800.0"/>
+        </node>
+        <node name="count1" position="180.00,240.00" prototype="list.count"/>
+        <node name="d" position="340.00,40.00" prototype="data.lookup">
+            <port name="key" type="string" value="density"/>
+        </node>
+        <node name="ellipse1" position="880.00,180.00" prototype="corevector.ellipse">
+            <port name="width" type="float" value="5.0"/>
+            <port name="height" type="float" value="5.0"/>
+        </node>
+        <node name="import_csv1" position="160.00,60.00" prototype="data.import_csv">
+            <port name="file" type="string" value="data/US_unemployment.csv"/>
+        </node>
+        <node name="line_angle2" position="240.00,420.00" prototype="corevector.line_angle">
+            <port name="angle" type="float" value="45.0"/>
+            <port name="distance" type="float" value="675.0"/>
+        </node>
+        <node name="make_point1" position="740.00,80.00" prototype="corevector.make_point"/>
+        <node name="rect1" position="20.00,20.00" prototype="corevector.rect"/>
+        <node name="resample1" position="500.00,420.00" prototype="corevector.resample">
+            <port name="method" type="string" value="amount"/>
+        </node>
+        <node name="sep" position="340.00,220.00" prototype="data.lookup">
+            <port name="key" type="string" value="September 2012"/>
+        </node>
+        <node name="state" position="340.00,120.00" prototype="data.lookup">
+            <port name="key" type="string" value="state"/>
+        </node>
+        <node name="textpath1" position="900.00,320.00" prototype="corevector.textpath">
+            <port name="font_size" type="float" value="12.0"/>
+            <port name="align" type="string" value="RIGHT"/>
+        </node>
+        <node name="to_points1" position="700.00,340.00" prototype="corevector.to_points"/>
+        <conn input="d.list" output="import_csv1"/>
+        <conn input="state.list" output="import_csv1"/>
+        <conn input="sep.list" output="import_csv1"/>
+        <conn input="textpath1.text" output="state"/>
+        <conn input="combine1.list1" output="ellipse1"/>
+        <conn input="combine1.list2" output="textpath1"/>
+        <conn input="convert_range1.value" output="sep"/>
+        <conn input="make_point1.x" output="convert_range1"/>
+        <conn input="convert_range2.value" output="d"/>
+        <conn input="make_point1.y" output="convert_range2"/>
+        <conn input="count1.list" output="import_csv1"/>
+        <conn input="resample1.shape" output="line_angle2"/>
+        <conn input="resample1.points" output="count1"/>
+        <conn input="to_points1.shape" output="resample1"/>
+        <conn input="textpath1.position" output="to_points1"/>
+        <conn input="combine2.list1" output="textpath1"/>
+        <conn input="combine2.list2" output="line_angle2"/>
+        <conn input="ellipse1.position" output="to_points1"/>
+        <conn input="combine2.list3" output="ellipse1"/>
+    </node>
+</ndbx>

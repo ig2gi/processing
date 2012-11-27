@@ -41,6 +41,21 @@ def main():
     ids[state["properties"]["name"]] = state["id"]
   f.close
   
+  # DENSITY
+  density = {}
+  lines = [line.strip() for line in open('states-density.csv')] 
+  for l in lines:
+    values = l.split(',')
+    density[values[0]] = values[1]
+    
+  # GDP
+  gdps = {}
+  lines = [line.strip() for line in open('gdp.csv')] 
+  for l in lines[1:]:
+    values = l.split(',')
+    gdps[values[1]] = values[2:5]
+    print values[2:5]
+  
   #print ids
   
   lines = [line.strip() for line in open('US_unemployment_old.csv')]   
@@ -56,13 +71,19 @@ def main():
     values = l.split(',')
     if row != 0 and values[0] in ids:
       #print values[0]
-      id = ids[values[0]] + ','
+     # if values[0] not in density:
+       # d = "0"
+     # else: d = density[values[0]]
+     # if values[0] not in gdps:
+     #   g = "0,0,0,"
+     # else: g = ",".join(gdps[values[0]]) + ','
+      id = ids[values[0]] + ',' 
       rec_values = []
       rec_values.append(values[0])
-      rec_values.extend([v for v in values[5:52]])
+      rec_values.extend([v for v in values[4:52]])
       tsv.append(id + ",".join(rec_values))
     elif row != 0:
-      us_rates.extend([v for v in values[5:52]])
+      us_rates.extend([v for v in values[4:52]])
     row = row + 1
     
   print len(us_rates)
@@ -73,7 +94,8 @@ def main():
   years = [2011,2010,2009]
   
   f = open("US_unemployment.csv", 'w+')
-  columns = ['id','state']
+  #columns = ['id','density', 'gdp','percentOfNationalGdp','population','state','sep2012N']
+  columns = ['id','state','sep2012N']
   columns.extend([m + ' 2012' for m in months[8::-1]])
   for y in years:
     months_year = [m + ' ' + str(y)  for m in months[11::-1]]
@@ -83,16 +105,26 @@ def main():
     f.write(l + '\n')  
   f.close()
   
+  
+  
+  
+  
+  
+  
   print len(columns)
   f = open("US_unemployment_rate.csv", 'w+')
   f.write('month,label,rate' + '\n')
   col = 0
-  for c in columns[2:]:
+  for c in columns[3:]:
       v = c.split(' ')
       label =  v[0][0:3] + ' ' + v[1]
       f.write(c + ',' + label + ',' + us_rates[col] + '\n')
       col = col + 1  
   f.close()
+  
+  
+  
+  
   
 
   
