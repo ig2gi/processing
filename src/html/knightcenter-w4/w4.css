@@ -13,24 +13,54 @@
 .maptitle {
  	font-family: Arial;
 	font-size: 1.7em;
+	font-weight:bold;
 	--text-shadow: 3px 3px 7px #111;
 }
 
 
 .maplegendtitle {
  	font-family: Arial;
+font-weight:bold;
 	font-size: 1.5em;
 	--text-shadow: 3px 3px 7px #111;
 }
 
-.currentstate {
+.currentstatename {
  	font-family: Arial;
-	font-size: 1.2em;
+	font-size: 1.3em;
+	font-weight:bold;
+	text-anchor: middle;
 	--text-shadow: 3px 3px 7px #111;
 }
+
+rect.currentstate{
+ 	fill:#fff;
+ 	fill-opacity: .4;
+ 	stroke:#444;
+ 	stroke-width: 2px;
+ 	display:none;
+}
+
 .currentstaterate {
  	font-family: Arial;
-	font-size: 1.0em;
+	font-size: 1.5em;
+	text-anchor: middle;
+	--text-shadow: 3px 3px 7px #111;
+}
+
+.currentstatedelta{
+ 	font-family: Arial;
+	font-size: 1.5em;
+	fill: gray;
+	text-anchor: middle;
+	--text-shadow: 3px 3px 7px #111;
+}
+
+.currentstatedeltainfo{
+ 	font-family: Arial;
+	font-size: 0.8em;
+	fill: gray;
+	text-anchor: middle;
 	--text-shadow: 3px 3px 7px #111;
 }
 
