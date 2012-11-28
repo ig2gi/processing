@@ -13,6 +13,7 @@ var body = d3.select("body");
 var data_unemployment;
 var data_us_rates;
 var usrates = new Array(); // TODO
+var usratesByDate = {}
 
 var rateById = {};
 var rate2009ById = {};
@@ -419,12 +420,12 @@ function draw_differenceChart(){
         .attr('transform', 'translate(360, 5)')
         .text('US Rate');
 
-    difference_chart.append('circle')
-        .attr('class', 'legenddc')
-        .attr("r", 6)
+    difference_chart.append('rect')
         .style("fill","steelblue")
-        .attr('transform', 'translate(350, 0)');
-     
+        .attr("width", 20)
+        .attr("height", 2)
+        .attr('transform', 'translate(335, 0)');
+
 
 }
 
@@ -442,6 +443,9 @@ if(currentstate == '')
       d3.min(usrates, function(d) { return  Math.min(d[currentstate], d["US Rate"]); }),
       d3.max(usrates, function(d) { return Math.max(d[currentstate], d["US Rate"]); })
     ]);
+
+  //ydc.domain([4,15]);
+  console.log(usrates['Missouri']);
 
   difference_chart.selectAll("clipPath").remove();
   difference_chart.selectAll(".area.above").remove();
@@ -656,8 +660,13 @@ function indexbar_select(d){
     d3.selectAll('.' + d.date.replace(' ',''))
         .style("fill","lightcoral")
         .style("font-weight","bold");
-    currentMonth = d.month;
-    rmean = parseFloat(d.rate);
+    selectDate(d.month);
+}
+
+function selectDate(date, rate){
+
+    currentMonth = date;
+    rmean = parseFloat(usratesByDate[date]);
     refresh();
 
 }
@@ -682,6 +691,7 @@ function ready(error, counties, states, unemployment, rates) {
         obj[u.state] = u[d.month];
       });
       usrates.push(obj);
+      usratesByDate[d.month] = parseFloat(d.rate);
 
     });
 
