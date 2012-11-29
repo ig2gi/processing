@@ -9,7 +9,6 @@ var parseDate = d3.time.format("%B %Y").parse;
 
 
 
-
 // D3 variables ---------------------------------
 
 var path = d3.geo.path();
@@ -19,6 +18,8 @@ var body = d3.select("body");
 var svg = d3.select("#map").append("svg")
     .attr("width", width)
     .attr("height", height);
+
+
 
 var map = svg.append("g")
     .attr("class", "states map")
@@ -126,26 +127,20 @@ function quantize(r){
 */
 function refresh(){
 
-
+      //w4.log();
 
     	d3.select('.maplegendtitle').text(w4.currentdate);
     	d3.select('.usrate').text(w4.usrate());
     	map.selectAll("path")
     	      .attr("class", function(d) { return quantize(w4.rateById[d.id]); })
-    	k = 0;
-    	legend_data = new Array();
-    	step = (w4.rate_max - w4.rate_rmin) / 17;
-      for(var i = w4.rate_min; i <= w4.rate_max  ; i = i + step){
-          legend_data[k++] = parseFloat(i).toFixed(1);
-      }
 
 
     	legend.selectAll("rect")
-    	      .data(legend_data)
+    	      .data(w4.ratesrange)
         		.attr("class", function(d, i) { return quantize(d); });
         		
     	legend.selectAll("text")
-         		.data(legend_data)
+         		.data(w4.ratesrange)
          		.text(function(d, i) { return d});    
 
       update_differenceChart();  
@@ -693,7 +688,7 @@ function indexbar_select(d){
     d3.selectAll('.' + d.date.replace(' ',''))
         .style("fill","lightcoral")
         .style("font-weight","bold");
-    w4.selectDate(date);
+    w4.selectDate(d.month);
     refresh();
 }
 

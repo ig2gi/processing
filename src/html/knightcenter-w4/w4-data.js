@@ -94,8 +94,8 @@ var w4 = {
                 w4.rateById[d.id] = +d[w4.currentdate];
               }
         );
-        for(k in this.rateById){
-            v = this.rateById[k];
+        for(r in this.rateById){
+            v = this.rateById[r];
             if(v <= this.rate_min) this.rate_min = v;
             if(v >= this.rate_max) this.rate_max = v;
         }
