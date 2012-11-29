@@ -539,7 +539,7 @@ if(currentstate != 'US Rate'){
                    .attr("cx", xdc(dd))
                    .attr("cy", ydc(rateById[currentstateId]) )
                    .attr("class","legenddc state")
-                   .attr("r", 5)
+                   .attr("r", 6)
                    .style("fill", "gray");
 
           }
@@ -561,7 +561,7 @@ if(currentstate != 'US Rate'){
            .attr("cx", xdc(dd) )
            .attr("cy", ydc(rmean))
            .attr("class","dcpointer")
-           .attr("r", 8)
+           .attr("r", 6)
            .style("fill", "steelblue");
           
 
