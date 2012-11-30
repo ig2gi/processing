@@ -18,7 +18,28 @@ var svg = d3.select("#map").append("svg")
     .attr("width", width)
     .attr("height", height);
 
+// title
+svg.append('svg:text')
+    .attr('class', 'maptitle')
+    .attr('transform', 'translate(400, 30)')
+    .text("Unemployment state by state across America");
 
+txt = ['Unemployment','in America','is back to','pre-recession','levels!'];
+txt.forEach(function(t,i){
+    svg.append('svg:text')
+        .attr('class', 'info')
+        .attr('x', 200)
+        .attr('y', 170 + (20 * i))
+        .text(t);
+});
+
+svg.append('rect')
+    //.attr('class', 'maptitle')
+    .attr('x', 195)
+    .attr('y', 155)
+    .attr('width', 1)
+    .attr('height', 100);
+  
 
 /*
   =====================================
@@ -32,25 +53,24 @@ infoBox1 = function(){
     
     var x=300, y=100;
 
-    var legendtitle =  svg.append("g")
+    var g =  svg.append("g")
         .attr("class", "legendtitle")
         .attr('transform', 'translate(' + x + ',' + y + ')');
 
     //
     function draw(){
 
-
-        legendtitle.append('svg:text')
+        g.append('svg:text')
             .attr('class', 'maplegendtitle')
             .attr('transform', 'translate(0, 0)')
             .text(w4.currentdate);
   
-        legendtitle.append('svg:text')
+        g.append('svg:text')
             .attr('class', 'usrate')
             .attr('transform', 'translate(0, 20)')
             .text(w4.usrate());
 
-        legendtitle.append("image")
+        g.append("image")
             .attr("xlink:href", "arrow-right.png")
             .attr("x", -40)
             .attr("y", -20)
@@ -62,8 +82,8 @@ infoBox1 = function(){
     // 
     function update(){
 
-      legendtitle.select('.maplegendtitle').text(w4.currentdate);
-      legendtitle.select('.usrate').text(w4.usrate());
+      g.select('.maplegendtitle').text(w4.currentdate);
+      g.select('.usrate').text(w4.usrate());
 
     }
 
@@ -89,18 +109,16 @@ infoBox1 = function(){
 */
 infoBox2 = function(){
     
-    var x=340, y=140;
+    var posx=380, posy=140;
 
-    var currentstate_box =  svg.append("g")
+    var g =  svg.append("g")
         .attr("class", "currentstate")
-        .attr('transform', 'translate(' + x + ',' + y + ')');
-
-    
+        .attr('transform', 'translate(' + posx + ',' + posy + ')');
 
     //
     function draw(){
 
-         currentstate_box.append('rect')
+          g.append('rect')
               .attr('class', 'currentstate')
               .attr('rx', 5)
               .attr('ry', 5)
@@ -108,28 +126,28 @@ infoBox2 = function(){
               .attr('height', 100)
               .attr('transform', 'translate(0, 0)');
               
-          currentstate_box.append('svg:text')
+          g.append('svg:text')
               .attr('class', 'currentstatename')
               .attr('transform', 'translate(80, 20)')
               .text('');
                   
-          currentstate_box.append('svg:text')
+          g.append('svg:text')
               .attr('class', 'currentstaterate')
               .attr('transform', 'translate(135, 60)')
               .text('');
 
-          currentstate_box.append('svg:text')
+          g.append('svg:text')
               .attr('class', 'currentstatedelta')
               .attr('transform', 'translate(50, 60)')
               .text('');
 
-          currentstate_box.append('svg:text')
+          g.append('svg:text')
               .attr('class', 'currentstatedeltainfo')
               .attr('transform', 'translate(50, 80)')
               .style("display","none")
               .text('Since Jan 2009');
 
-          currentstate_box.append("image")
+          g.append("image")
               .attr("xlink:href", "arrow-right.png")
               .attr("class","currentstatearrow")
               .style("display","none")
@@ -167,16 +185,16 @@ infoBox2 = function(){
 */
 mapLegend = function(){
     
-    var x=330, y=300;
+    var posx=350, posy=330;
 
-    var legend =  svg.append("g")
+    var g =  svg.append("g")
         .attr("class", "legend")
-        .attr('transform', 'translate(' + x + ',' + y+ ')');
+        .attr('transform', 'translate(' + posx + ',' + posy+ ')');
 
     //
     function draw(){
 
-        legend.selectAll("rect")
+        g.selectAll("rect")
             .data(w4.ratesrange)
             .enter().append("rect")
             .attr('class', 'legendbar')
@@ -192,7 +210,7 @@ mapLegend = function(){
             .attr("dy", ".35em"); // vertical-align: middle
         
               
-        legend.selectAll("text")
+        g.selectAll("text")
             .data(w4.ratesrange)
             .enter().append("text")
             .attr("x", -30)
@@ -200,7 +218,7 @@ mapLegend = function(){
             .attr("class", "legend")
             .text(function(d, i) { return d});
 
-        legend.append('svg:text')
+        g.append('svg:text')
             .attr('class', 'legend')
             .attr('x', 0)
             .attr('y', -30)
@@ -213,11 +231,11 @@ mapLegend = function(){
     // 
     function update(){
 
-        legend.selectAll("rect")
+        g.selectAll("rect")
             .data(w4.ratesrange)
             .attr("class", function(d, i) { return css_color(d); });
                   
-        legend.selectAll("text")
+        g.selectAll("text")
             .data(w4.ratesrange)
             .text(function(d, i) { return d});    
 
@@ -244,11 +262,11 @@ mapLegend = function(){
 */
 diffChart = function(){
     
-    var x=620, y=120;
+    var posx=620, posy=120;
 
-    var difference_chart =  svg.append("g")
+    var g =  svg.append("g")
         .attr("class", "diffchart")
-        .attr('transform', 'translate(' + x + ',' + y+ ')');
+        .attr('transform', 'translate(' + posx + ',' + posy+ ')');
 
     var xdc = d3.time.scale()
         .range([0, 500]);
@@ -280,25 +298,36 @@ diffChart = function(){
     function draw(){
 
           xdc.domain(d3.extent(w4.usrates, function(d) { return d.date; }));
-          difference_chart.datum(w4.usrates);
+          g.datum(w4.usrates);
 
           this.update();
 
-          difference_chart.append("g")
+          g.append("g")
               .attr("class", "x axis dc")
               .attr("transform", "translate(0,140)")
               .call(xdcAxis);
 
-          difference_chart.append('svg:text')
+          g.append('svg:text')
               .attr('class', 'legenddc')
-              .attr('transform', 'translate(320, -10)')
+              .attr('transform', 'translate(420, -30)')
               .text('US Rate');
 
-          difference_chart.append('rect')
+          g.append('rect')
               .style("fill","steelblue")
               .attr("width", 15)
               .attr("height", 2)
-              .attr('transform', 'translate(300, -15)');
+              .attr('transform', 'translate(400, -35)');
+
+          g.append('svg:text')
+              .attr('class', 'maptitle2')
+              .attr('transform', 'translate(0, -20)')
+              .text('US unemployment');
+
+          g.append('svg:text')
+              .attr('class', 'monthstitle')
+              .attr('transform', 'translate(90, 135)')
+              .text('Months since Obama became president');
+          
 
     }
 
@@ -313,17 +342,17 @@ diffChart = function(){
                 d3.max(w4.usrates, function(d) { return Math.max(d[w4.currentstate.name], d["US Rate"]); })
               ]);
 
-            difference_chart.selectAll("clipPath").remove();
-            difference_chart.selectAll(".area.above").remove();
-            difference_chart.selectAll(".area.below").remove();
-            difference_chart.selectAll(".dcpointer").remove();
-            difference_chart.select(".y.axis.dc").remove();
-            difference_chart.selectAll(".line").remove();
-            difference_chart.selectAll(".line2").remove();
-            difference_chart.selectAll(".legenddc.state").remove();
+            g.selectAll("clipPath").remove();
+            g.selectAll(".area.above").remove();
+            g.selectAll(".area.below").remove();
+            g.selectAll(".dcpointer").remove();
+            g.select(".y.axis.dc").remove();
+            g.selectAll(".line").remove();
+            g.selectAll(".line2").remove();
+            g.selectAll(".legenddc.state").remove();
 
           var dd = parseDate(w4.currentdate);
-           difference_chart.append("rect")
+           g.append("rect")
                       .attr("x",  xdc(dd) - 3)
                       .attr("y", -10)
                       .attr("width", 6)
@@ -335,22 +364,22 @@ diffChart = function(){
   
             if(w4.currentstate.name != 'US Rate'){
 
-                      difference_chart.append("clipPath")
+                      g.append("clipPath")
                           .attr("id", "clip-below")
                           .append("path")
                           .attr("d", areadc.y0(130));
 
-                      difference_chart.append("clipPath")
+                      g.append("clipPath")
                           .attr("id", "clip-above")
                           .append("path")
                           .attr("d", areadc.y0(0));
 
-                      difference_chart.append("path")
+                      g.append("path")
                           .attr("class", "area above")
                           .attr("clip-path", "url(#clip-above)")
                           .attr("d", areadc.y0(function(d) { return ydc(d[w4.currentstate.name]); }));
 
-                      difference_chart.append("path")
+                      g.append("path")
                           .attr("class", "area below")
                           .attr("clip-path", "url(#clip-below)")
                           .attr("d", areadc);
@@ -360,25 +389,25 @@ diffChart = function(){
                           .x(function(d) { return xdc(d.date); })
                           .y(function(d) { return ydc(d[w4.currentstate.name]); });
 
-                      difference_chart.append("path")
+                      g.append("path")
                           .attr("class", "line2")
                           .attr("d", linedc2);
 
-                      difference_chart.append('svg:text')
+                      g.append('svg:text')
                           .attr('class', 'legenddc state')
-                          .attr('transform', 'translate(400, -10)')
+                          .attr('transform', 'translate(420, -10)')
                           .text(w4.currentstate.name);
 
-                      difference_chart.append('rect')
+                      g.append('rect')
                           .attr('class', 'legenddc state')
                           .attr("width", 15)
                           .attr("height", 2)
                           .style("fill","gray")
-                          .attr('transform', 'translate(380, -15)');
+                          .attr('transform', 'translate(400, -15)');
                       
                       if(w4.rateById[w4.currentstate.id] != undefined){
 
-                          difference_chart.append("circle")
+                          g.append("circle")
                                .attr("cx", xdc(dd))
                                .attr("cy", ydc(w4.rateById[w4.currentstate.id]) )
                                .attr("class","legenddc state")
@@ -389,19 +418,25 @@ diffChart = function(){
          
               }
 
-              difference_chart.append("path")
+              if(w4.currentstate.name != 'US Rate'){
+                  g.select(".maptitle2").text('US vs ' + w4.currentstate.name);
+              }else{
+                  g.select(".maptitle2").text('US unemployment');
+              }
+
+              g.append("path")
                       .attr("class", "line")
                       .attr("data-legend",'US Rate')
                       .attr("d", linedc);
 
-              difference_chart.append("circle")
+              g.append("circle")
                      .attr("cx", xdc(dd) )
                      .attr("cy", ydc(w4.rate_mean))
                      .attr("class","dcpointer")
                      .attr("r", 6)
                      .style("fill", "steelblue");
 
-              difference_chart.append("g")
+              g.append("g")
                       .attr("class", "y axis dc")
                       .attr("transform", "translate(-10,0)")
                       .call(ydcAxis)
@@ -436,7 +471,7 @@ leftBarChart = function(){
     
     var posx=0, posy=100;
     
-    var index_bar = svg.append("g")
+    var g = svg.append("g")
         .attr("class", "indexbar")
         .attr('transform', 'translate(' + posx + ',' + posy+ ')');
 
@@ -469,23 +504,23 @@ leftBarChart = function(){
           x.domain([6,11]);
           y.domain(d3.extent(w4.usrates_rawdata, function(d) { return parseDate(d.date); }));
 
-          index_bar.append("g")
+          g.append("g")
               .attr("class", "x axis")
               .attr("transform", "translate(20,-2)")
               .call(xAxis);
 
-          index_bar.append("g")
+          g.append("g")
               .attr("class", "x axis")
               .attr("transform", "translate(20,610)")
               .call(xAxis2);
 
-          index_bar.append("path")
+          g.append("path")
               .datum(w4.usrates_rawdata)
               .attr("class", "line")
               .attr('transform', 'translate(20, 0)')
               .attr("d", line);
 
-          index_bar.selectAll("circle")
+          g.selectAll("circle")
                .data(w4.usrates_rawdata)
                .enter().append("circle")
                .attr("cx", function(d) { return x(parseFloat(d.rate)); })
@@ -497,7 +532,7 @@ leftBarChart = function(){
                        select(d);
                     });
           
-          index_bar.selectAll(".barlabel")
+          g.selectAll(".barlabel")
               .data(w4.usrates_rawdata)
               .enter().append("text")
               //.attr("x", function(d) { return x(parseFloat(d.rate)); })
@@ -506,7 +541,7 @@ leftBarChart = function(){
               .attr("class", function(d) { return "barlabel " + d.date.replace(' ',''); } )
               .text(function(d,i) { return d.date});
 
-          index_bar.selectAll("rect")
+          g.selectAll("rect")
               .data(w4.usrates_rawdata)
               .enter().append("rect")
               .attr("x", 20)
@@ -518,7 +553,7 @@ leftBarChart = function(){
                       select(d);
               });
               
-          index_bar.selectAll(".barvalue")            
+          g.selectAll(".barvalue")            
               .data(w4.usrates_rawdata)
               .enter().append("text")
               .attr("x", function(d, i) { return x(parseFloat(d.rate))+ 32 ;})
@@ -536,17 +571,17 @@ leftBarChart = function(){
             });
   
                            
-          index_bar.select("circle").style("fill","lightcoral");
-          index_bar.select(".barlabel").style("fill","lightcoral");
-          index_bar.select(".barvalue").style("fill","lightcoral");
+          g.select("circle").style("fill","lightcoral");
+          g.select(".barlabel").style("fill","lightcoral");
+          g.select(".barvalue").style("fill","lightcoral");
     }
 
     // select a new couple month/year
     function select(d){
 
-          index_bar.selectAll("circle").style("fill","steelblue");
-          index_bar.selectAll("text.barlabel").style("fill","#aaa").style("font-weight","100");
-          index_bar.selectAll("text.barvalue").style("fill","#aaa").style("font-weight","100");
+          g.selectAll("circle").style("fill","steelblue");
+          g.selectAll("text.barlabel").style("fill","#aaa").style("font-weight","100");
+          g.selectAll("text.barvalue").style("fill","#aaa").style("font-weight","100");
           d3.selectAll('.' + d.date.replace(' ',''))
               .style("fill","lightcoral")
               .style("font-weight","bold");
@@ -581,18 +616,18 @@ leftBarChart = function(){
 */
 mapChart = function(){
     
-    var posx=260, posy=280;
+    var posx=270, posy=300;
 
     var bubble_rmax = 20; // max radius of bubbles
 
-    var map = svg.append("g")
+    var g = svg.append("g")
         .attr("class", "states map")
         .attr('transform', 'translate(' + posx + ',' + posy+ ')');
 
     // 
     function draw(states){
 
-        map.selectAll("path")
+        g.selectAll("path")
             .data(states.features)
             .enter().append("path")
             .attr("class", function(d) { return css_color(w4.rateById[d.id]); })
@@ -624,11 +659,6 @@ mapChart = function(){
 
                 });
 
-          svg.append('svg:text')
-                .attr('class', 'maptitle')
-                .attr('transform', 'translate(400, 30)')
-                .text("Unemployment state by state across America");
-
           states.features.forEach(function(d, i) {
 
                 var radius = 0;
@@ -640,12 +670,12 @@ mapChart = function(){
                 centroid.x = centroid[0];
                 centroid.y = centroid[1];
                 centroid.feature = d;
-                map.append("circle")
+                g.append("circle")
                   .attr("cx", centroid.x)
                   .attr("cy", centroid.y)
                   .attr("class","population")
                   .attr("r", radius);
-                map.append("line")
+                g.append("line")
                   .attr("x1", centroid.x)
                   .attr("y1", centroid.y)
                   .attr("x2", centroid.x + Math.cos(angle) * radius)
@@ -653,6 +683,11 @@ mapChart = function(){
                   .attr("class","population");
 
           });
+
+          svg.append('svg:text')
+                  .attr('class', 'maptitle2')
+                  .attr('transform', 'translate(820, 330)')
+                  .text("Where are the jobs?");
 
             // legend map for population
            population_scale = [40000, 400000, 1000000];
@@ -663,14 +698,14 @@ mapChart = function(){
                   .attr("cx", 0)
                   .attr("cy", -r)
                   .attr("class","population legend")
-                  .attr('transform', 'translate(850, 840)')
+                  .attr('transform', 'translate(850, 860)')
                   .attr("r", r); 
 
                 svg.append("text")
                   .attr("x", 0)
                   .attr("y", -2*r)
                   .attr("class","population legendtext")
-                  .attr('transform', 'translate(850, 840)')
+                  .attr('transform', 'translate(850, 860)')
                   .text(d3.format(",")(n) ); 
 
             });
@@ -679,8 +714,10 @@ mapChart = function(){
                   .attr("x", 0)
                   .attr("y", 10)
                   .attr("class","population legendtext2")
-                  .attr('transform', 'translate(850, 840)')
+                  .attr('transform', 'translate(850, 860)')
                   .text("September 2012, \n number of unemployed"); 
+
+
   
     }
 
@@ -712,7 +749,7 @@ mapChart = function(){
     // 
     function update(){
 
-        map.selectAll("path")
+        g.selectAll("path")
             .attr("class", function(d) { return css_color(w4.rateById[d.id]); })
 
     }
