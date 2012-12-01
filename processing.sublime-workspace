@@ -4,6 +4,122 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"italic"
+			],
+			[
+				"cu",
+				"currentstate"
+			],
+			[
+				"di",
+				"difference_chart"
+			],
+			[
+				"ma",
+				"mapChart"
+			],
+			[
+				"left",
+				"leftBarChart"
+			],
+			[
+				"in",
+				"infoBox1"
+			],
+			[
+				"inf",
+				"infoBox1"
+			],
+			[
+				"lef",
+				"leftBarChart"
+			],
+			[
+				"rat",
+				"ratesrange"
+			],
+			[
+				"sta",
+				"state"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"ra",
+				"ratesrange"
+			],
+			[
+				"um",
+				"unemployed2012ByState"
+			],
+			[
+				"data_",
+				"data_us_rates"
+			],
+			[
+				"color",
+				"background-color"
+			],
+			[
+				"current",
+				"currentstate"
+			],
+			[
+				"select",
+				"selectDate"
+			],
+			[
+				"parse",
+				"parseDate"
+			],
+			[
+				"data",
+				"data_us_rates"
+			],
+			[
+				"rate",
+				"rate2009ById"
+			],
+			[
+				"sel",
+				"select"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"max",
+				"maxunemployment"
+			],
+			[
+				"cur",
+				"currentMonth"
+			],
+			[
+				"dr",
+				"draw_differenceChart"
+			],
+			[
+				"upda",
+				"update_differenceChart"
+			],
+			[
+				"currentStat",
+				"currentstate"
+			],
+			[
+				"par",
+				"parseDate"
+			],
+			[
+				"sl",
+				"selectedId"
+			],
+			[
 				"se",
 				"indexbar_select"
 			],
@@ -14,10 +130,6 @@
 			[
 				"dra",
 				"draw_leftgraph"
-			],
-			[
-				"dr",
-				"draw_map"
 			],
 			[
 				"fun",
@@ -31,15 +143,23 @@
 			"file": "src/html/knightcenter-w4/w4.css",
 			"settings":
 			{
-				"buffer_size": 1996,
+				"buffer_size": 3490,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/html/knightcenter-w4/index.html",
+			"file": "src/html/knightcenter-w4/w4-d3.js",
 			"settings":
 			{
-				"buffer_size": 452,
+				"buffer_size": 25160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/html/knightcenter-w4/w4-data.js",
+			"settings":
+			{
+				"buffer_size": 3318,
 				"line_ending": "Unix"
 			}
 		},
@@ -47,23 +167,7 @@
 			"file": "src/html/knightcenter-w4/w4.html",
 			"settings":
 			{
-				"buffer_size": 319,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/html/knightcenter-w4/w4.js",
-			"settings":
-			{
-				"buffer_size": 9439,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/html/knightcenter-w4/style.css",
-			"settings":
-			{
-				"buffer_size": 1400,
+				"buffer_size": 361,
 				"line_ending": "Unix"
 			}
 		},
@@ -71,15 +175,31 @@
 			"file": "src/html/knightcenter-w4/data/US_unemployment.csv",
 			"settings":
 			{
-				"buffer_size": 10516,
+				"buffer_size": 10873,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/html/knightcenter-w4/data/US_unemployment_rate.csv",
+			"file": "src/html/knightcenter-w4/index.html",
 			"settings":
 			{
-				"buffer_size": 1135,
+				"buffer_size": 1243,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/python/knightcenter/w4/US_unemployment_old.csv",
+			"settings":
+			{
+				"buffer_size": 12197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/html/knightcenter-w4/style.css",
+			"settings":
+			{
+				"buffer_size": 1423,
 				"line_ending": "Unix"
 			}
 		}
@@ -108,13 +228,21 @@
 	},
 	"file_history":
 	[
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/index.html",
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/d3.legend.js",
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/style.css",
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/data/US_unemployment.csv",
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/data/US_unemployment_rate.csv",
+		"/Users/gperrin/Dev/git_repo/processing/src/python/knightcenter/w4/states-density.csv",
+		"/Users/gperrin/Dev/git_repo/processing/src/python/knightcenter/w4/extractor.py",
+		"/Users/gperrin/Dev/git_repo/processing/src/python/knightcenter/w4/US_unemployment.csv",
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/data/us-states.json",
+		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/w4.html",
 		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/US_unemployment_rate.csv",
 		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/US_unemployment.csv",
 		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/w4.js",
-		"/Users/gperrin/Dev/git_repo/processing/src/python/knightcenter/w4/extractor.py",
 		"/Users/gperrin/Dev/git_repo/processing/html/knightcenter-w4/w4.js",
-		"/Users/gperrin/Dev/git_repo/processing/html/knightcenter-w4/w4.css",
-		"/Users/gperrin/Dev/git_repo/processing/src/html/knightcenter-w4/index.html"
+		"/Users/gperrin/Dev/git_repo/processing/html/knightcenter-w4/w4.css"
 	],
 	"find":
 	{
@@ -132,6 +260,42 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dcpointer",
+			"r_populationByNumber",
+			"r_populationByStateId",
+			"quantize",
+			"refresh",
+			"indexbar_select",
+			"selectDate",
+			"usrates_datafile",
+			"unemployment_datafile",
+			"rmin",
+			"rmean",
+			" // w4.currentdate = date;\n    // rmean = parseFloat(w4.usratesByDate[date]);",
+			"rmean",
+			"maxunemployment",
+			"data_unemployment",
+			"currentstateId",
+			"currentstate",
+			"currentMonth",
+			"maxunemployment",
+			"path.",
+			"path",
+			"currentIndex",
+			"    // difference_chart.append(\"circle\")\n    //        .attr(\"cx\", xdc(dd) )\n    //        .attr(\"cy\", ydc(rmean) )\n    //        .attr(\"class\",\"dcpointer\")\n    //        .attr(\"r\", 5)\n    //        .style(\"fill\", \"steelblue\");",
+			"rateById",
+			"var rateById = {};\nrateById",
+			"currentstatearrow",
+			"rect",
+			"frame",
+			"       \n",
+			"\nrateById",
+			"current",
+			"#LandAreaSqKm:",
+			"http.*htm",
+			"#PopDensityPerSqKm:",
+			"#state:",
+			")]);"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -139,17 +303,20 @@
 		"regex": false,
 		"replace_history":
 		[
+			"usrates_rawdata",
+			"unemployment_rawdata",
+			""
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
-		"wrap": true
+		"whole_word": true,
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -157,15 +324,15 @@
 					"file": "src/html/knightcenter-w4/w4.css",
 					"settings":
 					{
-						"buffer_size": 1996,
+						"buffer_size": 3490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1140,
-								1140
+								408,
+								408
 							]
 						],
 						"settings":
@@ -173,51 +340,81 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 688.0,
+						"translation.y": 137.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/html/knightcenter-w4/index.html",
+					"file": "src/html/knightcenter-w4/w4-d3.js",
 					"settings":
 					{
-						"buffer_size": 452,
+						"buffer_size": 25160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								452,
-								452
+								826,
+								826
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 173.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/html/knightcenter-w4/w4.html",
+					"file": "src/html/knightcenter-w4/w4-data.js",
 					"settings":
 					{
-						"buffer_size": 319,
+						"buffer_size": 3318,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								319,
-								319
+								1941,
+								1941
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 750.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/html/knightcenter-w4/w4.html",
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
 							]
 						],
 						"settings":
@@ -232,80 +429,50 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/html/knightcenter-w4/w4.js",
-					"settings":
-					{
-						"buffer_size": 9439,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8499,
-								8499
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4455.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "src/html/knightcenter-w4/style.css",
+					"file": "src/html/knightcenter-w4/data/US_unemployment.csv",
 					"settings":
 					{
-						"buffer_size": 1400,
+						"buffer_size": 10873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1347,
-								1347
+								2581,
+								2581
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 85.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "src/html/knightcenter-w4/data/US_unemployment.csv",
+					"file": "src/html/knightcenter-w4/index.html",
 					"settings":
 					{
-						"buffer_size": 10516,
+						"buffer_size": 1243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								337,
+								337
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -315,18 +482,18 @@
 				},
 				{
 					"buffer": 6,
-					"file": "src/html/knightcenter-w4/data/US_unemployment_rate.csv",
+					"file": "src/python/knightcenter/w4/US_unemployment_old.csv",
 					"settings":
 					{
-						"buffer_size": 1135,
+						"buffer_size": 12197,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								126
+								3360,
+								3360
 							]
 						],
 						"settings":
@@ -335,6 +502,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/html/knightcenter-w4/style.css",
+					"settings":
+					{
+						"buffer_size": 1423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1393,
+								1393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -375,7 +570,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
