@@ -47,7 +47,7 @@ dendro = function(){
     //
     function draw(root){
 
-         var nodes = tree.nodes(root),
+        var nodes = tree.nodes(root),
             links = tree.links(nodes);
 
         var link = g.selectAll(".link")

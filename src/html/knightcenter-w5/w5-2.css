@@ -1,0 +1,55 @@
+.title{
+ 	font-family: Arial;
+	font-size: 1.5em;
+	font-weight:bold;
+	text-anchor: end;
+	fill:black;
+	--text-shadow: 3px 3px 7px #111;
+}
+
+.subtitle{
+ 	font-family: Arial;
+	font-size: 1.2em;
+	text-anchor: end;
+	fill:gray;
+	--text-shadow: 3px 3px 7px #111;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+circle.tmin {
+  fill: steelblue;
+}
+
+circle.tmax {
+  fill: orange;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
+.tmax{
+ 	font-family: Arial;
+	font-size: 0.7em;
+	text-anchor: middle;
+}
+
+.tmin{
+ 	font-family: Arial;
+	font-size: 0.7em;
+	text-anchor: middle;
+}
+
+rect.baryear{
+	fill:#eee;
+	stroke:#000;
+	stroke-width: 0.1px;
+
+}
