@@ -15,6 +15,46 @@
 	--text-shadow: 3px 3px 7px #111;
 }
 
+.graphtitle{
+ 	font-family: Arial;
+	font-size: 0.8em;
+	font-weight:bold;
+	text-anchor: end;
+	fill:black;
+	--text-shadow: 3px 3px 7px #111;
+}
+
+.ptemptitle{
+ 	font-family: Arial;
+	font-size: 1.0em;
+	text-anchor: end;
+	fill:gray;
+	--text-shadow: 3px 3px 7px #111;
+}
+
+text.income{
+ 	font-family: Arial;
+	font-size: 0.9em;
+	text-anchor: end;
+	fill:lightgray;
+	
+}
+
+circle.income{
+	fill:lightgray;
+	stroke: black;
+	stroke-width:0px;
+}
+
+circle.income.selected{
+	fill:gray;
+}
+
+line.income{
+	stroke: lightgray;
+  	stroke-width: 3px;
+}
+
 .axis path,
 .axis line {
   fill: none;
@@ -30,20 +70,76 @@ circle.tmax {
   fill: orange;
 }
 
+rect.pmax {
+  fill: orange;
+}
+
+rect.pmin {
+  fill: steelblue;
+}
+
+rect.ppt {
+  fill: #778899;
+}
+
+line.pmax {
+  stroke: orange;
+  stroke-width: 2px;
+}
+
+line.pmin {
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+rect.graph{
+	fill:none;
+	stroke-width:.2px;
+	stroke:darkgray;
+
+}
+
 .x.axis path {
-  display: none;
+  --display: none;
+}
+
+.x2.axis path {
+  --display: none;
+}
+
+.y.axis {
+  	font-family: Arial;
+	font-size: 0.6em;
+}
+
+.y2.axis {
+  	font-family: Arial;
+	font-size: 0.6em;
 }
 
 
+
+.x.axis {
+  	font-family: Arial;
+  	font-weight: plain;
+	font-size: 0.8em;
+}
+
+.x2.axis {
+  	font-family: Arial;
+  	font-weight: plain;
+	font-size: 0.8em;
+}
+
 .tmax{
  	font-family: Arial;
-	font-size: 0.7em;
+	font-size: 0.6em;
 	text-anchor: middle;
 }
 
 .tmin{
  	font-family: Arial;
-	font-size: 0.7em;
+	font-size: 0.6em;
 	text-anchor: middle;
 }
 

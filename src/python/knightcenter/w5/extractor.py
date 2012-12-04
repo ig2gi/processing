@@ -48,7 +48,7 @@ class Node(object):
 class Indicator(object):
       """
       """
-      def __init__(self, code, name, topic, definition, source, func_val = lambda x: [x]) :
+      def __init__(self, code, name, topic, definition, source, numval = 1, func_val = lambda x: [x]) :
         self.name = name
         self.code = code
         self.topic = topic
@@ -61,6 +61,11 @@ class Indicator(object):
         self.values[country] = val
         
       def getValue(self, country):
+        if not self.values[country]:
+          v = []
+          for i in range(0,self.numval):
+            v.append("..")
+          return v
         return self.func_val(self.values[country])
         
         
@@ -68,14 +73,18 @@ class Indicator(object):
         s = self.code + ':\n\t'
         s = s + "\n\t".join("%s:%s" % (k,self.getValue(k)) for k in self.values.keys())
         return s
-        
-      def join(self, other):
+      
+      @staticmethod
+      def join(indicators):
         result = {}
-        for k in self.values.keys():
-          v = self.getValue(k)
-          v.extend(other.getValue(k))
-          result[k] = v
+        for i in indicators:
+          for k in i.values.keys():
+            if k not in result:
+              result[k] = []
+            result[k].extend(i.getValue(k))
         return result
+        
+        
        
 
 class Country(object):
@@ -145,27 +154,40 @@ def main():
     values = l.split(',')
     indicators[values[0]] = Indicator(values[0], values[1], values[4],'','')
     
-  # EN.CLC.MMDT.C
-  # EN.CLC.PCAT.C
+
   i1 = 'EN.CLC.MMDT.C'
   i2 = 'EN.CLC.PCAT.C'
+  i3 = 'EN.CLC.HPPT.MM'
+  i4 = 'EN.CLC.PCPT.MM'
+  i5 = 'EN.CLC.PCHW'
+  i6 = 'EN.CLC.PCCC'
+  inds = [i1, i2, i3, i4, i5, i6]
+  
   lines = [line.strip() for line in open("climate_change/Data-Table 1.csv")] 
   for l in lines:
     values = l.split(',')
     code = values[0].strip()
     val = values[len(values)-1].strip()
-    if val not in['..','n/a']:
-      if values[1].strip() == i1:
-        indicators[i1].addValue(code, val)
-      if values[1].strip() == i2:
-        indicators[i2].addValue(code, val)
+    indic = values[1].strip()
+    if val not in['..', 'n/a']:
+      if indic in inds:
+        indicators[indic].addValue(code, val)
+        
   indicators[i1].func_val = lambda x: [v.strip() for v in x.split('/')]
+  indicators[i1].numval = 2
   indicators[i2].func_val = lambda x: [v.strip() for v in x.split(' to ')]
+  indicators[i2].numval = 2
+  indicators[i4].func_val = lambda x: [v.strip() for v in x.split(' to ')]
+  indicators[i4].numval = 2
+  indicators[i5].func_val = lambda x: [v.strip() for v in x.split(' / ')]
+  indicators[i5].numval = 2
+  indicators[i6].func_val = lambda x: [v.strip() for v in x.split(' / ')]
+  indicators[i6].numval = 2
   
-  f1 = indicators[i1].join(indicators[i2])
-  
-  f = open(data_dir + "/temperatures.csv", 'w+')
-  f.write("code,name,tmin,tmax,pmin,pmax\n")
+  f1 = Indicator.join([indicators[i] for i in inds])
+  print f1
+  f = open(data_dir + "/climate.csv", 'w+')
+  f.write("code,name,tmin,tmax,t10th,t90th,ppt,p10th,p90th,h10th,h90th,c10th,c90th\n")
   for k in f1.keys():
     l = [k, countries[k].name]
     l.extend(f1[k])
