@@ -1,3 +1,15 @@
+body.graph2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: .8em .2em 0em .8em;
+  position: relative;
+  width: 960px;
+}
+
+img { 
+	display: inline-block; 
+	vertical-align: middle; 
+}
+
 .title{
  	font-family: Arial;
 	font-size: 1.5em;
@@ -40,10 +52,22 @@ text.income{
 	
 }
 
+text.area5m{
+	font-family: Arial;
+	font-size: 0.8em;
+	text-anchor: start;
+	fill:gray;
+}
+
 circle.income{
 	fill:lightgray;
 	stroke: black;
 	stroke-width:0px;
+}
+
+circle.population{
+	fill:lightgray;
+
 }
 
 circle.income.selected{
@@ -142,6 +166,19 @@ rect.graph{
 	font-size: 0.6em;
 	text-anchor: middle;
 }
+.population.year{
+ 	font-family: Arial;
+	font-size: 0.6em;
+	text-anchor: start;
+}
+
+.population.M{
+ 	font-family: Arial;
+	font-size: 0.6em;
+	font-weight: bold;
+	text-anchor: start;
+}
+
 
 rect.baryear{
 	fill:#eee;
@@ -149,3 +186,21 @@ rect.baryear{
 	stroke-width: 0.1px;
 
 }
+
+rect.area5m{
+	border: 0.3px;
+	fill-opacity:.3;
+}
+
+line.x.axis{
+	stroke: black;
+	--fill:none;
+}
+
+path.population {
+			  stroke: lightgray;
+			  stroke-width:3px;
+			  fill:none;
+			}
+
+

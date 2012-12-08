@@ -48,7 +48,7 @@ class Node(object):
 class Indicator(object):
       """
       """
-      def __init__(self, code, name, topic, definition, source, numval = 1, func_val = lambda x: [x]) :
+      def __init__(self, code, name, topic, definition, source, numval = 1, func_val = lambda x: x) :
         self.name = name
         self.code = code
         self.topic = topic
@@ -56,12 +56,13 @@ class Indicator(object):
         self.source = source
         self.values = {}
         self.func_val = func_val
+        self.numval = numval
         
       def addValue(self, country, val):
         self.values[country] = val
         
       def getValue(self, country):
-        if not self.values[country]:
+        if country not in self.values:
           v = []
           for i in range(0,self.numval):
             v.append("..")
@@ -70,9 +71,7 @@ class Indicator(object):
         
         
       def __str__(self):
-        s = self.code + ':\n\t'
-        s = s + "\n\t".join("%s:%s" % (k,self.getValue(k)) for k in self.values.keys())
-        return s
+        return self.code
       
       @staticmethod
       def join(indicators):
@@ -109,6 +108,8 @@ def main():
   
   aggregates = {}
   countries = {}
+  regions = {}
+  
   lines = [line.strip() for line in open("climate_change/Country-Table 1.csv")] 
   for l in lines[1:17]:
     values = l.split(',')
@@ -116,6 +117,7 @@ def main():
     name = values[1].strip(' \t\n\r')
     n = Node(name, code)
     aggregates[name] = n
+    regions[code] = Country(code, name, '', '')
     #ß®countries[code] = Country(code, name)
     
   for l in lines[17:]:
@@ -161,38 +163,153 @@ def main():
   i4 = 'EN.CLC.PCPT.MM'
   i5 = 'EN.CLC.PCHW'
   i6 = 'EN.CLC.PCCC'
-  inds = [i1, i2, i3, i4, i5, i6]
+  i13 = 'AG.LND.EL5M.ZS'
+  
+  i7 = 'SP.POP.TOTL'
+  i8 = 'EN.ATM.CO2E.KT'
+  i9 = 'EN.ATM.METH.KT.CE'
+  i10 = 'EN.ATM.NOXE.KT.CE'
+  i11 = 'EN.ATM.GHGO.KT.CE'
+  
+  i12 = 'EG.USE.PCAP.KG.OE'
+  
+  inds_climate = [i1, i2, i3, i4, i5, i6]
+  inds_economy = [i7]
+  inds_emission = [i8, i9, i10, i11]
+  inds_energyuse = [i12]
+  
+  labels_emission = {i8:'CO2', i9:'CH4', i10:'N2O',i11: 'GHG'}
+  
+  regioncodes = ['EAP','ECA','LAC','MNA','SAS','SSA','NME']
+  
   
   lines = [line.strip() for line in open("climate_change/Data-Table 1.csv")] 
   for l in lines:
     values = l.split(',')
     code = values[0].strip()
-    val = values[len(values)-1].strip()
     indic = values[1].strip()
-    if val not in['..', 'n/a']:
-      if indic in inds:
+    if indic == i13:
+      indicators[indic].addValue(code, values[15])
+    if indic in inds_climate:
+      val = values[len(values)-1].strip()
+      if val not in['..', 'n/a']:
         indicators[indic].addValue(code, val)
-        
+    if indic in inds_economy:
+      indicators[indic].addValue(code, values[5:]);
+      indicators[indic].numval = len(values[5:])
+    if indic in inds_emission or indic in inds_energyuse:
+      val = values[6:len(values)-1]
+      indicators[indic].addValue(code, val);
+      
   indicators[i1].func_val = lambda x: [v.strip() for v in x.split('/')]
   indicators[i1].numval = 2
   indicators[i2].func_val = lambda x: [v.strip() for v in x.split(' to ')]
   indicators[i2].numval = 2
+  indicators[i3].func_val = lambda x: [x]
+  indicators[i3].numval = 1
+  indicators[i13].func_val = lambda x: [x]
+  indicators[i13].numval = 1
   indicators[i4].func_val = lambda x: [v.strip() for v in x.split(' to ')]
   indicators[i4].numval = 2
   indicators[i5].func_val = lambda x: [v.strip() for v in x.split(' / ')]
   indicators[i5].numval = 2
   indicators[i6].func_val = lambda x: [v.strip() for v in x.split(' / ')]
   indicators[i6].numval = 2
+  indicators[i8].func_val = lambda x: [v.strip() for v in x]
   
-  f1 = Indicator.join([indicators[i] for i in inds])
+  l = [indicators[i] for i in inds_climate]
+  l.append(indicators[i13])
+  f1 = Indicator.join(l)
   print f1
   f = open(data_dir + "/climate.csv", 'w+')
-  f.write("code,name,tmin,tmax,t10th,t90th,ppt,p10th,p90th,h10th,h90th,c10th,c90th\n")
+  f.write("code,name,tmin,tmax,t10th,t90th,ppt,p10th,p90th,h10th,h90th,c10th,c90th,area5m\n")
   for k in f1.keys():
-    l = [k, countries[k].name]
-    l.extend(f1[k])
-    f.write(",".join(l) + '\n')
+    if k in countries:
+      l = [k, countries[k].name]
+      l.extend(f1[k])
+      f.write(",".join(l) + '\n')
   f.close()
+  
+  f2 = Indicator.join([indicators[i] for i in inds_economy])
+  #print f2
+  f = open(data_dir + "/economy.csv", 'w+')
+  f.write("code,name," + ','.join([str(i) for i in range(1990,2012)])+ '\n')
+  for k in f2.keys():
+    if k in countries:
+      l = [k, countries[k].name]
+      l.extend(f2[k])
+      f.write(",".join(l) + '\n')
+  f.close()
+  
+  def fct(x):
+    if x != '..':
+      return float(x)
+    return 0.0
+  
+  f3 = Indicator.join([indicators[i] for i in inds_emission])
+  #print f3
+  f = open(data_dir + "/emissions.csv", 'w+')
+  f.write("code,name,indicator,value,year" + '\n')
+  emissions_json = {'name': 'world', 'children':[]}
+  for k in regions:
+        name = regions[k].name
+        if k in regioncodes:
+          region_json = {'name': name, 'emission':0, 'energy': 0}
+          emissions_json['children'].append(region_json)
+          size = 0
+          for ind in inds_energyuse:
+            vals = indicators[ind].getValue(k)
+            if k == 'NME':
+                             vals1 = [fct(v) for v in indicators[ind].getValue('USA')]
+                             vals2 = [fct(v) for v in indicators[ind].getValue('CAN')]
+                             vals = [(x + y) for x,y in zip(vals1, vals2)]
+                             vals = ['..' if x == 0.0 else str(x) for x in vals]
+            for v in reversed(vals):
+              if v != '..':
+                  region_json['energy'] = fct(v)
+                  break
+            
+        for ind in inds_emission:
+          l = [k, name, ind]
+          if k == 'NME':
+            vals1 = [fct(v) for v in indicators[ind].getValue('USA')]
+            vals2 = [fct(v) for v in indicators[ind].getValue('CAN')]
+            #print vals1
+            #print vals2
+            vals = [(x + y) for x,y in zip(vals1, vals2)]
+            #print vals
+            vals = ['..' if x == 0.0 else str(x) for x in vals]
+          else: vals = indicators[ind].getValue(k)
+          #print vals
+          vals_f = [fct(v) for v in vals]
+          y = 2011
+          for v in reversed(vals):
+            #if v != '..':
+            if y == 2006: 
+              if k in regioncodes:
+                size = size + fct(v)
+                #region_json['children'].append({'name': labels_emission[ind], 'size':fct(v)})
+              l.extend([v,str(y)])
+              break
+            y = y - 1
+          #print l
+          if k in regioncodes:
+            region_json['emission'] = size
+          f.write(",".join(l) + '\n')
+  f.close()
+
+  
+  f = open(data_dir + "/emissions.json", 'w+')
+  s = json.dumps(emissions_json ,ensure_ascii=False,indent=2)
+  print s
+  f.write(s)
+  f.close()
+  
+  # f = open(data_dir + "/energyuse.json", 'w+')
+  #  s = json.dumps(energyuse_json ,ensure_ascii=False,indent=2)
+  #  print s
+  #  f.write(s)
+  #  f.close()
   
   f = open(data_dir + "/countries.csv", 'w+')
   f.write("code,name,region,incomegroup\n")
@@ -201,6 +318,21 @@ def main():
   for c in listcountries:
     f.write("%s,%s,%s,%s" % (c.code, c.name, c.region, c.incomeGroup) + '\n')
   f.close()
+  
+ 
+  f = open(data_dir + "/regions.csv", 'w+')
+  f.write("code,name\n")
+  listregions = regions.values()
+  listregions.sort(key=lambda x: x.name)
+  for c in listregions:
+    if c.code in regioncodes:
+      f.write("%s,%s" % (c.code, c.name) + '\n')
+  f.close()
+  
+ 
+  
+  
+  
 
 
 if __name__ == '__main__':

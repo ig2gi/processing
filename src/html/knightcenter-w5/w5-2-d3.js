@@ -13,6 +13,9 @@ var countryByCode = {}
 // lookup table: country code -> climate data 
 var dataByCode = {}
 
+// lookup table: country code -> economy data 
+var economyByCode = {}
+
 // selected country
 var currentCode;
 
@@ -38,6 +41,15 @@ function getCurrentIncomeIndex(){
     return index;
 }
 
+//
+var years = function getYears(){
+    var years = [];
+    for (var i = 1990; i <= 2010; i++) {
+        years[i-1990] = d3.time.format("%Y").parse(i + '');
+    };
+    return years;
+}();
+
 
 // D3 Global variables ---------------------------------
 
@@ -59,7 +71,7 @@ var svg = d3.select("#map").append("svg")
 */
 selectCountry = function(){
     
-    var x=800, y=20;
+    var x=850, y=20;
 
     var g =  svg.append("g")
         .attr("class", "select")
@@ -88,14 +100,6 @@ selectCountry = function(){
             .attr("class","subtitle")
             .attr("id", "region")
             .text('');
-
-        // g.append("svg:text")
-        //     .attr("x", 0)
-        //     .attr("y", 50)
-        //     .attr("class","subtitle")
-        //     .attr("id", "incg")
-        //     .text('');
-
 
 
         g.append("svg:text")
@@ -238,14 +242,14 @@ selectPercentile = function(){
 
 /*
   =====================================
-    Graph Component
+    Income Group Component
   
 
   =====================================
 */
 incomeBar = function(){
     
-    var x=750, y=200;
+    var x=840, y=200;
 
     var g =  svg.append("g")
         .attr("class", "incomebar")
@@ -264,7 +268,7 @@ incomeBar = function(){
 
         g.append("svg:text")
             .attr("x", 10)
-            .attr("y", -20)
+            .attr("y", -25)
             //.attr('class', 'income')
             .text('Income Group')
             .attr("transform", "rotate(90)"); 
@@ -291,7 +295,7 @@ incomeBar = function(){
        
         var cssIncome = ".income" + getCurrentIncomeIndex();
         g.selectAll(".income").style("fill","lightgray","font-weight","plain");
-        g.selectAll(cssIncome).style("fill","gray","font-weight","bold");
+        g.selectAll(cssIncome).transition().style("fill","gray","font-weight","bold");
      
     }
 
@@ -312,7 +316,7 @@ incomeBar = function(){
 
   =====================================
 */
-graph = function(){
+graphClimate = function(){
     
     var posx=70, posy=100;
 
@@ -419,7 +423,7 @@ graph = function(){
               .append("text")
               //.attr("transform", "rotate(-90)")
               .attr("y", 0)
-              .attr("x", -10)
+              .attr("x", 10)
               .attr("dy", ".71em")
               .style("text-anchor", "middle")
               .text("P (mm)");
@@ -550,8 +554,258 @@ graph = function(){
 }();
 
 
+/*
+  =====================================
+    Graph Population Component
+  
+
+  =====================================
+*/
+graphPopulation = function(){
+    
+    var posx=500, posy=220;
+
+    var g =  svg.append("g")
+        .attr("class", "select")
+        .attr('transform', 'translate(' + posx + ',' + posy + ')');
+
+    var data = {};
+
+    var x = d3.time.scale()
+            .range([0,8]);
+
+    var y = d3.scale.linear()
+            .range([100, 30]);
+
+    x.domain(years);
+
+    var line = d3.svg.line()
+            .x(function(d,i) { 
+                return x(years[i]) + 10; 
+            })
+            .y(function(d) { 
+                return y(d); 
+            });
+
+    //
+    function draw(){
+
+        g.append("g")
+              .append("text")
+              .attr("class", "graphtitle")
+              .attr("y", 100)
+              .attr("x", 110)
+              .attr("dy", ".71em")
+              .style("text-anchor", "middle")
+              .text("Population .....");
+
+        g.append("image")
+            .attr("xlink:href", "resources/human.png")
+            .attr("x", 160)
+            .attr("y", 70)
+            .attr("width", 20)
+            .attr("height", 40);
+
+         g.append("g")
+              .append("rect")
+              .attr("class", "graph")
+              .attr("y", 0)
+              .attr("x", -10)
+              .attr("width", 220)
+              .attr("height", 120);
+            
+
+    }
+
+    // 
+    function update(){
+
+       var obj = economyByCode[currentCode]; 
+       var data = []
+
+       g.selectAll(".population").remove();
+
+       years.forEach(function(d, i){
+            data[i] = parseFloat(obj[d.getFullYear()]) / 1000000.0;
+            //log(data[i]);
+       });
+        min = d3.min(data, function(d) { return d; });
+        max = d3.max(data, function(d) { return d; });
+        y.domain([min,max]);
+
+      
+        g.append("path")
+            .attr("class","population")
+            .attr("d", line(data));
+
+        data.forEach(function(d, i){
+            var xx = x(years[i]);
+            var yy = y(d) ;
+            if(i%10 == 0){
+                g.append("circle")
+                    .attr("class","population")
+                    .attr("cx", xx + 13)
+                    .attr("cy", yy -3)
+                    .attr("r",6);
+                g.append("g")
+                    .append("text")
+                    .attr("class", "population year")
+                    .attr("y", yy + 14)
+                    .attr("x", xx + 3)
+                    .text(d3.time.format('%Y')(years[i]));
+                g.append("g")
+                    .append("text")
+                    .attr("class", "population M")
+                    .attr("y", yy - 12)
+                    .attr("x", xx + 3)
+                    .text(d3.format(',.2f')(d) + 'M');
+            }
+
+        });
 
 
+    }
+
+   
+
+    // public
+    return {
+
+        draw: draw,
+        update: update
+
+    }
+
+
+}();
+
+/*
+  =====================================
+    Graph Ocean Level Component
+  
+
+  =====================================
+*/
+graphOcean = function(){
+    
+    var posx=460, posy=90;
+
+    var H = 50, W = 50, A = H * W;
+
+    var g =  svg.append("g")
+        .attr("class", "select")
+        .attr('transform', 'translate(' + posx + ',' + posy + ')');
+
+    var garea = g.append("g")
+            .attr("class", "area5m");
+
+    //
+    function draw(){
+
+
+
+        g.append("g")
+              .append("text")
+              .attr("class", "graphtitle")
+              .attr("y", 100)
+              .attr("x", 110)
+              .attr("dy", ".71em")
+              .style("text-anchor", "middle")
+              .text("Land Area below 5m");
+
+
+        g.append("image")
+            .attr("xlink:href", "resources/waves.png")
+            .attr("x", 60)
+            .attr("y", 71)
+            .attr("width", 90)
+            .attr("height", 30);
+
+        g.append("line")
+            .attr("x1", 65)
+            .attr("y1", 30)
+            .attr("x2", 150)
+            .attr("y2", 30)
+            .style("stroke","black","stroke-width","0.2px");
+
+        g.append("text")
+              .attr("class", "tmin")
+              .attr("y", 25)
+              .attr("x", 60)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("5m");
+
+        g.append("text")
+              .attr("class", "tmin")
+              .attr("y", 25)
+              .attr("x", 170)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("5m");
+
+        
+
+        garea.append("rect")
+                .attr("class", "area5m")
+                .attr("x", 80)
+                .attr("y", 31)
+                .attr("width", W)
+                .attr("height", H);
+        garea.append("text")
+                .attr("class", "area5m")
+                .attr("y", H + 34)
+                .attr("x", 125)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .text('');
+
+        g.append("g")
+              .append("rect")
+              .attr("class", "graph")
+              .attr("y", -30)
+              .attr("x", 30)
+              .attr("width", 160)
+              .attr("height", 150);
+
+
+            
+
+
+
+    }
+
+    //
+    function area(){
+        return dataByCode[currentCode]['area5m'] / 100.0;
+    }
+
+    // 
+    function update(){
+
+        var a = area();
+        var ty = a * A / W  - H;
+        log(ty);
+        garea.transition().attr("transform", "translate(0," + ty + ")" );
+        garea.select("text.area5m").text(d3.format(',.1f')(a * 100) + "%");
+        
+
+    }
+
+
+
+   
+
+    // public
+    return {
+
+        draw: draw,
+        update: update
+
+    }
+
+
+}();
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -575,19 +829,24 @@ graph = function(){
 queue()
 	    .defer(d3.csv, "data/countries.csv")
         .defer(d3.csv, "data/climate.csv")
+        .defer(d3.csv, "data/economy.csv")
 	    .await(ready);
 
 /*
   All graphic components.
 */
-var components = [selectCountry, selectPercentile, incomeBar, graph];
+var components = [selectCountry, selectPercentile, incomeBar, graphClimate, graphPopulation, graphOcean];
 
 
 /*
   Ready:
 */
-function ready(error, countries, temperatures) {
+function ready(error, countries, temperatures, economy) {
 
+    //
+    economy.forEach(function(d){
+        economyByCode[d.code] = d;
+    });
     //
     temperatures.forEach(function(d){
         dataByCode[d.code] = d;
