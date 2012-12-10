@@ -220,7 +220,7 @@ def main():
   l = [indicators[i] for i in inds_climate]
   l.append(indicators[i13])
   f1 = Indicator.join(l)
-  print f1
+  #print f1
   f = open(data_dir + "/climate.csv", 'w+')
   f.write("code,name,tmin,tmax,t10th,t90th,ppt,p10th,p90th,h10th,h90th,c10th,c90th,area5m\n")
   for k in f1.keys():
@@ -296,12 +296,50 @@ def main():
           if k in regioncodes:
             region_json['emission'] = size
           f.write(",".join(l) + '\n')
+  f.close();
+  
+  emissions2_json = {'name': 'world', 'children':[]}
+  region_nodes = {}
+  for k in countries:
+    name = countries[k].name
+    region = countries[k].region
+    if region not in region_nodes:
+      n = {'name': region, 'children':[]}
+      region_nodes[region] = n
+      emissions2_json['children'].append(n)
+    emission = 0
+    yemission = 2011
+    energy = 0
+    yenergy = 2010
+    # emission
+    for ind in inds_emission:
+      vals = indicators[ind].getValue(k)
+      yemission = 2011
+      for v in reversed(vals):
+        if v != '..':
+          emission = emission + fct(v)
+          break
+        yemission = yemission -1
+    # energy use
+    vals = indicators[i12].getValue(k)
+    for v in reversed(vals):
+      if v != '..':
+        energy = fct(v)
+        break
+      yenergy = yenergy - 1
+    if emission != 0 and energy != 0:
+      region_nodes[region]['children'].append({'name': name, 'emission':emission, 'yemission': yemission,'energy': energy, 'yenergy':yenergy})
+  
+  f = open(data_dir + "/emissions2.json", 'w+')
+  s = json.dumps(emissions2_json ,ensure_ascii=False,indent=2)
+  print s
+  f.write(s)
   f.close()
 
   
   f = open(data_dir + "/emissions.json", 'w+')
   s = json.dumps(emissions_json ,ensure_ascii=False,indent=2)
-  print s
+  #print s
   f.write(s)
   f.close()
   
