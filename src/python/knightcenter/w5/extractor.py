@@ -15,13 +15,20 @@ import json
 
 data_dir = '../../../html/knightcenter-w5/data/'
 
+aggregates = {}
+countries = {}
+regions = {}
+
+
+
 class Node(object):
   """
   """
-  def __init__(self, name, code) :
+  def __init__(self, name, code, attrs = None) :
     self.name = name
     self.code = code
     self.children = {}
+    self.attrs = attrs
     
   def addChild(self, name, node):
     self.children[name] = node
@@ -36,12 +43,19 @@ class Node(object):
     
   def json(self):
     jsonObj = {"name": self.name, "code": self.code, "children": self.jsonObjChildren()}
+    if self.attrs:
+      for k,v in self.attrs.iteritems():
+        jsonObj[k] = v
     return json.dumps(jsonObj ,ensure_ascii=False,indent=2)
     
   def jsonObjChildren(self):
     jsonChildren = []
     for c in self.children.values():
-      jsonChildren.append({"name": c.name, "code": c.code, "children": c.jsonObjChildren()})
+      child = {"name": c.name, "code": c.code, "children": c.jsonObjChildren()}
+      if c.attrs:
+        for k,v in c.attrs.iteritems():
+          child[k] = v
+      jsonChildren.append(child)
     return jsonChildren
     
     
@@ -72,6 +86,16 @@ class Indicator(object):
         
       def __str__(self):
         return self.code
+        
+      def write(self, file, columns):
+        f = open(data_dir + "/" + file, 'w+')
+        f.write(columns + '\n')
+        for k in self.values.keys():
+          if k in countries:
+            l = [k, countries[k].name]
+            l.extend(self.getValue(k))
+            f.write(",".join(l) + '\n')
+        f.close()
       
       @staticmethod
       def join(indicators):
@@ -95,6 +119,7 @@ class Country(object):
     self.region = region
     self.incomeGroup = incomeGroup
     self.indicators = {}
+    self.unfccc = 'no'
   
   def addIndicator(self, indicator):
      self.indicators.append(indicator)
@@ -106,25 +131,32 @@ class Country(object):
 
 def main():
   
-  aggregates = {}
-  countries = {}
-  regions = {}
+  unfccc = {}
+  lines = [line.strip() for line in open("levelactions.csv")] 
+  for l in lines:
+    v = l.split(',')
+    unfccc[v[0]] = v[2]
+    
   
   lines = [line.strip() for line in open("climate_change/Country-Table 1.csv")] 
   for l in lines[1:17]:
     values = l.split(',')
     code = values[0].strip(' \t\n\r')
     name = values[1].strip(' \t\n\r')
-    n = Node(name, code)
-    aggregates[name] = n
-    regions[code] = Country(code, name, '', '')
-    #ß®countries[code] = Country(code, name)
+    if code not in ['EMU', 'SID']: 
+     n = Node(name, code)
+     aggregates[name] = n
+     regions[code] = Country(code, name, '', '')
+ 
     
   for l in lines[17:]:
     values = l.split(',')
     code = values[0].strip(' \t\n\r')
     name = values[1].strip(' \t\n\r')
-    n = Node(name, code)
+    if code in unfccc:
+      n = Node(name, code, {'unfccc':unfccc[code]})
+      print n.json()
+    else: n = Node(name, code)
     region = values[3].strip(' \t\n\r')
     incomegroup = values[4].split(':')[0].strip(' \t\n\r')
     countries[code] = Country(code, name, region, incomegroup)
@@ -138,17 +170,14 @@ def main():
       regionNode.getChild(incomegroup).addChild(name, n)
   
   
+
+  
   world = aggregates['World']
   for k in aggregates: 
     if k not in['World','Low income','High income', 'Lower middle income', 'Low & middle income', 'Middle income', 'Upper middle income']:
       world.addChild(aggregates[k].name, aggregates[k])
       
-  #print world.json()
   
-  f = open(data_dir + "/countries.json", 'w+')
-  f.write(world.json())
-  f.close()
-
   # Indicators
   indicators = {}
   lines = [line.strip() for line in open("climate_change/Series-Table 1.csv")]
@@ -166,6 +195,8 @@ def main():
   i13 = 'AG.LND.EL5M.ZS'
   
   i7 = 'SP.POP.TOTL'
+  i14 = 'NY.GDP.MKTP.CD'
+  
   i8 = 'EN.ATM.CO2E.KT'
   i9 = 'EN.ATM.METH.KT.CE'
   i10 = 'EN.ATM.NOXE.KT.CE'
@@ -173,10 +204,15 @@ def main():
   
   i12 = 'EG.USE.PCAP.KG.OE'
   
+  i15 = 'EN.CLC.NCOM'
+  
+  
   inds_climate = [i1, i2, i3, i4, i5, i6]
-  inds_economy = [i7]
+  inds_economy = [i7,i14]
   inds_emission = [i8, i9, i10, i11]
   inds_energyuse = [i12]
+  inds_actions = [i15]
+  
   
   labels_emission = {i8:'CO2', i9:'CH4', i10:'N2O',i11: 'GHG'}
   
@@ -190,10 +226,14 @@ def main():
     indic = values[1].strip()
     if indic == i13:
       indicators[indic].addValue(code, values[15])
-    if indic in inds_climate:
+    if indic in inds_climate :
       val = values[len(values)-1].strip()
       if val not in['..', 'n/a']:
         indicators[indic].addValue(code, val)
+    if indic in inds_actions :
+        val = values[len(values)-1].strip()
+        if val not in['..']:
+            indicators[indic].addValue(code, val)
     if indic in inds_economy:
       indicators[indic].addValue(code, values[5:]);
       indicators[indic].numval = len(values[5:])
@@ -216,6 +256,15 @@ def main():
   indicators[i6].func_val = lambda x: [v.strip() for v in x.split(' / ')]
   indicators[i6].numval = 2
   indicators[i8].func_val = lambda x: [v.strip() for v in x]
+  indicators[i15].func_val = lambda x: ['no' if x.strip() == 'n/a' else 'yes']
+  indicators[i15].numval = 1
+  
+  #print world.json()
+  
+  f = open(data_dir + "/countries.json", 'w+')
+  f.write(world.json())
+  f.close()
+  
   
   l = [indicators[i] for i in inds_climate]
   l.append(indicators[i13])
@@ -230,16 +279,14 @@ def main():
       f.write(",".join(l) + '\n')
   f.close()
   
-  f2 = Indicator.join([indicators[i] for i in inds_economy])
-  #print f2
-  f = open(data_dir + "/economy.csv", 'w+')
-  f.write("code,name," + ','.join([str(i) for i in range(1990,2012)])+ '\n')
-  for k in f2.keys():
-    if k in countries:
-      l = [k, countries[k].name]
-      l.extend(f2[k])
-      f.write(",".join(l) + '\n')
-  f.close()
+
+  indicators[i7].write("population.csv", "code,name," + ','.join([str(i) for i in range(1990,2012)]))
+  
+  indicators[i14].write("gdp.csv", "code,name," + ','.join([str(i) for i in range(1990,2012)]))
+  
+  print indicators[i15].values
+  indicators[i15].write("levelactions.csv", "code,name,UNFCCC")
+  
   
   def fct(x):
     if x != '..':
@@ -332,7 +379,7 @@ def main():
   
   f = open(data_dir + "/emissions2.json", 'w+')
   s = json.dumps(emissions2_json ,ensure_ascii=False,indent=2)
-  print s
+  #print s
   f.write(s)
   f.close()
 
@@ -343,11 +390,7 @@ def main():
   f.write(s)
   f.close()
   
-  # f = open(data_dir + "/energyuse.json", 'w+')
-  #  s = json.dumps(energyuse_json ,ensure_ascii=False,indent=2)
-  #  print s
-  #  f.write(s)
-  #  f.close()
+
   
   f = open(data_dir + "/countries.csv", 'w+')
   f.write("code,name,region,incomegroup\n")
